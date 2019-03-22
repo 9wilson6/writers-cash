@@ -1,0 +1,14 @@
+.header {
+  background: url("../assets/bg.jpeg");
+  background-size: cover;
+  background-position: center;
+
+  color: $primary-color-white;
+  &__content {
+    padding-top: $margin-xlg;
+    background-color: $primary-color-blue;
+    opacity: 0.9;
+    height: 97vh;
+    width: 100%;
+  }
+}

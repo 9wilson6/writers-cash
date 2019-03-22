@@ -1,0 +1,16 @@
+{
+  "name": "writersCash",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^4.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "name": "node-sass -w scss/ -o css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
