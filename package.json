@@ -3,14 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-    "node-sass": "^4.11.0"
-  },
-  "devDependencies": {},
   "scripts": {
     "name": "node-sass -w scss/ -o css"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/9wilson6/writers-cash.git"
+  },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/9wilson6/writers-cash/issues"
+  },
+  "homepage": "https://github.com/9wilson6/writers-cash#readme",
+  "dependencies": {
+    "node-sass": "^4.11.0"
+  }
 }

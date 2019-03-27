@@ -1,0 +1,22 @@
+.headingPrimary {
+  display: block;
+  margin: 0 auto;
+}
+.headingSecondary {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+.headingTertiary {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+a,
+a:hover {
+  text-decoration: none;
+}
+
+// @include for-tablet-portrait-up {
+//   width: 100%;
+// }
+//    background-image: -webkit-linear-gradient(225deg, #00CF8A, #0084D6);
+// background-image: linear-gradient(225deg, #00CF8A, #0084D6);

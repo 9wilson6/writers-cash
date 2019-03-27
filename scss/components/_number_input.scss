@@ -1,0 +1,36 @@
+//number input custom
+input[type="number"] {
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  font-size: 15px;
+  //   margin: 0 10px !important;
+  width: 30% !important;
+  height: 30px !important;
+}
+
+input[type="number"]:hover,
+input[type="number"]:focus {
+  color: #fff;
+  background: $primary-color-green;
+}
+
+button {
+  background-image: -webkit-linear-gradient(225deg, #00cf8a, #0084d6);
+  background-image: linear-gradient(225deg, #00cf8a, #0084d6);
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 0 5px;
+  border-radius: 5px;
+  font-size: 25px;
+  height: 40px !important;
+  width: 40px !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+  background: $primary-color-blue;
+}

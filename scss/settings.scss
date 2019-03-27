@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Black+Ops+One|Lato|Pacifico|Roboto|Black+Han+Sans|Bungee+Inline|Arvo|Oswald:700|Merriweather|Khand:300,400,500,700|Prompt:400,600,700i|Cardo:400:700');
+@import url("https://fonts.googleapis.com/css?family=Black+Ops+One|Cabin:500,700|Montserrat:400,700i|Roboto");
 @import "abstracts/functions";
 @import "abstracts/mixins";
 @import "abstracts/variables";
@@ -23,5 +23,8 @@
 @import "components/modal";
 @import "components/messages";
 @import "components/files";
+@import "components/select";
+@import "components/custom_link_button";
+@import "components/number_input";
 @import "pages/dashboard__content";
 @import "pages/not_active";

@@ -1,0 +1,19 @@
+.formsubmit {
+  display: inline-block;
+  margin: 0 auto;
+  background: transparent;
+  border: 2px solid $primary-color-green;
+  padding: 1rem 3rem;
+  border-radius: 30px;
+  width: 200px;
+  color: $primary-color-blue;
+  transition: all .3s ease-out;
+  //   position: absolute;
+  //   bottom: 0;
+  //   right: 0;
+  &:hover {
+    background: -webkit-linear-gradient(225deg, #00cf8a, #0084d6);
+    background: linear-gradient(225deg, #00cf8a, #0084d6);
+    color: $primary-color-white;
+  }
+}
