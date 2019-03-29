@@ -117,6 +117,7 @@
                       type="number"
                       name=""
                       id=""
+                      min="0"
                       value="1"
                       class="form-control"
                     />

@@ -1,0 +1,41 @@
+.order_now {
+  //   background-image: -webkit-linear-gradient(225deg, #00cf8a, #0084d6);
+  //   background-image: linear-gradient(225deg, #00cf8a, #0084d6);
+  background: url("../assets/class-composition-creativity-207756.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 300px;
+  text-align: center;
+  &__heading {
+    color: $primary-color-black;
+  }
+  .container-fluid {
+    background: $primary-color-gray-light;
+    opacity: 0.8;
+    width: 100%;
+    min-height: 300px;
+    .headingSecondary {
+      color: $primary-color-black;
+      &:after {
+        // background: black;
+      }
+    }
+    p {
+      font-size: 2rem;
+      color: $primary-color-black;
+    }
+    .btn {
+      color: $primary-color-black;
+      &:hover {
+        color: $primary-color-white;
+      }
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .headingSecondary {
+      font-size: 24px;
+    }
+  }
+}

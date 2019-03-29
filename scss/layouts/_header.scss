@@ -10,10 +10,10 @@
   text-align: center;
 
   &__content {
-    background: $primary-color-black;
-    //    background-image: -webkit-linear-gradient(225deg, #00CF8A, #0084D6);
-    // background-image: linear-gradient(225deg, #00CF8A, #0084D6);
-    opacity: 0.8;
+    background: $primary-color-blue;
+    // background-image: -webkit-linear-gradient(225deg, #00cf8a, #0084d6);
+    // background-image: linear-gradient(225deg, #00cf8a, #0084d6);
+    opacity: 0.9;
     height: 100vh;
     width: 100%;
     display: -webkit-box;
@@ -59,8 +59,10 @@
         width: 100%;
         box-shadow: 0 2px 4px 10px #fff;
         &__header {
-          background: $primary-color-black;
-          font-size: 22px;
+          // background-image: -webkit-linear-gradient(225deg, #00cf8a, #0084d6);
+          // background-image: linear-gradient(225deg, #00cf8a, #0084d6);
+          background: $primary-color-blue;
+          font-size: 18px;
           padding: 1rem;
 
           font-family: inherit;
@@ -99,7 +101,8 @@
       }
       .form {
         &__header {
-          font-size: 20px;
+          font-size: 15px;
+          padding: 1px;
         }
       }
       .headingTertiary {
@@ -110,6 +113,10 @@
         border-radius: 15px;
         padding: 7px 12px;
         margin: $margin-xsm auto;
+      }
+      .formsubmit {
+        padding: 0.5rem 1.5rem;
+        margin-top: -20px;
       }
     }
   }

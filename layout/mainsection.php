@@ -1,40 +1,9 @@
-<section class="mainSection">
-	<section class="order" id="order">
-		<div class="order__content">
-			<div class="container_">
-			
-			</div>
-		</div>
-	</section>
+<?php 
+require_once "./layout/advantage.php";
+ require_once "./layout/how_to_order_a_custom_paper.php";
 
-	<section class="about" id="about">
-		<div class="container">
-			<div class="about__content">
-			
-			</div>
-		</div>
+require_once "./layout/order_now.php";
 
-	</section>
-	<section class="testimonials">
+require_once "./layout/testimonials.php";
 
-		<div class="container">
-			<div class="testimonials__content" >
-			
-			</div>
-		</div>
-	</section>
-	<section class="tutor">
-		<div class="container">
-			<div class="tutor__content">
-				
-			</div>
-		</div>
-	</section>
-<div class="blank-container">
-		<section class="blank">
-		<div class="container">
-			
-		</div>
-	</section>
-</div>
-</section>
+?>

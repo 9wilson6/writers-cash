@@ -1,0 +1,137 @@
+.testimonials {
+  color: $primary-color-white;
+  min-height: 300px;
+  text-align: center;
+  padding-bottom: $margin-xlg;
+  background: $primary-color-blue-1;
+  .container {
+    padding-top: $margin-lg;
+  }
+  .headingSecondary {
+    color: $primary-color-white;
+    margin-top: -$margin-xsm;
+    margin-bottom: $margin-md;
+    padding-top: 2rem;
+    &:after {
+      // background: black;
+    }
+    &__heading {
+    }
+    // color: $primary-color-white;
+    //
+    // &:after {
+    //   content: "";
+    //   font-family: "Montserrat", sans-serif;
+    //   font-weight: 400;
+    //   font-size: 2.5rem;
+    //   margin: $margin-sm auto;
+    //   background-color: white;
+    //   height: 3px;
+    //   width: 25rem;
+    //   border-radius: 2px;
+    //   display: inline-block;
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 50%;
+    //   transform: translate(-50%, -50%);
+    // }
+  }
+
+  &__content {
+    .testmonial {
+      margin: 10px 15px;
+      padding: 0 0 20px 20px;
+      position: relative;
+    }
+
+    .pic {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      border: 4px solid $primary-color-gray-light;
+      border-radius: 50px;
+      padding: 5px;
+    }
+
+    .pic img {
+      margin: 0 auto;
+      text-align: center;
+      border-radius: 50px;
+      width: 80px;
+      height: 80px;
+    }
+
+    .testmonial-review {
+      border: 5px solid $primary-color-gray;
+      border-radius: 10px;
+      font-size: 17.5px;
+      margin: 0 0 20px;
+      padding: 10px 20px;
+      min-height: 150px;
+      position: relative;
+      p {
+        font-style: italic;
+        font-size: normal;
+        line-height: 24px;
+        padding: 9px 0 0 49px;
+        color: $primary-color-base;
+        font-size: 15px;
+        position: relative;
+        &:before {
+          content: "\f10d";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          position: absolute;
+          left: 0;
+          top: 10px;
+          font-size: 30px;
+          background-image: -webkit-linear-gradient(225deg, #00cf8a, #0084d6);
+          background-image: linear-gradient(225deg, #00cf8a, #0084d6);
+          -webkit-background-clip: text;
+          color: transparent;
+        }
+      }
+    }
+
+    .testmonial-title {
+      //   padding: 0 0 0 48px;
+      color: $primary-color-gray;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      position: absolute;
+      bottom: 0px;
+      right: 13px;
+      a {
+        color: $primary-color-gray-light;
+      }
+    }
+
+    .owl-theme .owl-controls {
+      margin-top: 30px;
+      /* font-size: 15px;
+            color: #7c7c7c; */
+      a {
+        color: #dc005a;
+        font-size: 15px;
+        font-family: tahoma;
+        font-weight: bold;
+      }
+      .owl-page span {
+        background: #fff;
+        display: block;
+        height: 8px;
+        margin: 5px 2.5px;
+        width: 30px;
+        border-radius: 0;
+      }
+    }
+
+    .owl-theme .owl-controls .owl-page.active span,
+    .owl-theme .owl-controls.clickable .owl-page:hover span {
+      //   background: #dc005a;
+      background-image: -webkit-linear-gradient(225deg, #00cf8a, #0084d6);
+      background-image: linear-gradient(225deg, #00cf8a, #0084d6);
+    }
+  }
+}

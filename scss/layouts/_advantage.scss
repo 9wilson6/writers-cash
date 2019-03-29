@@ -1,0 +1,107 @@
+.advantage {
+  width: 100vw;
+  min-height: 400px;
+  background: $primary-color-gray-light;
+  text-align: center;
+  &--ty_half {
+    background: $primary-color-white;
+    height: 300px;
+    transform: translateY(-50%);
+    border-radius: 20px;
+    padding: 3rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    -webkit-box-shadow: 0px 3px 12px -1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 3px 12px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 12px -1px rgba(0, 0, 0, 0.2);
+    .row [class^="col-"]:nth-child(-n + 3) {
+      border-bottom: 1px solid $primary-color-base;
+      padding-bottom: 50px;
+      height: 150px;
+      .icon {
+        margin: 50px 10px;
+      }
+    }
+    .row [class^="col-"]:nth-child(-n + 2) {
+      border-right: 1px solid $primary-color-base;
+    }
+    .row [class^="col-"]:nth-child(n + 4) {
+      padding-top: 50px;
+      height: 150px;
+      .icon {
+        margin: 10px 10px;
+      }
+    }
+    .row [class^="col-"]:nth-child(n + 4) {
+      border-right: 1px solid $primary-color-base;
+    }
+    .row [class^="col-"]:last-child {
+      border-right: none;
+    }
+    p {
+      display: inline;
+    }
+    .icon {
+      font-size: 4rem;
+      display: inline-block;
+      background-image: -webkit-linear-gradient(225deg, #00cf8a, #0084d6);
+      background-image: linear-gradient(225deg, #00cf8a, #0084d6);
+      -webkit-background-clip: text;
+      color: transparent;
+      //   padding-right: 10px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    &--ty_half {
+      transform: translateY(-25%);
+    }
+
+    p {
+      display: block;
+    }
+    .row [class^="col-"] {
+      margin-bottom: 15px;
+      font-size: 15px;
+    }
+    .row [class^="col-"]:nth-child(-n + 3) {
+      border-bottom: 0;
+      padding-bottom: 0px;
+      height: auto;
+      .icon {
+        margin: 0px 0px;
+      }
+    }
+    .row [class^="col-"]:nth-child(-n + 2) {
+      border-right: 0;
+    }
+    .row [class^="col-"]:nth-child(n + 4) {
+      padding-top: 0px;
+      height: auto;
+      .icon {
+        margin: 0px 0px;
+      }
+    }
+    .row [class^="col-"]:nth-child(n + 4) {
+      border-right: 0;
+    }
+    .row [class^="col-"]:nth-child(odd) {
+      border-right: 1px solid $primary-color-base;
+      border-bottom: 1px solid $primary-color-base;
+      padding-top: 15px;
+    }
+    .row [class^="col-"]:nth-child(even) {
+      //   border-right: 1px solid red;
+      border-bottom: 1px solid $primary-color-base;
+      padding-top: 15px;
+    }
+    // .row [class^="col-"]:last-child {
+    //   border-right: none;
+    // }
+    .icon {
+      font-size: 30px;
+    }
+  }
+}

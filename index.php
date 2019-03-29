@@ -17,10 +17,14 @@ require_once("inc/footer_links.php");
     $(window).scroll(function(){
       let scroll= $(window).scrollTop();
       if (scroll>50) {
-        $('#navbar').css("background","#222E4F" );
+        $('#navbar').css({"background":"#222E4F", "opacity": ".85", "height":"70px", "font-size":"15px"} );
+        $('.logo').css({"font-size":"20px"});
+        $('.sign_up_btn').css({"font-size":"10px"});
       }
       else{
-        $('#navbar').css("background","transparent" );
+        $('#navbar').css({"background":"transparent", "font-size":"20px"} );
+        $('.logo').css({"font-size":"30px"});
+        $('.sign_up_btn').css({"font-size":"18px"});
       }
     });
   });
@@ -33,4 +37,21 @@ require_once("inc/footer_links.php");
     $('input[type="number"]').niceNumber();
 
   });</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+  <script>
+    $(document).ready(function () {
+
+      $("#testimonial-slider").owlCarousel({
+
+        items: 2,
+        itemsDesktop: [1000, 2],
+        itemsDesktopSmall: [979, 2],
+        itemsTablet: [768, 1],
+        itemsMobile: [550, 1],
+        pagination: true,
+        autoPlay: true
+      });
+
+    });
+  </script>
 
