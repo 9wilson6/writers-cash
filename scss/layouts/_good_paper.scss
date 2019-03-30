@@ -1,0 +1,30 @@
+.good_paper {
+  background: $primary-color-gray-light;
+  padding: 10rem 0;
+
+  .container {
+    text-align: center;
+    .card {
+      width: 100%;
+      &-header {
+        background: $primary-color-blue-1;
+      }
+      p {
+        font-size: 16px;
+        color: $primary-color-blue-1;
+      }
+      &-link {
+        text-decoration: none;
+        color: $primary-color-gray-light;
+        font-family: "Montserrat", serif;
+        font-weight: 700;
+        font-size: 25px;
+      }
+      @media only screen and (max-width: 767px) {
+        &-link {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

@@ -8,7 +8,8 @@
         <div class="col-sm-12 col-md-6 col-lg-3">
           <div class="mycard">
             <div class="mycard__icon">
-              <i class="fas fa-cloud-upload-alt icon"></i>
+              <!-- <i class="fas fa-cloud-upload-alt icon"></i> -->
+              <i class="lnr lnr-cloud-upload icon"></i>
             </div>
             <div class="mycard__header">Place order online</div>
             <div class="mycard__body">
@@ -21,7 +22,8 @@
         <div class="col-sm-12 col-md-6 col-lg-3">
           <div class="mycard">
             <div class="mycard__icon">
-              <i class="far fa-handshake icon"></i>
+              <!-- <i class="far fa-handshake icon"></i> -->
+              <i class="lnr lnr-rocket icon"></i>
             </div>
             <div class="mycard__header">Assign a tutor</div>
             <div class="mycard__body">
@@ -34,7 +36,8 @@
         <div class="col-sm-12 col-md-6 col-lg-3">
           <div class="mycard">
             <div class="mycard__icon">
-              <i class="far fa-comments icon"></i>
+              <!-- <i class="far fa-comments icon"></i> -->
+              <i class="lnr lnr-bubble icon"></i>
             </div>
             <div class="mycard__header">Chat with the tutor</div>
             <div class="mycard__body">
@@ -47,7 +50,8 @@
         <div class="col-sm-12 col-md-6 col-lg-3">
           <div class="mycard">
             <div class="mycard__icon">
-              <i class="fas fa-download icon"></i>
+              <!-- <i class="fas fa-download icon"></i> -->
+              <i class="lnr lnr-cloud-download icon"></i>
             </div>
             <div class="mycard__header">Download solution</div>
             <div class="mycard__body">

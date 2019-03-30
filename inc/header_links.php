@@ -14,6 +14,8 @@
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<!-- Custom Css -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+
+	<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 	<?php if(isset($link)) {?>
 		<link rel="stylesheet" href="css/settings.css">
 		<link rel="stylesheet" href="./plugins/jquery.nice-number.min.css">
