@@ -1,35 +1,35 @@
-<section class="fom">
-	
+<div class="login">
+  <div class="login__content">
+    <div class="box">
+      <a href="index" class="home">home</a>
+      <div class="heading"><h2>Reset password</h2></div>
+      <form action="#" method="POST">
+        <?php if (!empty($error)) {?>
 
-	<div class="main">
-        <section class="form-header">
-            <div class="home"><a href="student_login">Login</a></div>
-            <div style="clear: both"></div>
-            <div class="image">
-                <div class="cover"></div> <img src="./assets/user.png">
-            </div>
-            <div class="company">WriterDom</div>
-            <div class="heading">Reset Your Account Password</div>
-        </section>
-        <form action="" method="POST" id="form-box">
+        <div class="text-danger text-uppercase  text-center">
+          <strong><?php echo $error; ?></strong>
+        </div>
+        <?php }?>
+        <?php if (!empty($success)) {?>
+        <div class="text-success text-uppercase text-center">
+          <strong><?php echo $success; ?></strong>
+        </div>
+        <?php }?>
+        <div>
+          <input type="email" name="email" id="email"
+          required>
+          <label for="email">Email</label>
+          <input type="hidden" name="user_type" value="1" />
+        </div>
 
-        	<?php if (!empty($error)) { ?>
-        
-         <div class="text-danger text-uppercase  text-center"><strong><?php  echo $error; ?></strong></div>
-      <?php  } ?>
-      <?php if (!empty($success)) { ?>
-        
-         <div class="text-success text-uppercase text-center"><strong><?php  echo $success; ?></strong></div>
-      <?php  } ?>
-            <!-- //////////////////////////////////// -->
-            <div class="icon"><span class="fa fa-envelope"></span></div>
-            <div class="input">
-                <input type="email" name="email" id="email" class="inp" placeholder="E-mail" required>
-              <input type="hidden" name="user_type" value="1">
-            </div>
-            <!-- //////////////////////////////////// -->
-            <input type="submit" value="RESET NOW" name="submit" class="sub-btn">
-        </form>
-      
+
+        <!-- <div>
+          <textarea name="" required id="message"></textarea>
+          <label for="message">Message</label>
+        </div> -->
+        <input type="submit" value="RESET NOW" name="submit" />
+        <a href="student_login" class="have_account">back to login</a>
+      </form>
     </div>
-</section>
+  </div>
+</div>

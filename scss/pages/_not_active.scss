@@ -1,0 +1,71 @@
+.not_active {
+  height: 100vh;
+  width: 100%;
+  background: $primary-color-gray;
+  &__content {
+    position: absolute;
+    width: 50%;
+    min-height: 50vh;
+    padding: 30px;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: $primary-color-gray-light;
+    .headingSeconadry {
+      text-align: center;
+      margin-bottom: $margin-sm;
+    }
+    .lead {
+      font-size: 90%;
+      color: $primary-color-blue-1;
+      text-align: center;
+    }
+    .note {
+      text-align: center;
+    }
+    .form-div {
+      text-align: center;
+      padding-top: $margin-md;
+      .id_card {
+        display: none;
+      }
+      .btn {
+        width: 70%;
+        background: #009688;
+        border-color: #009688;
+        &:hover {
+          background: #26a69a;
+          cursor: pointer;
+        }
+      }
+      .input-label {
+        background: #009688;
+        color: #fff;
+        padding: 30px;
+        width: 70%;
+        &:hover {
+          background: #26a69a;
+          cursor: pointer;
+        }
+      }
+      .fa {
+        margin-right: 10px;
+      }
+    }
+  }
+  @media (max-width: 700px) {
+    &__content {
+      width: 100%;
+      .lead {
+        font-size: 70%;
+      }
+      .input-label {
+        font-size: 14px;
+      }
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}

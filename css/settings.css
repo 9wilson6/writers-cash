@@ -430,12 +430,14 @@ a:hover {
   .footer .container {
     margin-top: 0.1px;
     text-align: center; }
-    .footer .container ul li {
-      list-style: none; }
-      .footer .container ul li a {
-        text-decoration: none;
-        color: #f5f8fa;
-        font-size: 16px; }
+    .footer .container ul {
+      text-align: left; }
+      .footer .container ul li {
+        list-style: none; }
+        .footer .container ul li a {
+          text-decoration: none;
+          color: #f5f8fa;
+          font-size: 16px; }
     .footer .container p {
       color: #f5f8fa;
       font-size: 17px; }
@@ -447,13 +449,15 @@ a:hover {
       color: #222e4f;
       display: inline-block;
       margin-bottom: 10px;
-      width: 80%; }
+      width: 100%; }
+    .footer .container form {
+      width: 90%; }
     .footer .container input[type="submit"] {
       display: inline-block;
       border: 0;
       background-image: -webkit-linear-gradient(225deg, #00cf8a, #0084d6);
       background-image: linear-gradient(225deg, #00cf8a, #0084d6);
-      width: 80%;
+      width: 100%;
       padding: 4px 10px;
       color: #f5f8fa; }
     .footer .container .social-icons {
@@ -601,6 +605,88 @@ a:hover {
       @media only screen and (max-width: 767px) {
         .good_paper .container .card-link {
           font-size: 15px; } }
+
+.login {
+  background: #126d91;
+  height: 100vh;
+  font-family: sans-serif; }
+  .login__content .box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    background: #fff;
+    padding: 40px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px; }
+  .login__content .box h2 {
+    margin: 0 0 20px;
+    padding: 0;
+    color: #222e4f;
+    text-transform: uppercase; }
+  .login__content .box input {
+    padding: 10px 0;
+    margin-bottom: 20px; }
+  .login__content .box textarea {
+    height: 80px;
+    padding: 10px 0;
+    margin-bottom: 20px; }
+  .login__content .box input,
+  .login__content .box textarea {
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #999; }
+  .login__content .box input[type="submit"] {
+    cursor: pointer;
+    background: #126d91;
+    color: #ffff;
+    text-transform: uppercase;
+    border-radius: 10px; }
+  .login__content .box form div {
+    position: relative; }
+  .login__content .box form div label {
+    position: absolute;
+    top: 10px;
+    pointer-events: none;
+    left: 0;
+    transition: 0.5s;
+    color: #999; }
+  .login__content .box input:focus ~ label,
+  .login__content .box textarea:focus ~ label,
+  .login__content .box input:valid ~ label,
+  .login__content .box textarea:valid ~ label {
+    top: -12px;
+    left: 0;
+    color: #126d91;
+    font-size: 12px;
+    font-weight: bold; }
+  .login__content .box input:focus,
+  .login__content .box textarea:focus,
+  .login__content .box input:valid,
+  .login__content .box textarea:valid {
+    border-bottom: 2px solid #126d91; }
+  .login__content .home,
+  .login__content .have_account {
+    color: #1b083d;
+    align-self: center;
+    font-size: 9pt;
+    padding: 11px;
+    cursor: pointer; }
+  .login__content .home {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: dodgerblue; }
+  @media (max-width: 700px) {
+    .login__content .box {
+      width: 90%; } }
 
 .formsubmit {
   display: inline-block;
@@ -795,3 +881,58 @@ button {
 
 button:hover {
   background: #222e4f; }
+
+.not_active {
+  height: 100vh;
+  width: 100%;
+  background: #eeeeee; }
+  .not_active__content {
+    position: absolute;
+    width: 50%;
+    min-height: 50vh;
+    padding: 30px;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #f5f8fa; }
+    .not_active__content .headingSeconadry {
+      text-align: center;
+      margin-bottom: 2.5rem; }
+    .not_active__content .lead {
+      font-size: 90%;
+      color: #126d91;
+      text-align: center; }
+    .not_active__content .note {
+      text-align: center; }
+    .not_active__content .form-div {
+      text-align: center;
+      padding-top: 5rem; }
+      .not_active__content .form-div .id_card {
+        display: none; }
+      .not_active__content .form-div .btn {
+        width: 70%;
+        background: #009688;
+        border-color: #009688; }
+        .not_active__content .form-div .btn:hover {
+          background: #26a69a;
+          cursor: pointer; }
+      .not_active__content .form-div .input-label {
+        background: #009688;
+        color: #fff;
+        padding: 30px;
+        width: 70%; }
+        .not_active__content .form-div .input-label:hover {
+          background: #26a69a;
+          cursor: pointer; }
+      .not_active__content .form-div .fa {
+        margin-right: 10px; }
+  @media (max-width: 700px) {
+    .not_active__content {
+      width: 100%; }
+      .not_active__content .lead {
+        font-size: 70%; }
+      .not_active__content .input-label {
+        font-size: 14px; }
+      .not_active__content .btn {
+        width: 100%; } }

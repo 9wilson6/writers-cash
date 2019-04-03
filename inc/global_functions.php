@@ -10,7 +10,14 @@ function Register(){
 		$email=$db->escape($_POST['email']);
 		$password=$db->escape($_POST['password']);
 		$C_password=$db->escape($_POST['C_password']);
+		if(isset($_POST['about_me'])){
+$about_me = $db->escape($_POST['about_me']);
 
+		}else{
+			$about_me ="";
+
+		}
+		
 		////////////////////////CHECK FOR EMPTY FIELDS///////////////////////////////////////////////
 		if ( !empty($username) && !empty($user_type) && !empty($email) &&  !empty($password) &&  !empty($C_password)) {
 			//////////////////////////CHECK EMAIL VALIDITY///////////////////////////////////////////
@@ -28,7 +35,7 @@ function Register(){
 					 		$date=date("Y-m-d H:i:sa");
 					 			$verif_key=str_shuffle(substr(password_hash($date, PASSWORD_DEFAULT), 30,90));
 					 			
-					 			$query="INSERT INTO users(username, email, password, type, created_on,verif_key, status) VALUES('$username','$email','$password_', '$user_type','$date','$verif_key', 1)";
+					 			$query="INSERT INTO users(username, email, password, type, created_on,verif_key, status, about_me) VALUES('$username','$email','$password_', '$user_type','$date','$verif_key', 1, '$about_me')";
 					 			$results=$db->query($query);
 					 		
 					 			

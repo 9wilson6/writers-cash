@@ -1,50 +1,48 @@
-<section class="fom">
-	
+<div class="login">
+  <div class="login__content">
+    <div class="box">
+      <a href="index" class="home">home</a>
+      <div class="heading"><h2>Register</h2></div>
+      <form action="#" method="POST">
+        <?php if (!empty($error)) {?>
 
-	<div class="main">
-        <section class="form-header">
-            <div class="home"><a href="index">Home</a></div>
-            <div style="clear: both"></div>
-            <div class="image">
-                <div class="cover"></div> <img src="./assets/user.png">
-            </div>
-            <div class="company">WriterDom</div>
-            <div class="heading">Login to your account</div>
-        </section>
-        <form action="" method="POST" id="form-box">
+        <div class="text-danger text-uppercase  text-center">
+          <strong><?php echo $error; ?></strong>
+        </div>
+        <?php }?>
+        <?php if (!empty($success)) {?>
+        <div class="text-success text-uppercase text-center">
+          <strong><?php echo $success; ?></strong>
+        </div>
+        <?php }?>
+        <div>
+          <input type="email" name="email" id="email"
+          <?php if (isset($_SESSION['email'])): ?>
+          value="<?php echo $_SESSION['email'] ?>"
+          <?php endif?>
+          required>
+          <label for="email">Email</label>
+          <input type="hidden" name="user_type" value="2" />
+        </div>
 
-        	<?php if (!empty($error)) { ?>
-        
-         <div class="text-danger text-uppercase  text-center"><strong><?php  echo $error; ?></strong></div>
-      <?php  } ?>
-      <?php if (!empty($success)) { ?>
-        
-         <div class="text-success text-uppercase text-center"><strong><?php  echo $success; ?></strong></div>
-      <?php  } ?>
-            <!-- //////////////////////////////////// -->
-            <div class="icon"><span class="fa fa-envelope"></span></div>
-            <div class="input">
-                <input type="email" name="email" id="email" class="inp" placeholder="E-mail" <?php if (isset($_SESSION['email'])): ?>
-                value="<?php echo $_SESSION['email'] ?>"
-              <?php endif ?> required>
-              <input type="hidden" name="user_type" value="2">
-            </div>
-            <!-- //////////////////////////////////// -->
-            <div class="icon"><span class="fa fa-lock"></span></div>
-            <div class="input">
-                <input type="password" name="password" id="password" class="inp"  <?php if (isset($_SESSION['password'])): ?>
-                  value="<?php echo $_SESSION['password'] ?>"
-                <?php
-                  session_destroy();
-                 endif ?> placeholder="Password" required>
-                  <input type="hidden" name="user" value="tutor">
-            </div>
-            <!-- //////////////////////////////////// -->
-            <input type="submit" value="LOGIN NOW" name="submit" class="sub-btn">
-        </form>
-        <section class="form-footer">
-            <p>Don't have account? &nbsp; <a href="tutor_register">Register</a></p>
-            <div class="home"><a href="tutor_pass_reset">forgot password?</a></div>
-        </section>
+        <div>
+          <input type="password" name="password" id="password"<?php if (isset($_SESSION['password'])): ?>
+          value="<?php echo $_SESSION['password'] ?>"
+          <?php
+session_destroy();
+endif?>
+           required>
+          <input type="hidden" name="user" value="tutor" />
+          <label for="password" id="name">password</label>
+        </div>
+
+        <!-- <div>
+          <textarea name="" required id="message"></textarea>
+          <label for="message">Message</label>
+        </div> -->
+        <input type="submit" value="LOGIN NOW" name="submit" />
+        <a href="tutor_register" class="have_account">have no account?</a> <br> <a href="tutor_pass_reset" class="have_account">forgot password?</a>
+      </form>
     </div>
-</section>
+  </div>
+</div>

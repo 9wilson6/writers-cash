@@ -1,7 +1,8 @@
-<?php 
-require_once"../inc/sessios.php";
-session_gen ();
- ?>
+<?php
+require_once "../inc/sessios.php";
+session_gen();
+
+?>
 <section class="dashboard_nav">
 <!-- Navigation -->
  <!-- <button class="btn btn-outline-warning left-toggler">jjj</button> -->
@@ -16,21 +17,20 @@ session_gen ();
         <i class="fas fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
-        
+
   <ul class="navbar-nav ml-auto">
    <!--  <li class="nav-item">
       <a class="nav-link" href="#">Getting started</a>
           </li> -->
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle nav-link--excemption" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome, 
-        <?php $name= explode(" ", $_SESSION['username']);
-        echo ucfirst($name[0]);
-        if (isset($_SESSION['user_id'])) {
-          $user_id=$_SESSION['user_id'];
-        }
-        
+      <a class="nav-link dropdown-toggle nav-link--excemption" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome,
+        <?php $name = explode(" ", $_SESSION['username']);
+echo ucfirst($name[0]);
+if (isset($_SESSION['user_id'])) {
+    $user_id = $_SESSION['user_id'];
+}
 
-       ?><i class="far fa-user-circle icon"></i></a>
+?><i class="far fa-user-circle icon"></i></a>
       <div class="dropdown-menu navbar__toggle" aria-labelledby="navbarDropdown">
         <a class="dropdown-item"  href="my-profile?key=<?php echo urlencode(convert_uuencode($user_id)) ?>"><i class="fas fa-user icon-r"></i>Profile</a>
         <a class="dropdown-item "  href="change-pass?key=<?php echo urlencode(convert_uuencode($user_id)) ?>"><i class="fas fa-sliders-h icon-r"></i>Change Password</a>
@@ -39,7 +39,7 @@ session_gen ();
     </li>
   </ul>
       </div>
-    
+
   </nav>
 </section>
 <!-- <script src="../js/session_timer.js"></script> -->

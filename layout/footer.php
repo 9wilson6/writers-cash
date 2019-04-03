@@ -8,9 +8,9 @@
             <li><a href="">Terms</a></li>
             <li><a href="">Privacy Policy</a></li>
             <li><a href="">Blog</a></li>
-            <!-- <li><a href="">hello</a></li>
-            <li><a href="">hello</a></li>
-            <li><a href="">hello</a></li> -->
+            <li><a href="">Login</a></li>
+            <li><a href="">Register</a></li>
+            <li><a href="">Become a Tutor</a></li>
           </ul>
         </div>
         <div class="col-12 col-sm-5 col-md-6">
