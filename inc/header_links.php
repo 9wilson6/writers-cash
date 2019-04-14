@@ -1,9 +1,11 @@
+<?php 
+session_start(); ?>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<?php session_start(); ?>
-	<title>MyWriteDom<?php if (isset($title)) {
-		echo"|".$title;
-	}; ?></title>
-
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<!-- Bootstrap 4 link -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<!-- Fontawesome 5.5.0 link -->
@@ -26,6 +28,6 @@
 	<?php }?>
 	<!-- Custom Css -->
 
-
+	<title>Online Professional Tutoring | Lorem ipsum.</title>
 </head>
 <body>

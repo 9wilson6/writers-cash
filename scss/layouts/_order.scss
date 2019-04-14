@@ -63,5 +63,8 @@
   ////////////////////////////for small devices////////////////////
   @media only screen and (max-width: 767px) {
     margin-top: -$margin-sm;
+    .headingSecondary {
+      font-size: 20px;
+    }
   }
 }

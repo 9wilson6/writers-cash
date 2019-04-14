@@ -1,6 +1,6 @@
 <?php
+ob_start();
 require_once("../dbconfig/dbconnect.php");
-
 require_once("../inc/utilities.php");
 $date_global_=strtotime($date_global);
 $count_q="SELECT COUNT(project_id) FROM projects WHERE deadline>{$date_global_}";
@@ -20,9 +20,10 @@ $results=$db->get_results($query);
 ?>
 <?php
 require_once "../inc/header_links.php";
-require_once("./not_active.php");
+// require_once("./not_active.php");
 $page="dashboard" ;
 require_once "../components/top_nav.php";
+ob_flush();
 ?>
 <div class="display">
     <div class="display__content">

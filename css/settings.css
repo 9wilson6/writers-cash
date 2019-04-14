@@ -120,7 +120,7 @@ a:hover {
       .navbar-container .navbar .site-nav a {
         color: #ebebd3;
         display: block;
-        padding: 2em 4em 2em 1.5em;
+        padding: 1.2em 2.2em 1.2em 0.8em;
         text-transform: uppercase;
         text-decoration: none; }
         .navbar-container .navbar .site-nav a:hover, .navbar-container .navbar .site-nav a:focus {
@@ -128,7 +128,7 @@ a:hover {
           color: #fff; }
       .navbar-container .navbar .site-nav--icon {
         display: inline-block;
-        font-size: 1.5em;
+        font-size: 1em;
         margin-right: 1em;
         width: 1.1em;
         text-align: right;
@@ -230,7 +230,7 @@ a:hover {
     .header__content--text {
       width: 100%; }
       .header__content--text .headingPrimary {
-        font-size: 50px;
+        font-size: 40px;
         margin-bottom: 1.5rem; }
     .header__content--form {
       width: 100%;
@@ -266,14 +266,13 @@ a:hover {
             font-size: 100%;
             height: 100%; }
     @media only screen and (max-width: 767px) {
+      .header__content--text {
+        margin-top: -150px; }
       .header__content--form {
-        margin: 10px auto; }
+        display: none; }
       .header__content .headingPrimary {
-        font-size: 20px;
+        font-size: 30px;
         margin-bottom: 1.5rem; }
-      .header__content .form__header {
-        font-size: 15px;
-        padding: 1px; }
       .header__content .headingTertiary {
         font-size: 15px; }
       .header__content .btn1 {
@@ -329,7 +328,9 @@ a:hover {
       font-family: "Montserrat", sans-serif; }
   @media only screen and (max-width: 767px) {
     .custom_paper {
-      margin-top: -2.5rem; } }
+      margin-top: -2.5rem; }
+      .custom_paper .headingSecondary {
+        font-size: 20px; } }
 
 .testimonials {
   color: #fff;
@@ -342,8 +343,7 @@ a:hover {
   .testimonials .headingSecondary {
     color: #fff;
     margin-top: -1.5rem;
-    margin-bottom: 5rem;
-    padding-top: 2rem; }
+    margin-bottom: 5rem; }
   .testimonials__content .testmonial {
     margin: 10px 15px;
     padding: 0 0 20px 20px;
@@ -419,6 +419,12 @@ a:hover {
   .testimonials__content .owl-theme .owl-controls.clickable .owl-page:hover span {
     background-image: -webkit-linear-gradient(225deg, #00cf8a, #0084d6);
     background-image: linear-gradient(225deg, #00cf8a, #0084d6); }
+  @media only screen and (max-width: 767px) {
+    .testimonials {
+      margin-top: -30px; }
+      .testimonials .headingSecondary {
+        font-size: 20px;
+        font-weight: bolder; } }
 
 .footer {
   position: relative;
@@ -476,7 +482,9 @@ a:hover {
         .footer .container .social-icons a {
           color: #fff; }
           .footer .container .social-icons a:not(:last-child) {
-            padding-right: 5px; } }
+            padding-right: 5px; }
+      .footer .container ul {
+        text-align: center; } }
 
 .order_now {
   background: url("../assets/class-composition-creativity-207756.jpg");
@@ -484,8 +492,9 @@ a:hover {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 300px;
-  text-align: center; }
+  min-height: 360px;
+  text-align: center;
+  padding-top: 20px; }
   .order_now__heading {
     color: #000; }
   .order_now .container-fluid {
@@ -504,7 +513,7 @@ a:hover {
         color: #fff; }
   @media only screen and (max-width: 767px) {
     .order_now .headingSecondary {
-      font-size: 24px; } }
+      font-size: 20px; } }
 
 .advantage {
   width: 100vw;
@@ -553,7 +562,7 @@ a:hover {
       color: transparent; }
   @media only screen and (max-width: 767px) {
     .advantage--ty_half {
-      transform: translateY(-25%); }
+      transform: translateY(-50%); }
     .advantage p {
       display: block; }
     .advantage .row [class^="col-"] {
@@ -933,6 +942,7 @@ button:hover {
       .not_active__content .lead {
         font-size: 70%; }
       .not_active__content .input-label {
-        font-size: 14px; }
+        font-size: 14px;
+        width: 100%; }
       .not_active__content .btn {
         width: 100%; } }

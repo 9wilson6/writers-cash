@@ -17,14 +17,14 @@ require_once("inc/footer_links.php");
     $(window).scroll(function(){
       let scroll= $(window).scrollTop();
       if (scroll>50) {
-        $('#navbar').css({"background":"#222E4F", "opacity": ".85", "height":"70px", "font-size":"15px"} );
+        $('#navbar').css({"background":"#222E4F", "opacity": ".9", "height":"50px", "font-size":"15px"} );
         $('.logo').css({"font-size":"20px"});
         $('.sign_up_btn').css({"font-size":"10px"});
       }
       else{
         $('#navbar').css({"background":"transparent", "font-size":"20px"} );
         $('.logo').css({"font-size":"30px"});
-        $('.sign_up_btn').css({"font-size":"18px"});
+        $('.sign_up_btn').css({"font-size":"13px"});
       }
     });
   });

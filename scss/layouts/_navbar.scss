@@ -2,6 +2,7 @@
   width: 100%;
   position: fixed;
   z-index: 99;
+  // height: 30px;
   .navbar {
     background: transparent;
     color: #ebebd3;
@@ -60,7 +61,7 @@
       a {
         color: #ebebd3;
         display: block;
-        padding: 2em 4em 2em 1.5em;
+        padding: 1.2em 2.2em 1.2em 0.8em;
         text-transform: uppercase;
         text-decoration: none;
         &:hover,
@@ -72,7 +73,7 @@
 
       &--icon {
         display: inline-block;
-        font-size: 1.5em;
+        font-size: 1em;
         margin-right: 1em;
         width: 1.1em;
         text-align: right;
@@ -138,7 +139,11 @@
             border: 2px solid $primary-color-green;
             border-radius: 10px;
             &:hover {
-              background-image: -webkit-linear-gradient(225deg, #00cf8a, #0084d6);
+              background-image: -webkit-linear-gradient(
+                225deg,
+                #00cf8a,
+                #0084d6
+              );
               background-image: linear-gradient(225deg, #00cf8a, #0084d6);
             }
           }
