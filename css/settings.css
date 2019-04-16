@@ -891,6 +891,112 @@ button {
 button:hover {
   background: #222e4f; }
 
+.order-now {
+  margin-top: 68px;
+  min-height: 90vh;
+  position: relative; }
+  .order-now #navbar {
+    margin-top: -65px;
+    font-size: 13px; }
+    .order-now #navbar .logo {
+      font-size: 30px; }
+  .order-now__content {
+    width: 100%;
+    background: #f5f8fa; }
+    .order-now__content .container {
+      padding-top: 5rem;
+      font-size: 100% !important;
+      min-height: 140vh;
+      background: #fff;
+      font-family: "Roboto", sans-serif; }
+      .order-now__content .container input,
+      .order-now__content .container textarea {
+        height: 40px;
+        font-size: 18px;
+        outline: none;
+        box-shadow: none !important;
+        border: 2px solid #ccc !important;
+        color: gray; }
+      .order-now__content .container label {
+        color: #a6a6a6; }
+      .order-now__content .container .submit {
+        width: 60% !important;
+        display: block;
+        margin: 10px auto;
+        background: #222e4f;
+        color: white;
+        transition: background 0.3s ease-out;
+        height: 40px;
+        border-radius: 10px;
+        font-weight: bolder;
+        cursor: pointer; }
+        .order-now__content .container .submit:hover {
+          background: #126d91; }
+      .order-now__content .container .card-header {
+        background: #222e4f;
+        color: #fff;
+        font-weight: bolder; }
+      .order-now__content .container .customer-login,
+      .order-now__content .container .new-client {
+        width: 100%;
+        border: double #f5f8fa; }
+        .order-now__content .container .customer-login i,
+        .order-now__content .container .new-client i {
+          font-size: 18px; }
+        .order-now__content .container .customer-login a,
+        .order-now__content .container .new-client a {
+          color: red;
+          position: relative;
+          top: 15px;
+          font-size: 15px; }
+      .order-now__content .container .order-details {
+        margin-bottom: 5rem;
+        margin-top: 5rem; }
+        .order-now__content .container .order-details select,
+        .order-now__content .container .order-details option {
+          color: gray;
+          font-size: 18px; }
+        .order-now__content .container .order-details option {
+          font-size: 13px; }
+        .order-now__content .container .order-details .select {
+          border: 2px solid #ccc !important;
+          height: 40px; }
+          .order-now__content .container .order-details .select:before {
+            content: "";
+            background: #ccc; }
+        .order-now__content .container .order-details input[type="number"] {
+          border-radius: 0;
+          height: 30px !important;
+          width: 100% !important;
+          display: block; }
+        .order-now__content .container .order-details input[type="number"]:focus,
+        .order-now__content .container .order-details input[type="number"]:hover {
+          background: transparent; }
+        .order-now__content .container .order-details button {
+          background: #ccc;
+          border-radius: 0;
+          height: 44px !important;
+          box-shadow: none; }
+        .order-now__content .container .order-details .forms2__textarea {
+          display: block; }
+        .order-now__content .container .order-details .id_card {
+          display: none; }
+        .order-now__content .container .order-details .input-label {
+          background: #222e4f;
+          color: #fff;
+          padding: 9px;
+          font-size: 14px;
+          width: 100%;
+          transition: background 0.3s ease-out; }
+          .order-now__content .container .order-details .input-label:hover {
+            background: #126d91;
+            cursor: pointer; }
+        .order-now__content .container .order-details .fa {
+          margin-right: 10px; }
+      @media only screen and (max-width: 767px) {
+        .order-now__content .container .order-details label {
+          display: block; } }
+
 .not_active {
   height: 100vh;
   width: 100%;

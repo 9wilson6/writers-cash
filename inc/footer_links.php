@@ -1,6 +1,3 @@
-
-<!-- Jquery Link -->
-<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
 <script
 src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <!-- popper js Link -->
@@ -12,7 +9,56 @@ src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
 <?php if(isset($link)) {?>
  <script type="text/javascript" src="js/custom.js"></script>
+ <script>
+  $(document).ready(function(){
+    $('.menu-toggle').click(function () {
 
+      $('.site-nav').toggleClass('site-nav--open', 500);
+      $(this).toggleClass('open');
+
+    });
+    $(window).scroll(function(){
+      let scroll= $(window).scrollTop();
+      if (scroll>50) {
+        $('#navbar').css({"background":"#222E4F", "opacity": ".9",  "font-size":"12px", "margin-top": "-70px"} );
+        $('.logo').css({"font-size":"20px"});
+        $('.sign_up_btn').css({"font-size":"10px"});
+      }
+      else{
+        $('#navbar').css({"background":"transparent", "font-size":"13px", "margin-top": "-65px"} );
+        $('.logo').css({"font-size":"25px"});
+        $('.sign_up_btn').css({"font-size":"13px"});
+      }
+    });
+  });
+</script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+
+<script>
+  $(function () {
+
+    $('input[type="number"]').niceNumber();
+
+  });</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+  <script>
+    $(document).ready(function () {
+
+      $("#testimonial-slider").owlCarousel({
+
+        items: 2,
+        itemsDesktop: [1000, 2],
+        itemsDesktopSmall: [979, 2],
+        itemsTablet: [768, 1],
+        itemsMobile: [550, 1],
+        pagination: true,
+        autoPlay: true
+      });
+
+    });
+
+
+  </script>
 <?php }else{?>
   <script type="text/javascript" src="../js/custom.js"></script>
   <script type="text/javascript" src="../js/session_timer.js"></script>
@@ -40,7 +86,7 @@ src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
       $('[data-toggle="tooltip"]').tooltip(); 
     });
   </script>
-
+  <script type="text/javascript" src="./plugins/jquery.nice-number.min.js"></script>
   <script>
     $(document).ready(function(){
       $('#testmonial-slider').owlCarousel({
