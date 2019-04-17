@@ -940,6 +940,11 @@ button:hover {
       .order-now__content .container .new-client {
         width: 100%;
         border: double #f5f8fa; }
+        .order-now__content .container .customer-login input,
+        .order-now__content .container .customer-login textarea,
+        .order-now__content .container .new-client input,
+        .order-now__content .container .new-client textarea {
+          padding-left: 5px; }
         .order-now__content .container .customer-login i,
         .order-now__content .container .new-client i {
           font-size: 18px; }

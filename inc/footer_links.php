@@ -20,7 +20,7 @@ src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     $(window).scroll(function(){
       let scroll= $(window).scrollTop();
       if (scroll>50) {
-        $('#navbar').css({"background":"#222E4F", "opacity": ".9",  "font-size":"12px", "margin-top": "-70px"} );
+        $('#navbar').css({"background":"#222E4F", "opacity": ".9",  "font-size":"12px", "margin-top": "-75px"} );
         $('.logo').css({"font-size":"20px"});
         $('.sign_up_btn').css({"font-size":"10px"});
       }

@@ -2,7 +2,7 @@
   <div class="login__content">
     <div class="box">
       <a href="index" class="home">home</a>
-      <div class="heading"><h2>Register</h2></div>
+      <div class="heading"><h2>Login</h2></div>
       <form action="#" method="POST">
         <?php if (!empty($error)) {?>
 

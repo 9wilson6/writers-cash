@@ -4,7 +4,7 @@
 require_once "inc/global_functions.php";
 require_once("dbconfig/dbconnect.php");
 $error="";
-
+$sucess="";
 Login();
 require_once"components/student/login.php";
  ?>
