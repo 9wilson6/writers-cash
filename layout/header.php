@@ -30,12 +30,13 @@
                   >
                   <div class="col-sm-8">
                     <div class="select">
-                      <select>
-                        <option value="high-school">High School</option>
-                        <option value="collage">Collage</option>
-                        <option value="university">University</option>
-                        <option value="masters">Masters</option>
-                        <option value="phd">Ph.D</option>
+                      <select name="academic_level" id="academic_level" required >
+                      <option value="College">High School</option>
+                      <option value="College">College</option>
+                      <option value="Undergraduate">Undergraduate</option>
+                      <option value="Masters">Masters</option>
+                      <option value="Postgraduate">Postgraduate</option>
+                      <option value="Ph.D">Ph.D</option>
                       </select>
                     </div>
                   </div>
@@ -46,42 +47,32 @@
                   >
                   <div class="col-sm-8">
                     <div class="select">
-                      <select>
-					<option value="Essay (any type)" selected="">Essay (any type)</option>
-					<option value="Admission essay">Admission essay</option>
-					<option value="Annotated bibliography">Annotated bibliography</option>
-					<option value="Argumentative essay">Argumentative essay</option>
-					<option value="Article review">Article review</option>
-					<option value="Biographies">Biographies</option>
-					<option value="Book/movie review">Book/movie review</option>
-					<option value="Business plan">Business plan</option>
-					<option value="Case study">Case study</option>
-					<option value="Coursework">Coursework</option>
-					<option value="Creative writing">Creative writing</option>
-					<option value="Critical thinking">Critical thinking</option>
-					<option value="Dissertation">Dissertation</option>
-					<option value="Dissertation chapter">Dissertation chapter</option>
-					<option value="Dissertation chapter - Conclusion">Dissertation chapter - Conclusion</option>
-					<option value="Dissertation chapter - Discussion">Dissertation chapter - Discussion</option>
-					<option value="Dissertation chapter - Introduction">Dissertation chapter - Introduction</option>
-					<option value="Dissertation chapter - Methodology">Dissertation chapter - Methodology</option>
-					<option value="Dissertation chapter - Results">Dissertation chapter - Results</option>
-					<option value="Dissertation chapter - Review">Dissertation chapter - Review</option>
-					<option value="Editing">Editing</option>
-					<option value="Formatting">Formatting</option>
-					<option value="Multiple choice questions">Multiple choice questions</option>
-					<option value="Other">Other</option>
-					<option value="Paraphrasing">Paraphrasing</option>
-					<option value="Presentation or speech">Presentation or speech</option>
-					<option value="Problem solving">Problem solving</option>
-					<option value="Proofreading">Proofreading</option>
-					<option value="Research paper">Research paper</option>
-					<option value="Research proposal">Research proposal</option>
-					<option value="Term paper">Term paper</option>
-					<option value="Thesis">Thesis</option>
-					<option value="Thesis/Dissertation abstract">Thesis/Dissertation abstract</option>
-					<option value="Thesis/Dissertation chapter">Thesis/Dissertation chapter</option>
-					<option value="Thesis/Dissertation proposal">Thesis/Dissertation proposal</option>
+                      <select name="papertype"  id="papertype" required>
+                      <option value="Admission Essay">Admission Essay</option>
+                      <option value="Annotated Bibliography">Annotated Bibliography</option>
+                      <option value="Article Critique/Review">Article Critique/Review</option>
+                      <option value="Book Review">Book Review</option>
+                      <option value="Coursework">Coursework</option>
+                      <option value="Dissertation">Dissertation</option>
+                      <option value="Editing">Editing</option>
+                      <option value="Essay">Essay</option>
+                      <option value="Lab Report">Lab Report</option>
+                      <option value="Math Problem">Math Problem</option>
+                      <option value="Movie Review">Movie Review</option>
+                      <option value="Multiple Choice (MCQs)">Multiple Choice (MCQs)</option>
+                      <option value="Online Test (No Time Framed)">Online Test (No Time Framed)</option>
+                      <option value="Online Test (Time framed)">Online Test (Time framed)</option>
+                      <option value="Other (not listed)">Other (not listed)</option>
+                      <option value="Personal Statement">Personal Statement</option>
+                      <option value="PowerPoint (PPT)">PowerPoint (PPT)</option>
+                      <option value="Programming">Programming</option>
+                      <option value="Questionnaire">Questionnaire</option>
+                      <option value="Research Paper">Research Paper</option>
+                      <option value="Research Proposal">Research Proposal</option>
+                      <option value="Statistics Project">Statistics Project</option>
+                      <option value="Summary">Summary</option>
+                      <option value="Term Paper">Term Paper</option>
+                      <option value="Thesis">Thesis</option>
                       </select>
                     </div>
                   </div>
@@ -89,42 +80,34 @@
 
                 <div class="form-group row">
                   <label for="inputPassword" class="col-sm-4 col-form-label"
-                    >Deadline</label
+                    >Urgency</label
                   >
                   <div class="col-sm-8">
                     <div class="select">
-                      <select>
-					<option value="14days">14 days</option>
-					<option value="7days">7 days</option>
-					<option value="10days">10 days</option>
-					<option value="5days">5 days</option>
-					<option value="3days">3 days</option>
-					<option value="2days">2 days</option>
-					<option value="1day">1 day</option>
-					<option value="12hours">12 hours</option>
-					<option value="6hours">6 hours</option>
-					<option value="3hours">3 hours</option>
-                      </select>
+                     <select name="datetyme" required>
+                    <option value="14days">14 days</option>
+                    <option value="7days">7 days</option>
+                    <option value="10days">10 days</option>
+                    <option value="5days">5 days</option>
+                    <option value="3days">3 days</option>
+                    <option value="2days">2 days</option>
+                    <option value="1day">1 day</option>
+                    <option value="12hours">12 hours</option>
+                    <option value="6hours">6 hours</option>
+                    <option value="3hours">3 hours</option>
+                    </select>
                     </div>
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="inputPassword" class="col-sm-4 col-form-label"
-                    >Pages</label
-                  >
+                  <label for="inputPassword" class="col-sm-4 col-form-label">Pages</label>
                   <div class="col-sm-8">
-                    <input
-                      type="number"
-                      name=""
-                      id=""
-                      min="0"
-                      value="1"
-                      class="form-control"
-                    />
+                   <input type="number" required name="pages" max="1000" id="" min="1" class="form-control"/>
                   </div>
                 </div>
 			  </div>
-			  <div class="form-group row"><input type="submit" value="Continue" class="formsubmit"></div>
+			  <div class="form-group row">
+          <input type="submit" value="Continue" name="Continue" class="formsubmit"></div>
             </form>
           </div>
         </div>

@@ -35,7 +35,9 @@ if (isset($_REQUEST['login'])) {
 ><i class="lnr lnr-user"></i
 ></span>
 </div>
- <input type="text" name="username" id="username" required placeholder="Username" />
+ <input type="text" name="username" id="username" <?php if (isset($_SESSION['username'])): ?>
+   value="<?php echo $_SESSION['username'] ?>"
+ <?php endif ?> required placeholder="Username" />
 </div>
 </div>
 <div class="col-md-6 mb-3">
@@ -46,7 +48,9 @@ if (isset($_REQUEST['login'])) {
 ><i class="lnr lnr-envelope"></i
 ></span>
 </div>
- <input type="email" name="email" id="email" required placeholder="Email" />
+ <input type="email" name="email" <?php if (isset($_SESSION['email'])): ?>
+   value="<?php echo $_SESSION['email'] ?>"
+ <?php endif ?> id="email" required placeholder="Email" />
 </div>
 </div>
 </div>
@@ -97,9 +101,12 @@ if (isset($_REQUEST['login'])) {
 <div class="card-body">
 <div class="form-row">
 <div class="col-md-6 mb-3">
-<label for="validationDefault01">Type of Paper</label>
+<label for="papertype">Type of Paper</label>
 <div class="select">
 <select name="papertype"  id="papertype" required>
+  <?php if (isset($_SESSION['papertype'])): ?>
+    <option value="<?php echo($_SESSION['papertype']) ?>"> <?php echo($_SESSION['papertype']) ?></option>
+  <?php endif ?>
 <option value="Admission Essay"
 >Admission Essay</option
 >
@@ -155,6 +162,9 @@ if (isset($_REQUEST['login'])) {
 <div class="select">
  <select name="subject"  id="subject"
  required>
+ <?php if (isset($_SESSION['subject'])): ?>
+   <option value="<?php echo $_SESSION['subject'] ?>"><?php echo $_SESSION['subject'] ?></option>
+ <?php endif ?>
     <option value="Accounting">Accounting</option>
 <option value="Agricultural Studies"
 >Agricultural Studies</option
@@ -208,7 +218,9 @@ id=""
 cols="30"
 rows="10"
 required
-></textarea>
+><?php if (isset($_SESSION['title'])): ?>
+  <?php echo $_SESSION['title']; ?>
+<?php endif ?></textarea>
 </div>
 
 <div class="col-md-6 mb-3">
@@ -219,6 +231,9 @@ name="academic_level"
 id="academic_level"
 required
 >
+<?php if (isset($_SESSION['academic_level'])): ?>
+  <option value="<?php echo $_SESSION['academic_level'] ?>"><?php echo $_SESSION['academic_level']; ?></option>
+<?php endif ?>
 <option value="College">High School</option>
 <option value="College">College</option>
 <option value="Undergraduate">Undergraduate</option>
@@ -234,6 +249,9 @@ required
 <label for="validationDefault01">Style</label>
 <div class="select">
 <select name="style" id="style" required="">
+  <?php if (isset($_SESSION['style'])): ?>
+    <option value="<?php echo $_SESSION['style'] ?>"><?php echo $_SESSION['style'] ?></option>
+  <?php endif ?>
 <option value="APA">APA</option>
 <option value="Chicago">Chicago</option>
 <option value="Harvard">Harvard</option>
@@ -253,6 +271,9 @@ required
 <label for="validationDefault02">Urgency</label>
 <div class="select">
 <select name="datetyme">
+  <?php if (isset($_SESSION['datetyme'])): ?>
+    <option value="<?php echo $_SESSION['datetyme'] ?>"><?php echo $_SESSION['datetyme'] ?></option>
+  <?php endif ?>
 <option value="14days">14 days</option>
 <option value="7days">7 days</option>
 <option value="10days">10 days</option>
@@ -270,24 +291,24 @@ required
 <div class="form-row">
 <div class="col-md-6 mb-3">
 <label for="validationDefault01">Number of Pages</label>
-<input
-type="number"
-name="pages"
-max="1000"
-id=""
-min="1"
-class="form-control"
+<input type="number" name="pages" max="1000" id="" min="1" class="form-control"
+<?php if (isset($_SESSION['pages'])): ?>
+  value="<?php echo $_SESSION['pages'] ?>"
+<?php endif ?>
 />
 </div>
 <div class="col-md-6 mb-3">
-<label for="validationDefault02">Number of Sources</label>
+<label for="sources">Number of Sources</label>
 <input
 type="number"
 name="sources"
-id=""
+id="sources"
 max="1000"
 min="1"
 class="form-control"
+<?php if (isset($_SESSION['sources'])): ?>
+  value="<?php echo$_SESSION['sources'] ?>"
+<?php endif ?>
 />
 <input type="hidden" name="reg">
 </div>
@@ -303,14 +324,21 @@ cols="30"
 rows="10"
 placeholder="instructions"
 required
-></textarea>
+>
+  <?php if (isset($_SESSION['instructions'])): ?>
+    <?php echo $_SESSION['instructions']; ?>
+  <?php endif ?>
+</textarea>
 </div>
 </div>
 <div class="form-row">
 <div class="col-md-6 mb-3">
-<label for="validationDefault01">Budget</label>
+<label for="budget">Budget</label>
 <div class="select">
-<select name="budget" class="" id="" required="">
+<select name="budget" class="" id="budget" required="">
+  <?php if (isset($_SESSION['budget'])): ?>
+    <option value="<?php echo $_SESSION['budget'] ?>"><?php echo $_SESSION['budget'] ?></option>
+  <?php endif ?>
 <option value=""> Select one </option>
 <option value="$45">$45 (up to 3 pages) </option>
 <option value="$150">$150 (up to 10 pages)</option>

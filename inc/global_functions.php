@@ -12,19 +12,35 @@ $user_type=$db->escape($_POST['user_type']);
 $email=$db->escape($_POST['email']);
 $password=$db->escape($_POST['password']);
 $C_password=$db->escape($_POST['C_password']);
+if (isset($_POST['reg'])) {
+	$_SESSION['username']=$username;
+	$_SESSION['email']=$email;
+}
 ///////Order Variables////////////
 if (isset($_POST['reg'])) {
+
 			  $title=$db->escape($_POST['title']);
+			  $_SESSION['title']=$title;
 			  $subject=$db->escape($_POST['subject']);
+			   $_SESSION['subject']=$subject;
 			  $academic_level=$db->escape($_POST['academic_level']);
+			  $_SESSION['academic_level']=$academic_level;
 			  $style=$db->escape($_POST['style']);
+			  $_SESSION['style']=$style;
 			  $papertype=$db->escape($_POST['papertype']);
+			  $_SESSION['papertype']=$papertype;
 			  $datetyme= strtotime("+ {$_POST['datetyme']}");
+			  $_SESSION['datetyme']=$_POST['datetyme'];
 			  $pages=$db->escape($_POST['pages']);
+			  $_SESSION['pages']=$pages;
 			  $sources=$db->escape($_POST['sources']);
+			  $_SESSION['sources']=$sources;
 			  $instructions=$db->escape($_POST['instructions']);
+			  $_SESSION['instructions']=str_replace("\r\n", "", $_POST['instructions']);
 			  $budget=$db->escape($_POST['budget']);
+			  $_SESSION['budget']=$budget;
 			  $date_global=strtotime($date_global);
+			  // $_SESSION['date_global']
 			  // echo $datetyme;
 			 
 			}
@@ -92,6 +108,9 @@ $query="SELECT project_id FROM projects WHERE DATE_CREATED='$date_global' AND st
 $error_1="Was not Successfully Posted try again";
   }
 		$success_1= "Operation was successful ";
+		session_unset();
+		session_destroy();
+		session_start();
 	}else{$success= "Regration was successful";}
 
 
