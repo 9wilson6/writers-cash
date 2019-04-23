@@ -7,7 +7,7 @@ src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <!-- Animation on scroll cdn Link -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
-<?php if(isset($link)) {?>
+<?php if (isset($link)) {?>
  <script type="text/javascript" src="js/custom.js"></script>
  <script>
   $(document).ready(function(){
@@ -20,12 +20,12 @@ src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     $(window).scroll(function(){
       let scroll= $(window).scrollTop();
       if (scroll>50) {
-        $('#navbar').css({"background":"#222E4F", "opacity": ".9",  "font-size":"12px", "margin-top": "-75px"} );
+        $('#navbar').css({"background":"#222E4F", "opacity": ".9",  "font-size":"12px"} );
         $('.logo').css({"font-size":"20px"});
         $('.sign_up_btn').css({"font-size":"10px"});
       }
       else{
-        $('#navbar').css({"background":"transparent", "font-size":"13px", "margin-top": "-65px"} );
+        $('#navbar').css({"background":"transparent", "font-size":"13px"} );
         $('.logo').css({"font-size":"25px"});
         $('.sign_up_btn').css({"font-size":"13px"});
       }
@@ -34,12 +34,7 @@ src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 
-<script>
-  $(function () {
 
-    $('input[type="number"]').niceNumber();
-
-  });</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
   <script>
     $(document).ready(function () {
@@ -59,18 +54,25 @@ src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 
   </script>
-<?php }else{?>
+   <script type="text/javascript" src="./plugins/jquery.nice-number.min.js"></script>
+<?php } else {?>
   <script type="text/javascript" src="../js/custom.js"></script>
   <script type="text/javascript" src="../js/session_timer.js"></script>
+ <script  src="../plugins/jquery.nice-number.min.js"></script>
 
 <?php }?>
 <!-- custom timer Js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
 <!-- <script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script> -->
 <!-- Ck Editor -->
-<script src="https://cdn.ckeditor.com/4.11.1/standard/ckeditor.js"></script>
+<!-- <script src="https://cdn.ckeditor.com/4.11.1/standard/ckeditor.js"></script> -->
 <!-- Animation On Scrol Trigger  -->
+<script>
+  $(function () {
 
+    $('input[type="number"]').niceNumber();
+
+  });</script>
 <script>
   AOS.init(
 
@@ -83,10 +85,10 @@ src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   </html>
   <script>
     $(document).ready(function(){
-      $('[data-toggle="tooltip"]').tooltip(); 
+      $('[data-toggle="tooltip"]').tooltip();
     });
   </script>
-  <script type="text/javascript" src="./plugins/jquery.nice-number.min.js"></script>
+ 
   <script>
     $(document).ready(function(){
       $('#testmonial-slider').owlCarousel({

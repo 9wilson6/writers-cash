@@ -3,31 +3,31 @@ session_student();
  ?>
 <section class="dashboard_nav_left">
 	<div class="dashboard_nav_left__content">
-<ul class="list-group">
+<ul class="">
   <!-- <a href=""><li class="list-group-item"><i class="fas fa-tachometer-alt icon-r"></i>Dashboard</li></a> -->
   <a href="../student/createpost"  <?php if ($page=="create") { ?>
   	class="active"
-  <?php } ?>><li class="list-group-item"><i class="fas fa-upload icon-r"></i>Post Homework</li></a>
+  <?php } ?>><li class="list-group-item">Post Homework</li></a>
   <a href="../student/my-homework" <?php if ($page=="my-homework") { ?>
    class="active"
- <?php } ?>><li class="list-group-item"><i class="fas fa-list icon-r"></i>My Homework<span class=" float-right " id="available">0</span></li></a>
+ <?php } ?>><li class="list-group-item">Homework<span class="  " id="available">0</span></li></a>
    <a href="../student/in-progress" <?php if ($page=="progress") { ?>
    	class="active"
-  <?php } ?>><li class="list-group-item"><i class="fas fa-sync-alt icon-r"></i>In Progress<span class=" float-right" id="in_progress">0</span></li></a>
+  <?php } ?>><li class="list-group-item">Active<span class=" " id="in_progress">0</span></li></a>
   <a href="../student/delivered" <?php if ($page=="delivered") { ?>
   	class="active"
- <?php } ?>><li class="list-group-item"><i class="fas fa-check icon-r"></i>Delivered<span class=" float-right" id="delivered">0</span></li></a>
+ <?php } ?>><li class="list-group-item">Delivered<span class=" " id="delivered">0</span></li></a>
  <a href="editing" <?php if ($page=="revision") { ?>
     class="active"
-  <?php } ?>><li class="list-group-item"><i class="fas fa-redo-alt icon-r"></i></i>Under Editing <span class=" float-right" id="on_revision">0</span></li></a>
+  <?php } ?>><li class="list-group-item"></i>Revision <span class=" " id="on_revision">0</span></li></a>
    <a href="../student/completed" <?php if ($page=="completed") { ?>
    class="active"
-  <?php } ?>><li class="list-group-item"><i class="far fa-thumbs-up icon-r"></i>Closed<span class=" float-right" id="closed">0</span></li></a>
+  <?php } ?>><li class="list-group-item">Closed<span class=" " id="closed">0</span></li></a>
     <a href="../student/messages" <?php if ($page=="messages") { ?>
     	class="active"
-   <?php } ?>><li class="list-group-item"><i class="far fa-envelope-open icon-r"></i>Messages<span class=" float-right " id="messages">0</span></li></a>
+   <?php } ?>><li class="list-group-item">Messages<span class="  " id="messages">0</span></li></a>
 
-  <a href="../logout" <li class="list-group-item"><i class="fas fa-sign-out-alt icon-r"></i>Logout</li></a>
+  <a href="../logout"> <li class="list-group-item">Logout</li></a>
 </ul>
 	</div>
 </section>

@@ -1,0 +1,91 @@
+body {
+  @media only screen and (max-width: 767px) {
+    overflow: auto;
+  }
+}
+
+.dashboard_nav {
+  //   background: $primary-color-blue-1;
+  min-width: 767px;
+
+  background-image: -webkit-linear-gradient(225deg, #00cf8a, #0084d6);
+  background-image: linear-gradient(225deg, #00cf8a, #0084d6);
+
+  .navbar {
+    padding: 0 100px;
+    &-brand {
+      font-weight: 700;
+      font-family: "Black Ops One", cursive;
+      color: $primary-color-white;
+      font-size: 25px;
+    }
+    .nav-link {
+      color: $primary-color-white;
+    }
+    .dropdown-menu {
+      background: #00cf8a;
+      .dropdown-item {
+        font-size: 16px;
+        color: $primary-color-white;
+
+        .icon-r {
+          margin-right: 10px;
+          font-weight: bolder;
+        }
+        &:hover {
+          background: #0084d6;
+        }
+      }
+    }
+    @media only screen and (max-width: 767px) {
+      .dropdown-menu {
+        background: #0084d6;
+        position: absolute;
+        .dropdown-item {
+          font-size: 16px;
+
+          &:hover {
+            background: #00cf8a;
+          }
+        }
+      }
+    }
+  }
+  &_left {
+    background: darken($primary-color-green, $amount: 17);
+
+    &__content {
+      overflow-x: auto;
+      overflow-y: hidden;
+      display: block;
+      margin: 0 auto;
+      min-height: 50px;
+      background: transparent;
+      padding-bottom: 0;
+      ul {
+        min-width: 900px;
+        margin-bottom: -1px;
+        padding-bottom: 0;
+        padding-top: 30px;
+        // display: inline !important;
+        text-align: center;
+        text-decoration: none;
+
+        li {
+          font-weight: bolder;
+          position: relative;
+          top: -7px;
+          display: inline !important;
+          border: none;
+          background: transparent;
+          color: $primary-color-white;
+          font-size: 17px;
+        }
+      }
+
+      .active {
+        border-bottom: 3px solid white;
+      }
+    }
+  }
+}

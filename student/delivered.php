@@ -11,25 +11,25 @@ $results=$db->get_results($query);
 
 
 ?>
-
-
-<!-- <pre>
-    <?php #print_r($results); ?>
-</pre> -->
+<div class="page-container">
+    <?php require_once "../components/stud_leftnav.php" ?>
 <div class="display">
     <div class="display__content">
-        <?php require_once "../components/stud_leftnav.php" ?>
+        
         <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-9">
-                <h1 class="headingTertiary text-light">RESULTS</h1>
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8">
+                <h1 class="headingTertiary">RESULTS</h1>
                 <div class="card"> 
-                      <h1 class="headingSecondary text-dark">Your homework results</h1>
+                       <div class="card-header">Assignments pending your approval</div>
+                       <div class="card-body">
                 <?php if ($db->num_rows<1) { ?>
-                  <div class="card-header">Assignments pending your approval</div> 
+                
+                    <h1 class="text-center">There is nothing to show yet</h1>
+               
                <?php }else{?>
                           
             
-       <div class="card-body">
+      
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
@@ -79,11 +79,12 @@ $results=$db->get_results($query);
                <?php } ?>
                 </div>
             </div>
+            </div>
   <?php require_once("section_notes.php") ?>
-        </div>
+        
     </div>
 </div>
-
+               </div>
 <?php
 require_once"../inc/footer_links.php";
  ?>

@@ -1,0 +1,159 @@
+.page-container {
+  background: $primary-color-base;
+}
+
+.display {
+  padding: 10px 200px;
+  @media only screen and (max-width: 767px) {
+    padding: 10px 80px;
+  }
+  &__content {
+    .headingTertiary {
+      text-align: center;
+      color: $primary-color-green;
+    }
+    width: 100%;
+    font-size: 70% !important;
+    min-height: 140vh;
+    font-family: "Roboto", sans-serif;
+    input,
+    textarea {
+      height: 40px;
+      font-size: 18px;
+      outline: none;
+      // padding-left: 5px;
+      box-shadow: none !important;
+      border: 2px solid #ccc !important;
+      color: darken(#ccc, 30);
+    }
+    label {
+      color: darken(#ccc, 15);
+    }
+    .submit {
+      width: 60% !important;
+      display: block;
+      margin: 10px auto;
+      background: $primary-color-blue;
+      color: white;
+      transition: background 0.3s ease-out;
+      height: 40px;
+      border-radius: 10px;
+      font-weight: bolder;
+      cursor: pointer;
+      &:hover {
+        background: $primary-color-blue-1;
+      }
+    }
+
+    width: 100%;
+    border: double $primary-color-gray-light;
+    // padding: 15px 30px;
+    input,
+    textarea {
+      padding-left: 5px;
+    }
+
+    margin-bottom: $margin-md;
+    margin-top: $margin-md;
+    select,
+    option {
+      color: darken(#ccc, 30);
+      font-size: 18px;
+    }
+    option {
+      font-size: 13px !important;
+    }
+    .card-header {
+      background: $primary-color-blue-1;
+      color: #fff;
+      font-size: 13px !important;
+      text-transform: uppercase;
+    }
+    .select {
+      border: 2px solid #ccc !important;
+      height: 40px;
+
+      &:before {
+        content: "";
+        background: #ccc !important;
+      }
+    }
+    input[type="number"] {
+      border-radius: 0;
+      height: 30px !important;
+      width: 100% !important;
+      display: block;
+    }
+    input[type="number"]:focus,
+    input[type="number"]:hover {
+      background: transparent;
+      color: darken(#ccc, 30);
+    }
+    button {
+      background: #ccc;
+      border-radius: 0;
+      height: 44px !important;
+      box-shadow: none;
+      &:hover {
+        background: darken($color: #ccc, $amount: 4);
+      }
+    }
+    .forms2__textarea {
+      display: block;
+    }
+    .id_card {
+      display: none;
+    }
+    .input-label {
+      background: $primary-color-blue;
+      height: 35px;
+      color: #fff;
+      padding: 7px;
+      font-size: 13px;
+      width: 100%;
+      transition: background 0.3s ease-out;
+      &:hover {
+        background: $primary-color-blue;
+        cursor: pointer;
+      }
+    }
+    .btn-submit {
+      font-size: 15px;
+      width: 90% !important;
+      height: 35px !important;
+      margin-right: 7px !important;
+      background: $primary-color-blue-1;
+      cursor: pointer;
+      transition: background 0.3s ease-out;
+      &:hover {
+        background: $primary-color-blue;
+      }
+    }
+    .forms2__label {
+      width: 90%;
+      color: $primary-color-blue-1;
+      font-size: 17px;
+      margin-left: 7px;
+      cursor: pointer;
+      font-weight: bolder;
+    }
+    .btn {
+      font-size: 10px;
+      padding-top: 10px;
+    }
+    .danger {
+      background: darken($color: red, $amount: 10);
+      color: #fff;
+      border: none;
+      &:hover {
+        background: darken($color: red, $amount: 2);
+        color: #fff;
+      }
+    }
+    @media only screen and (max-width: 767px) {
+      label {
+        display: block;
+      }
+    }
+  }
+}

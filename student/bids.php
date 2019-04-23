@@ -8,7 +8,7 @@ if (isset($_POST['project_id'])) {
                   $query="SELECT * FROM bids WHERE project_id=$project_id";
                   $results=$db->get_results($query);
                  if ($db->num_rows<1) {?>
-                            <h1 class="headingSecondary">Nothing To Show Yet</h1>
+                            <h1 class="headingTertiary">Nothing To Show Yet</h1>
                             <?php }else{ ?>
                             
                                 <table class="table">

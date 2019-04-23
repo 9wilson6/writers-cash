@@ -21,9 +21,9 @@ return $db->num_rows;
 ////////////////////////////////////////////////////////////////////
 if ($_POST['target']=="in_progress") {
 	if (in_progress($_POST['user_type'], $_POST['user_id'])>0) {
-		echo "<div class='my_pill'>".in_progress($_POST['user_type'], $_POST['user_id'])."</div>";
+		echo "<span class='my_pill'>".in_progress($_POST['user_type'], $_POST['user_id'])."</span>";
 	}else{
-		echo "<div class='pill'>".in_progress($_POST['user_type'], $_POST['user_id'])."</div>";
+		echo "<span class='pill'>".in_progress($_POST['user_type'], $_POST['user_id'])."</span>";
 	}
 
 }
@@ -55,9 +55,9 @@ return $db->num_rows;
 ////////////////////////////////////////////////////////////////////
 if ($_POST['target']=="closed") {
 	if (closed($_POST['user_type'], $_POST['user_id'])>0) {
-echo "<div class='my_pill'>".closed($_POST['user_type'], $_POST['user_id'])."</div>";
+echo "<span class='my_pill'>".closed($_POST['user_type'], $_POST['user_id'])."</span>";
 	}else{
-	echo "<div class='pill'>".closed($_POST['user_type'], $_POST['user_id'])."</div>";
+	echo "<span class='pill'>".closed($_POST['user_type'], $_POST['user_id'])."</span>";
 	}
 
 }
@@ -81,9 +81,9 @@ return $db->num_rows;
 if ($_POST['target']=="on_revision") {
 
 	if (on_revision($_POST['user_type'], $_POST['user_id'])>0) {
-echo "<div class='my_pill'>".on_revision($_POST['user_type'], $_POST['user_id'])."</div>";
+echo "<span class='my_pill'>".on_revision($_POST['user_type'], $_POST['user_id'])."</span>";
 	}else{
-	echo "<div class='pill'>".on_revision($_POST['user_type'], $_POST['user_id'])."</div>";
+	echo "<span class='pill'>".on_revision($_POST['user_type'], $_POST['user_id'])."</span>";
 	}
 }
 function assigned(){
@@ -110,9 +110,9 @@ return $db->num_rows;
 if ($_POST['target']=="delivered") {
 
 	if (delivered($_POST['user_type'], $_POST['user_id'])>0) {
-echo "<div class='my_pill'>".delivered($_POST['user_type'], $_POST['user_id'])."</div>";
+echo "<span class='my_pill'>".delivered($_POST['user_type'], $_POST['user_id'])."</span>";
 	}else{
-	echo "<div class='pill'>".delivered($_POST['user_type'], $_POST['user_id'])."</div>";
+	echo "<span class='pill'>".delivered($_POST['user_type'], $_POST['user_id'])."</span>";
 	}
 }
 //////////////////////////DELIVERED//////////////////////////////////////////////
@@ -140,9 +140,9 @@ return $db->num_rows;
 if ($_POST['target']=="available") {
 
 	if (available($_POST['user_type'], $_POST['user_id'])>0) {
-echo "<div class='my_pill'>".available($_POST['user_type'], $_POST['user_id'])."</div>";
+echo "<span class='my_pill'>".available($_POST['user_type'], $_POST['user_id'])."</span>";
 	}else{
-	echo "<div class='pill'>".available($_POST['user_type'], $_POST['user_id'])."</div>";
+	echo "<span class='pill'>".available($_POST['user_type'], $_POST['user_id'])."</span>";
 	}
 }
 
@@ -173,9 +173,9 @@ return $db->num_rows;
 if ($_POST['target']=="messages") {
 
 	if (messages($_POST["user_id"], $_POST["user_type"])>0) {
-echo "<div class='my_pill'>".messages($_POST["user_id"], $_POST["user_type"])."</div>";
+echo "<span class='my_pill'>".messages($_POST["user_id"], $_POST["user_type"])."</span>";
 	}else{
-	echo "<div class='pill'>".messages($_POST["user_id"], $_POST["user_type"])."</div>";
+	echo "<span class='pill'>".messages($_POST["user_id"], $_POST["user_type"])."</span>";
 	}
 	}
 //////////////////////////MESSAGES//////////////////////////////////////////////

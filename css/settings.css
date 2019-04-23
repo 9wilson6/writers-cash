@@ -31,6 +31,7 @@ body {
   font-weight: 400;
   box-sizing: border-box;
   width: 100vw;
+  min-width: 767px;
   background: #222e4f;
   overflow-x: hidden; }
 
@@ -486,6 +487,131 @@ a:hover {
       .footer .container ul {
         text-align: center; } }
 
+.page-container {
+  background: #f1f3f9; }
+
+.display {
+  padding: 10px 200px; }
+  @media only screen and (max-width: 767px) {
+    .display {
+      padding: 10px 80px; } }
+  .display__content {
+    width: 100%;
+    font-size: 70% !important;
+    min-height: 140vh;
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    border: double #f5f8fa;
+    margin-bottom: 5rem;
+    margin-top: 5rem; }
+    .display__content .headingTertiary {
+      text-align: center;
+      color: #00dd6e; }
+    .display__content input,
+    .display__content textarea {
+      height: 40px;
+      font-size: 18px;
+      outline: none;
+      box-shadow: none !important;
+      border: 2px solid #ccc !important;
+      color: gray; }
+    .display__content label {
+      color: #a6a6a6; }
+    .display__content .submit {
+      width: 60% !important;
+      display: block;
+      margin: 10px auto;
+      background: #222e4f;
+      color: white;
+      transition: background 0.3s ease-out;
+      height: 40px;
+      border-radius: 10px;
+      font-weight: bolder;
+      cursor: pointer; }
+      .display__content .submit:hover {
+        background: #126d91; }
+    .display__content input,
+    .display__content textarea {
+      padding-left: 5px; }
+    .display__content select,
+    .display__content option {
+      color: gray;
+      font-size: 18px; }
+    .display__content option {
+      font-size: 13px !important; }
+    .display__content .card-header {
+      background: #126d91;
+      color: #fff;
+      font-size: 13px !important;
+      text-transform: uppercase; }
+    .display__content .select {
+      border: 2px solid #ccc !important;
+      height: 40px; }
+      .display__content .select:before {
+        content: "";
+        background: #ccc !important; }
+    .display__content input[type="number"] {
+      border-radius: 0;
+      height: 30px !important;
+      width: 100% !important;
+      display: block; }
+    .display__content input[type="number"]:focus,
+    .display__content input[type="number"]:hover {
+      background: transparent;
+      color: gray; }
+    .display__content button {
+      background: #ccc;
+      border-radius: 0;
+      height: 44px !important;
+      box-shadow: none; }
+      .display__content button:hover {
+        background: #c2c2c2; }
+    .display__content .forms2__textarea {
+      display: block; }
+    .display__content .id_card {
+      display: none; }
+    .display__content .input-label {
+      background: #222e4f;
+      height: 35px;
+      color: #fff;
+      padding: 7px;
+      font-size: 13px;
+      width: 100%;
+      transition: background 0.3s ease-out; }
+      .display__content .input-label:hover {
+        background: #222e4f;
+        cursor: pointer; }
+    .display__content .btn-submit {
+      font-size: 15px;
+      width: 90% !important;
+      height: 35px !important;
+      margin-right: 7px !important;
+      background: #126d91;
+      cursor: pointer;
+      transition: background 0.3s ease-out; }
+      .display__content .btn-submit:hover {
+        background: #222e4f; }
+    .display__content .forms2__label {
+      width: 90%;
+      color: #126d91;
+      font-size: 17px;
+      margin-left: 7px;
+      cursor: pointer;
+      font-weight: bolder; }
+    .display__content .btn {
+      font-size: 10px;
+      padding-top: 10px; }
+    .display__content .danger {
+      background: #cc0000;
+      color: #fff;
+      border: none; }
+      .display__content .danger:hover {
+        background: #f50000;
+        color: #fff; }
+    @media only screen and (max-width: 767px) {
+      .display__content label {
+        display: block; } }
+
 .order_now {
   background: url("../assets/class-composition-creativity-207756.jpg");
   background-attachment: fixed;
@@ -712,6 +838,70 @@ a:hover {
     background: linear-gradient(225deg, #00cf8a, #0084d6);
     color: #fff; }
 
+@media only screen and (max-width: 767px) {
+  body {
+    overflow: auto; } }
+
+.dashboard_nav {
+  min-width: 767px;
+  background-image: -webkit-linear-gradient(225deg, #00cf8a, #0084d6);
+  background-image: linear-gradient(225deg, #00cf8a, #0084d6); }
+  .dashboard_nav .navbar {
+    padding: 0 100px; }
+    .dashboard_nav .navbar-brand {
+      font-weight: 700;
+      font-family: "Black Ops One", cursive;
+      color: #fff;
+      font-size: 25px; }
+    .dashboard_nav .navbar .nav-link {
+      color: #fff; }
+    .dashboard_nav .navbar .dropdown-menu {
+      background: #00cf8a; }
+      .dashboard_nav .navbar .dropdown-menu .dropdown-item {
+        font-size: 16px;
+        color: #fff; }
+        .dashboard_nav .navbar .dropdown-menu .dropdown-item .icon-r {
+          margin-right: 10px;
+          font-weight: bolder; }
+        .dashboard_nav .navbar .dropdown-menu .dropdown-item:hover {
+          background: #0084d6; }
+    @media only screen and (max-width: 767px) {
+      .dashboard_nav .navbar .dropdown-menu {
+        background: #0084d6;
+        position: absolute; }
+        .dashboard_nav .navbar .dropdown-menu .dropdown-item {
+          font-size: 16px; }
+          .dashboard_nav .navbar .dropdown-menu .dropdown-item:hover {
+            background: #00cf8a; } }
+  .dashboard_nav_left {
+    background: #008643; }
+    .dashboard_nav_left__content {
+      overflow-x: auto;
+      overflow-y: hidden;
+      display: block;
+      margin: 0 auto;
+      min-height: 50px;
+      background: transparent;
+      padding-bottom: 0; }
+      .dashboard_nav_left__content ul {
+        min-width: 900px;
+        margin-bottom: -1px;
+        padding-bottom: 0;
+        padding-top: 30px;
+        text-align: center;
+        text-decoration: none; }
+        .dashboard_nav_left__content ul li {
+          font-weight: bolder;
+          position: relative;
+          top: -7px;
+          display: inline !important;
+          border: none;
+          background: transparent;
+          color: #fff;
+          font-size: 17px; }
+      .dashboard_nav_left__content .active {
+        border-bottom: 3px solid white; }
+
 #revision .modal-dialog {
   font-size: 4rem;
   -webkit-transform: translate(0, -50%);
@@ -896,7 +1086,7 @@ button:hover {
   min-height: 90vh;
   position: relative; }
   .order-now #navbar {
-    margin-top: -65px;
+    margin-top: -70px;
     font-size: 13px; }
     .order-now #navbar .logo {
       font-size: 30px; }
