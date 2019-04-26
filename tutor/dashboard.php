@@ -25,13 +25,15 @@ $page="dashboard" ;
 require_once "../components/top_nav.php";
 ob_flush();
 ?>
+<div class="page-container">
+ <?php require_once "../components/tutor_leftnav.php" ?>
 <div class="display">
     <div class="display__content">
-        <?php require_once "../components/tutor_leftnav.php" ?>
+       
         <!-- <h1 class="headingTertiary text-left">Available</h1> -->
         <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-9">
-                <h1 class="headingTertiary text-light">Available Projects</h1>
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8">
+                <h1 class="headingTertiary">Available Projects</h1>
                 <div class="card wide-card">
                     <div class="card-header">Available Orders</div>
                     <div class="card-body">
@@ -45,8 +47,6 @@ ob_flush();
                                             <th class="wide">Title</th>
                                             <th data-toggle="tooltip" title="Price $" data-placement="right">Price</th>
                                             <th data-toggle="tooltip" title="pages" data-placement="right">Pg</th>
-                                            <th data-toggle="tooltip" title="Slides" data-placement="right">Sl</th>
-                                            <th data-toggle="tooltip" title="Problems" data-placement="right">Pr</th>
                                             <th class="smalll">Subject</th>
                                             <th class="medium">Deadline</th>
                                         </tr>
@@ -63,8 +63,7 @@ ob_flush();
                                                 </td>
                                                 <td><?php echo $result->budget; ?></td>
                                                 <td><?php echo $result->pages; ?></td>
-                                                <td><?php echo $result->slides; ?></td>
-                                                <td><?php echo $result->problems; ?></td>
+                                                
                                                 <td class="smalll"><?php echo $result->subject; ?></td>
                                                 <td><?php $time=getDateTimeDiff($date_global, $result->deadline );
                                                 $period= explode(" ", $time); ?>
@@ -92,13 +91,18 @@ ob_flush();
                                     </div>
                                     <?php if ($result_q>10): ?>
                                         <div class="card-footer">
-                                            <select name="select" class="custom-select mb-2 ml-0 mr-sm-2 mb-sm-0" id="select">
+                                            <div class="customSelect">
+                                             <div class="select">
+
+                                            <select name="select" id="select">
                                                 <option value="20">20</option>
                                                 <option value="50">50</option>
                                                 <option value="100">100</option>
                                                 <option value="100">250</option>
                                                 <option value="100">500</option>
-                                            </select></div>
+                                            </select></div></div>
+                                           
+                                            </div>
                                         <?php endif ?>
                                     </div>
                                 </div>
@@ -107,7 +111,7 @@ ob_flush();
                             </div>
                         </div>
                     </div>
-
+</div>
 
                     <?php
                     require_once"../inc/footer_links.php";

@@ -70,40 +70,36 @@ if (isset($_POST['edit'])) {
 require_once("../dbconfig/dbconnect.php");
 global $success, $error, $date_global;
 // echo date("Y-m-d H:i:sa", strtotime($date_global));
-  $project_id=$_POST['project_id'];
   $title=$db->escape($_POST['title']);
-  $subject=$db->escape($_POST['subject']);
-  $academic_level=$db->escape($_POST['academic_level']);
-  $style=$db->escape($_POST['style']);
-  $papertype=$db->escape($_POST['papertype']);
-  $date=$_POST['date'];
-  $time=$_POST['tyme'];
-  $datetyme= strtotime("+ {$date}days +{$time}hours");
-  $pages=$db->escape($_POST['pages']);
-  $slides=$db->escape($_POST['slides']);
-  $problems=$db->escape($_POST['problems']);
-  $sources=$db->escape($_POST['sources']);
-  $instructions=$db->escape($_POST['instructions']);
-  $budget=$db->escape($_POST['budget']);
-  $student_id=$_SESSION['user_id'];
-  $date_global=strtotime($date_global);
+        $_SESSION['title']=$title;
+        $subject=$db->escape($_POST['subject']);
+         $_SESSION['subject']=$subject;
+        $academic_level=$db->escape($_POST['academic_level']);
+        $_SESSION['academic_level']=$academic_level;
+        $style=$db->escape($_POST['style']);
+        $_SESSION['style']=$style;
+        $papertype=$db->escape($_POST['papertype']);
+        $_SESSION['papertype']=$papertype;
+        $datetyme= strtotime("+ {$_POST['datetyme']}");
+        $_SESSION['datetyme']=$_POST['datetyme'];
+        $pages=$db->escape($_POST['pages']);
+        $_SESSION['pages']=$pages;
+        $sources=$db->escape($_POST['sources']);
+        $_SESSION['sources']=$sources;
+        $instructions=$db->escape($_POST['instructions']);
+        $_SESSION['instructions']=str_replace("\r\n", "", $_POST['instructions']);
+        $budget=$db->escape($_POST['budget']);
+        $_SESSION['budget']=$budget;
+        $date_global=strtotime($date_global);
+        $student_id=$_SESSION['user_id'];
+        $project_id=$_POST['project_id'];
+// die("we done here");
 
-  if ($date==0 && $time==0) {
-    $error="Invalide deadline";
-    header("location:homework_edit?id=".$project_id."&error=".$error);
-  }
-  if ($pages==0 && $slides==0 && $problems==0) {
-    $error="pages/slides/problems cannot all be zero";
-    header("location:homework_edit?id=".$project_id."&error=".$error);
-  }
-  if ($datetyme<$date_global) {
-   $datetyme= $date_global + 21600;
-  }
-
-  $query="UPDATE projects SET title='$title',subject='$subject',academic_level='$academic_level',style='$style', type_of_paper='$papertype',deadline='$datetyme',pages='$pages',slides='$slides',problems='$problems',sources='$sources',instructions='$instructions',budget='$budget',student_id='$student_id' WHERE project_id=".$project_id;
+  $query="UPDATE projects SET title='$title',subject='$subject',academic_level='$academic_level',style='$style', type_of_paper='$papertype', deadline='$datetyme',pages='$pages',sources='$sources',instructions='$instructions',budget='$budget',student_id='$student_id' WHERE project_id='$project_id'";
 
 
   if ($db->query($query)) {
+   
     /////////////////////////////////notification/////////////////////////////////////////////
     $note="Student Id: ".  $student_id." edited project id: ".$project_id." at ".date("Y-m-d H:i:sa",$date_global);
     $note2="You Edited project id: ".$project_id." at ".date("Y-m-d H:i:sa",$date_global);

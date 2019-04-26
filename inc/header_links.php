@@ -26,6 +26,7 @@ session_start(); ?>
 	<?php }else{?>
 		<link rel="stylesheet" href="../plugins/jquery.nice-number.min.css">
 		<link rel="stylesheet" href="../css/settings.css">
+		<!-- <link rel="stylesheet" href="../secondary_settings.css"> -->
 	<?php }?>
 	<!-- Custom Css -->
 

@@ -84,14 +84,19 @@ $results=$db->get_results($query);
                     </div>
                     <?php if ($db->num_rows>9): ?>
                           <div class="card-footer">
-                        <select name="select" class="custom-select mb-2 ml-0 mr-sm-2 mb-sm-0" id="select">
+                            <div class="customSelect">
+                                <div class="select">
+                                     <select name="select" class="" id="select">
                             <option value="20">10</option>
                             <option value="20">20</option>
                             <option value="50">50</option>
                             <option value="100">100</option>
                             <option value="100">250</option>
                             <option value="100">500</option>
-                        </select></div>
+                        </select>
+                                </div>
+                            </div>
+                       </div>
                          <?php endif ?>
                 </div>
             </div>

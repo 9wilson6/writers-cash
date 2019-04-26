@@ -70,6 +70,9 @@ a,
 a:hover {
   text-decoration: none; }
 
+.img-fluid {
+  height: 12px; }
+
 .navbar-container {
   width: 100%;
   position: fixed;
@@ -497,11 +500,9 @@ a:hover {
       padding: 10px 80px; } }
   .display__content {
     width: 100%;
-    font-size: 70% !important;
+    font-size: 65% !important;
     min-height: 140vh;
     font-family: "Roboto", sans-serif;
-    width: 100%;
-    border: double #f5f8fa;
     margin-bottom: 5rem;
     margin-top: 5rem; }
     .display__content .headingTertiary {
@@ -544,10 +545,12 @@ a:hover {
       color: #fff;
       font-size: 13px !important;
       text-transform: uppercase; }
-    .display__content .select {
+    .display__content .select,
+    .display__content .my_select {
       border: 2px solid #ccc !important;
       height: 40px; }
-      .display__content .select:before {
+      .display__content .select:before,
+      .display__content .my_select:before {
         content: "";
         background: #ccc !important; }
     .display__content input[type="number"] {
@@ -601,6 +604,16 @@ a:hover {
     .display__content .btn {
       font-size: 10px;
       padding-top: 10px; }
+    .display__content .btn-message {
+      text-decoration: none;
+      color: #fff;
+      background: #126d91;
+      padding: 4px;
+      text-align: center; }
+    .display__content .my_select {
+      width: 100%;
+      display: block;
+      border: none; }
     .display__content .danger {
       background: #cc0000;
       color: #fff;
@@ -608,6 +621,13 @@ a:hover {
       .display__content .danger:hover {
         background: #f50000;
         color: #fff; }
+    .display__content .move-up {
+      margin: 0 0 0 0 !important;
+      transform: translateX(20px);
+      width: 100%;
+      padding: 7px 30px !important;
+      height: 30px !important;
+      font-size: 10px !important; }
     @media only screen and (max-width: 767px) {
       .display__content label {
         display: block; } }
@@ -891,14 +911,14 @@ a:hover {
         text-align: center;
         text-decoration: none; }
         .dashboard_nav_left__content ul li {
-          font-weight: bolder;
+          font-weight: lighter;
           position: relative;
           top: -7px;
           display: inline !important;
           border: none;
           background: transparent;
           color: #fff;
-          font-size: 17px; }
+          font-size: 14px; }
       .dashboard_nav_left__content .active {
         border-bottom: 3px solid white; }
 
@@ -924,6 +944,67 @@ a:hover {
 .modal-content, .modal-header, .modal-title, .modal-body, .modal-footer,
 .modal button {
   font-size: 2rem; }
+
+.messages {
+  height: 41rem;
+  position: relative; }
+  .messages__view {
+    height: 28rem;
+    margin-bottom: 5rem;
+    overflow: auto;
+    background: #fff;
+    font-size: 16px; }
+    .messages__view .received,
+    .messages__view .sent {
+      width: 90%;
+      clear: both;
+      margin-bottom: 7px;
+      text-align: left;
+      padding: 17px;
+      font-size: 1.4rem; }
+    .messages__view .date {
+      color: #126d91;
+      font-size: 1.2rem;
+      margin-top: 7px;
+      float: right;
+      clear: both; }
+    .messages__view .received {
+      background: #e1f1d6;
+      float: right; }
+    .messages__view .sent {
+      background: #f4f4f4;
+      float: left; }
+    .messages__view .mymb {
+      min-height: 30rem; }
+  .messages__form {
+    height: 14rem;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 11rem; }
+    .messages__form textarea {
+      width: 100%;
+      height: 100%;
+      color: #000;
+      padding: 3px 7px;
+      padding-bottom: 15px;
+      border: none;
+      background: #f5f8fa;
+      font-size: 15px;
+      outline: 0; }
+    .messages__form textarea:focus {
+      outline: none;
+      border: none; }
+  .messages .send {
+    position: absolute;
+    bottom: -15px;
+    right: 0.2px; }
+    .messages .send_btn {
+      background: #126d91;
+      color: #fff;
+      height: 25px;
+      font-size: 13px; }
 
 .files {
   font-size: 1.3rem;

@@ -8,8 +8,6 @@ require_once "../inc/header_links.php";
 require_once("../dbconfig/dbconnect.php");
 $query="SELECT * FROM delivered LEFT JOIN projects ON delivered.project_id=projects.project_id WHERE delivered.student_id=".$_SESSION['user_id'];
 $results=$db->get_results($query);
-
-
 ?>
 <div class="page-container">
     <?php require_once "../components/stud_leftnav.php" ?>
@@ -78,10 +76,10 @@ $results=$db->get_results($query);
                     </div>
                <?php } ?>
                 </div>
-            </div>
-            </div>
+           
+        </div>
   <?php require_once("section_notes.php") ?>
-        
+      </div>  
     </div>
 </div>
                </div>

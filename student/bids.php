@@ -26,12 +26,12 @@ if (isset($_POST['project_id'])) {
                                             <td>
                                                 <?php echo $result->tutor_id ?>
                                             </td>
-                                            <?php $query="SELECT SUM(rating) as rating, COUNT(rec_num) as complited FROM closed WHERE tutor_id='$result->tutor_id'";
+                                            <?php $query="SELECT SUM(rating) as rating, COUNT(comment) as complited FROM closed WHERE tutor_id='$result->tutor_id'";
                                         $results=$db->get_row($query);
                                         $rate=round($results->rating/$results->complited,0);
                                          ?>
                                             <td>
-                                                <?php echo $rate ?>
+                                                <?php echo $rate."/10"  ?> &nbsp;
                                                 <?php if ($rate==0): ?>
                                                 <img class="img-fluid rating" src="../assets/not_rated.PNG" alt="">
                                                 <?php elseif($rate>0 && $rate<=4): ?>
@@ -57,7 +57,7 @@ if (isset($_POST['project_id'])) {
                     <input type="hidden" name="tutor_id" value="<?php echo $result->tutor_id; ?>">
                     <input type="hidden" name="cost" value="<?php echo $result->bid_total_amount ?>">
                     <input type="hidden" name="charged" value="<?php echo $result->bid_amount ?>">
-                    <button type="submit" name="assing" class="btn btn-success">Award</button>
+                    <button type="submit" name="assing" class="btn btn-submit btn-block move-up mr-0">Award</button>
                 </form>
                                             </td>
                                         </tr>

@@ -5,36 +5,36 @@ session_tutor(); ?>
 <!-- Left navigation bar -->
 <section class="dashboard_nav_left">
 	<div class="dashboard_nav_left__content">
-    <ul class="list-group">
+    <ul class="">
 
       <a href="dashboard"  <?php if ($page=="dashboard") { ?>
         class="active"
-        <?php } ?>><li class="list-group-item"><i class="far fa-credit-card icon-r"></i>Available <span class=" float-right" id="available">0</span></li></a>
+        <?php } ?>><li class="list-group-item">Available <span class=" " id="available">0</span></li></a>
 
         <a href="in-progress"  <?php if ($page=="progress") { ?>
          class="active"
-         <?php } ?>><li class="list-group-item"><i class="fas fa-sync-alt icon-r"></i>In Progress <span class=" float-right" id="in_progress">0</span></li></a>
+         <?php } ?>><li class="list-group-item">In Progress <span class=" " id="in_progress">0</span></li></a>
 
 
          <a href="delivered"  <?php if ($page=="delivered") { ?>
           class="active"
-          <?php } ?>><li class="list-group-item"><i class="fas fa-check icon-r"></i>Delivered <span class=" float-right" id="delivered">0</span></li></a>
+          <?php } ?>><li class="list-group-item">Delivered <span class="" id="delivered">0</span></li></a>
 
           <a href="revision" <?php if ($page=="revision") { ?>
            class="active"
-           <?php } ?>><li class="list-group-item"><i class="fas fa-redo-alt icon-r" ></i></i>On Revision <span class=" float-right" id="on_revision">0</span></li></a>
+           <?php } ?>><li class="list-group-item">On Revision <span class="" id="on_revision">0</span></li></a>
 
 
            <a href="my-projects"  <?php if ($page=="projects") { ?>
              class="active"
-             <?php } ?>><li class="list-group-item"><i class="far fa-thumbs-up icon-r"></i>Closed <span class=" float-right" id="closed">0</span></li></a>
+             <?php } ?>><li class="list-group-item">Closed <span class="" id="closed">0</span></li></a>
 
 
 
 
              <a href="messages"  <?php if ($page=="messages") { ?>
                class="active"
-               <?php } ?>><li class="list-group-item"><i class="fas fa-sign-out-alt icon-r"></i>messages <span class=" float-right" id="messages">0</span></li></a>
+               <?php } ?>><li class="list-group-item">messages <span class="" id="messages">0</span></li></a>
 
   <!-- <a href="announcements"  <?php #if ($page=="announcements") { ?>
   	class="active"
@@ -43,12 +43,12 @@ session_tutor(); ?>
 
     <a href="feedback"   <?php if ($page=="feedback") { ?>
      class="active"
-     <?php } ?>><li class="list-group-item"><i class="far fa-comments icon-r"></i>Feedback </li></a>
+     <?php } ?>><li class="list-group-item">Feedback </li></a>
 
 
      <a href="finance"   <?php if ($page=="finance") { ?>
        class="active"
-       <?php } ?>><li class="list-group-item"><i class="fas fa-credit-card icon-r"></i>Finacial overview</li></a>
+       <?php } ?>><li class="list-group-item">Finacial overview</li></a>
 
      </ul>
    </div>

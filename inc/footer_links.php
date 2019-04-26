@@ -1,5 +1,4 @@
-<script
-src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <!-- popper js Link -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <!-- Bootstrap js Link -->
@@ -107,3 +106,16 @@ src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
     });
   </script>
+    <script>
+    $(document).ready(function () {
+        $("#cert_").on("change", function (e) {
+            var files = $(this)[0].files;
+            if (files.length >= 2) {
+                $("#cert").text(files.length + " Files ready to upload");
+            } else {
+                let filename = e.target.value.split("\\").pop();
+                $("#cert").text(filename);
+            }
+        });
+    });
+</script>

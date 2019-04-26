@@ -217,12 +217,12 @@ $period= explode(" ", $time); ?>
                                                     <td>
                                                         <?php echo $result->tutor_id ?>
                                                     </td>
-                                                    <?php $query="SELECT SUM(rating) as rating, COUNT(rec_num) as complited FROM closed WHERE tutor_id='$result->tutor_id'";
+                                                    <?php $query="SELECT SUM(rating) as rating, COUNT(comment) as complited FROM closed WHERE tutor_id='$result->tutor_id'";
                                                         $results=$db->get_row($query);
                                                         $rate=round($results->rating/$results->complited,0);
                                                         ?>
                                                     <td>
-                                                        <?php echo $rate ?>
+                                                        <?php echo  $rate."/10" ?>
                                                         <?php if ($rate==0): ?>
                                                         <img class="img-fluid rating" src="../assets/not_rated.PNG"
                                                             alt="">
@@ -258,7 +258,7 @@ $period= explode(" ", $time); ?>
                                                             <input type="hidden" name="charged"
                                                                 value="<?php echo $result->bid_amount ?>">
                                                             <button type="submit" name="assing"
-                                                                class="btn btn-success">Award</button>
+                                                                class="btn btn-submit btn-block move-up mr-0">Award</button>
                                                         </form>
                                                     </td>
                                                 </tr>
@@ -304,22 +304,9 @@ require_once"../inc/footer_links.php";
         }, 30000);
         $("#assing").submit(function () {
 
-            var c = confirm("Note that in order to assigne tutor ID: <?php if (isset($result->tutor_id)) {echo $result->tutor_id;} ?> \n your homework you will need to load $<?php if (isset( $result->bid_total_amount)) {echo $result->bid_total_amount;} ?> \n to your Writedom account. \nThe funds will be held in your account until you release them.\n We will guide you through the process\n Press okay to proceed");
+            var c = confirm("Note that in order to assigne tutor ID: <?php if (isset($result->tutor_id)) {echo $result->tutor_id;} ?> \n your homework you will need to load $<?php if (isset( $result->bid_total_amount)) {echo $result->bid_total_amount;} ?> \n to your Lorem account. \nThe funds will be held in your account until you release them.\n We will guide you through the process\n Press okay to proceed");
             return c; //you can just return c because it will be true or false
         });
     });
 </script>
 
-<script>
-    $(document).ready(function () {
-        $("#cert_").on("change", function (e) {
-            var files = $(this)[0].files;
-            if (files.length >= 2) {
-                $("#cert").text(files.length + " Files ready to upload");
-            } else {
-                let filename = e.target.value.split("\\").pop();
-                $("#cert").text(filename);
-            }
-        });
-    });
-</script>

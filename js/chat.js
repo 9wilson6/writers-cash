@@ -1,6 +1,4 @@
 $(function(){
-
- 
 setInterval(function() {
         $("#messageBox").load("../chat", {
            project_id: project_id,
@@ -10,7 +8,7 @@ setInterval(function() {
     //     $('#files').stop().animate({ scrollTop: $('#files')[0].scrollHeight});
     // $('#messageBox').stop().animate({ scrollTop: $('#messageBox')[0].scrollHeight});
     
-    }, 100);
+    }, 1000);
 
  $('#messageBox').stop().animate({ scrollTop: $('#messageBox')[0].scrollHeight});
 

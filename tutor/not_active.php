@@ -61,7 +61,7 @@ if (isset($_POST['submit'])) {
         </div>
 
         <p class="lead">
-          kindly wait as the our team works on you application we will get back to as soon as we get done.... :)
+         We are processing your request.... :)
         </p>
 
 

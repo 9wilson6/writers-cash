@@ -9,12 +9,14 @@ $results=$db->get_results($query);
 <!--  <pre>
      <?php #print_r($results); ?>
  </pre> -->
+ <div class="page-container">
+      <?php require_once "../components/stud_leftnav.php" ?>
 <div class="display">
     <div class="display__content">
-        <?php require_once "../components/stud_leftnav.php" ?>
+       
         <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-9">
-                <h1 class="headingTertiary text-light">Messages</h1>
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8">
+                <h1 class="headingTertiary">Messages</h1>
 
                 <div class="card">
                     <div class="card-header">Your recent messages</div>
@@ -46,22 +48,22 @@ $results=$db->get_results($query);
                             <td><?php echo $result->date_sent; ?></td>
                             <?php if ($result->status==1): ?>
                                 <td>
-                                <a href="in-progress-details?pid=<?php echo urlencode(convert_uuencode($result->project_id)) ?>#messageBox" class="btn btn-sm btn-block btn-light">view</a>
+                                <a href="in-progress-details?pid=<?php echo urlencode(convert_uuencode($result->project_id)) ?>#messageBox" class="btn-message btn-block">view</a>
                             </td>
                             <?php elseif($result->status==2): ?>
 
                             <td>
-                                <a href="delivered-details?pid=<?php echo urlencode(convert_uuencode($result->project_id)) ?>#messageBox" class="btn btn-sm btn-block btn-light">view</a>
+                                <a href="delivered-details?pid=<?php echo urlencode(convert_uuencode($result->project_id)) ?>#messageBox" class="btn-message btn-block ">view</a>
                             </td>
                             <?php elseif($result->status==3): ?>
 
                             <td>
-                                <a href="editing-details?pid=<?php echo urlencode(convert_uuencode($result->project_id)) ?>#messageBox" class="btn btn-sm btn-block btn-light">view</a>
+                                <a href="editing-details?pid=<?php echo urlencode(convert_uuencode($result->project_id)) ?>#messageBox" class="btn-message btn-block">view</a>
                             </td>
                             <?php elseif($result->status>3): ?>
 
                             <td>
-                               <a href="complited_details?id=<?php echo urlencode(convert_uuencode($result->project_id)) ?>#messageBox" class="btn btn-sm btn-block btn-light">view</a>
+                               <a href="complited_details?id=<?php echo urlencode(convert_uuencode($result->project_id)) ?>#messageBox" class="btn-message btn-block">view</a>
                             </td>
                             <?php endif ?>
 
@@ -81,15 +83,20 @@ $results=$db->get_results($query);
 
                     </div>
                      <?php if ($db->num_rows>9): ?>
-                          <div class="card-footer">
-                        <select name="select" class="custom-select mb-2 ml-0 mr-sm-2 mb-sm-0" id="select">
+                    <div class="card-footer">
+                      <div class="customSelect">
+                           <div class="select">
+                            <select name="select" id="select">
                             <option value="20">10</option>
                             <option value="20">20</option>
                             <option value="50">50</option>
                             <option value="100">100</option>
                             <option value="100">250</option>
                             <option value="100">500</option>
-                        </select></div>
+                        </select>
+                       </div>
+                      </div>
+                    </div>
                          <?php endif ?>
                 </div>
             </div>
@@ -97,7 +104,7 @@ $results=$db->get_results($query);
         </div>
     </div>
 </div>
-
+</div>
 
 <?php
 require_once"../inc/footer_links.php";

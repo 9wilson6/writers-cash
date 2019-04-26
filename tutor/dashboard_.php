@@ -15,8 +15,6 @@ if ($db->num_rows>0) {
     </td>
     <td><?php echo $result->budget; ?></td>
     <td><?php echo $result->pages; ?></td>
-    <td><?php echo $result->slides; ?></td>
-    <td><?php echo $result->problems; ?></td>
     <td class="smalll"><?php echo $result->subject; ?></td>
     <td><?php $time=getDateTimeDiff($date_global, $result->deadline );
              $period= explode(" ", $time); ?>

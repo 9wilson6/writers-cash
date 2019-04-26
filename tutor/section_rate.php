@@ -1,6 +1,6 @@
-<div class="col-sm-12 col-md-12 col-lg-12  col-xl-3">
+<div class="col-sm-12 col-md-12 col-lg-12  col-xl-4">
   <?php require_once("./sammary_functions.php") ?>
-    <h1 class="headingTertiary text-light">My Account</h1>
+    <h1 class="headingTertiary">My Account</h1>
     <div class="card">
         <div class="card-header">My stats</div>
         <div class="card-body">
