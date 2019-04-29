@@ -191,13 +191,13 @@
                                     <div class="card-body action_card">
                                         <div class="row">
                                             <div class="col-sm-12 col-md-6 col-lg-6 mb-3">
-                                                <a class="btn  btn-success btn-block text-uppercase " href="#satisfied"
+                                                <a class="btn  btn-success btn-block text-uppercase " style="padding-top: 17px;" href="#satisfied"
                                                     data-toggle="modal" id="Mlauncher">Satisfied</a>
 
                                             </div>
 
                                             <div class="col-sm-12 col-md-6 col-lg-6 mb-3">
-                                                <a class="btn  btn-danger btn-block text-uppercase " href="#revision"
+                                                <a class="btn  btn-danger btn-block text-uppercase " style="border: 0; padding-top: 17px;" href="#revision"
                                                     data-toggle="modal" id="Mlauncher">Request Adjustments</a>
                                                 <!--                                             <div class="container">
     <div class="row">
@@ -221,19 +221,14 @@
                                                         </div>
                                                         <div class="modal-body">
                                                             <p>
-                                                                <form action="delivered-details-revision" method="post"
+                                                                <form action="delivered-details-revision" class="customSelect" method="post"
                                                                     id="revision">
                                                                     <textarea name="instructions" id="instructions"
                                                                         class="form-control forms2__textarea"
                                                                         placeholder="instructions" required></textarea>
-                                                                    <div class="form-row">
+                                                                    <div class="form-row mt-5">
                                                                         <div class="col">
-                                                                            <label for="datetime"
-                                                                                class="forms2__label">days (<small>to
-                                                                                    deadline</small>)</label>
-                                                                            <input type="number" name="date"
-                                                                                class="form-control forms2__select"
-                                                                                min="0" max="12" id="datetyme" required>
+                                                                         
                                                                             <input type="hidden" name="project_id"
                                                                                 value="<?php echo $results->project_id ?>">
                                                                             <input type="hidden" name="student_id"
@@ -242,29 +237,33 @@
                                                                             <input type="hidden" name="tutor_id"
                                                                                 value="<?php echo $results->tutor_id ?>">
 
-                                                                        </div>
-
-                                                                        <div class="col">
-                                                                            <label for="datetime"
-                                                                                class="forms2__label">hours (<small>to
-                                                                                    deadline</small>)</label>
-                                                                            <input type="number" name="tyme"
-                                                                                id="datetyme"
-                                                                                class="form-control forms2__select"
-                                                                                max="24" min="0" required>
+                                                                         <div class="select">
+                                                                        <select name="datetyme">
+                                                                          <option value="14days">14 days</option>
+                                                                          <option value="7days">7 days</option>
+                                                                          <option value="10days">10 days</option>
+                                                                          <option value="5days">5 days</option>
+                                                                          <option value="3days">3 days</option>
+                                                                          <option value="2days">2 days</option>
+                                                                          <option value="1day">1 day</option>
+                                                                          <option value="12hours">12 hours</option>
+                                                                          <option value="6hours">6 hours</option>
+                                                                          <option value="3hours">3 hours</option>
+                                                                        </select>
+                                                                      </div>
 
                                                                         </div>
                                                                     </div>
                                                                     <button type="submit" id="submit"
-                                                                        class="btn btn-primary btn-block mt-5"
+                                                                        class="btn btn-submit btn-block  mr-0 mt-5"
                                                                         name="submit">Submit Instruction</button>
                                                                 </form>
                                                             </p>
                                                         </div>
                                                         <div class="modal-footer">
 
-                                                            <button type="button" class="btn btn-secondary"
-                                                                data-dismiss="modal">Close</button>
+                                                           <!--  <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button> -->
                                                         </div>
                                                     </div>
                                                 </div>
@@ -275,8 +274,8 @@
                                                 <div class="modal-dialog" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <h5 class="modal-title ml-lg-5">LET'S KNOW HOW YOU FEEL
-                                                                ABOUT THIS TUTOR</h5>
+                                                            <h6 class="modal-title ml-lg-5">LET'S KNOW HOW YOU FEEL
+                                                                ABOUT THIS TUTOR</h6>
                                                             <button type="button" class="close" data-dismiss="modal"
                                                                 aria-label="Close">
                                                                 <span aria-hidden="true">×</span>
@@ -288,13 +287,13 @@
 
                                                                     <div class="form-row">
 
-
-                                                                        <div class="col-4">
-
+                                                                         <div class="col-12 col-md-2"></div>
+                                                                        <div class="col-12 col-md-10">
+                                                                            <label for="">Rate out of 10</label> <br>
                                                                             <input type="number" name="rating"
-                                                                                class="form-control forms2__select"
+                                                                                class="form-control"
                                                                                 max="10" min="0" value="10"
-                                                                                placeholder="rate out of 10" required>
+                                                                                 required>
                                                                             <input type="hidden" name="project_id"
                                                                                 value="<?php echo $results->project_id ?>">
                                                                             <input type="hidden" name="student_id"
@@ -305,23 +304,32 @@
                                                                                 value="<?php echo $results->charges?>">
 
                                                                         </div>
-                                                                        <div class="col-8">
+                                                                        <div class="col-12 col-md-2"></div>
+                                                                        <div class="col-12 col-md-8">
+                                                                            <label for="instructions">leave a comment.....:)</label>
                                                                             <textarea name="comment"
-                                                                                class="form-control"
-                                                                                style="font-size: 18px; height: 35px;"
-                                                                                placeholder="leave a comment.....:)"></textarea>
+                                                                               id="instructions" class="form-control"
+                                                                               rows="10" 
+                                                                               style="height: 130px" 
+                                                                                placeholder=""></textarea>
                                                                         </div>
+                                                                        <div class="col-4 col-md-4"></div>
                                                                     </div>
-                                                                    <button type="submit" id="rate"
-                                                                        class="btn btn-primary btn-block mt-5"
-                                                                        name="rate">OK</button>
+                                                                     <div class="form-row mt-5">
+                                                                         <!-- <div class="col-sm-6 col-md-6 col-lg-6"><button type="button" class="btn btn-submit btn-block move-up mr-0"
+                                                                data-dismiss="modal">Close</button></div> -->
+                                                                         <div class="col-12 col-md-2"></div>
+                                                                        <div class="col-12 col-md-8"> <button type="submit" id="rate"
+                                                                        class="btn btn-submit btn-block move-up mr-0"
+                                                                        name="rate">OK</button></div>
+                                                                     </div>
+                                                                   
                                                                 </form>
                                                             </p>
                                                         </div>
                                                         <div class="modal-footer">
 
-                                                            <button type="button" class="btn btn-secondary"
-                                                                data-dismiss="modal">Close</button>
+                                                            
                                                         </div>
                                                     </div>
                                                 </div>
@@ -353,8 +361,9 @@
 
     require_once"../inc/footer_links.php";
     ?>
+     <script src="../plugins/ckeditor.js"></script>
+  <script>
+    CKEDITOR.replace("instructions");
+  </script>
 <script src="../js/chat.js"></script>
 <script src="../js/files.js"></script>
-<script>
-    CKEDITOR.replace('instructions');
-</script>

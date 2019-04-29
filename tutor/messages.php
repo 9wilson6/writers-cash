@@ -7,12 +7,13 @@ require_once("../dbconfig/dbconnect.php");
 <?php $query="SELECT chats.user_type, chats.message, chats.date_sent, chats.project_id, chats.student_id, chats.tutor_id,projects.status FROM chats LEFT JOIN projects on chats.project_id=projects.project_id where chats.user_type=1 ORDER BY date_sent DESC LIMIT 10";
 $results=$db->get_results($query);
  ?>
+ <div class="page-container">
+      <?php require_once "../components/tutor_leftnav.php" ?>
 <div class="display">
     <div class="display__content">
-         <?php require_once "../components/tutor_leftnav.php" ?>
         <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-9">
-                <h1 class="headingTertiary text-light">Messages</h1>
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8">
+                <h1 class="headingTertiary">Messages</h1>
 
                 <div class="card">
                     <div class="card-header">Your recent messages</div>
@@ -25,12 +26,12 @@ $results=$db->get_results($query);
                                 <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th class="smalll">Order id</th>
-                                    <th class="smalll">From(student id)</th>
-                                    <th class="medium">Message</th>
+                                    <th class="">Order id</th>
+                                    <th class="">From(student id)</th>
+                                    <th class="">Message</th>
 
-                                    <th class="smalll">Date</th>
-                                    <th class="wide">Action</th>
+                                    <th class="">Date</th>
+                                    <th class="">Action</th>
                                 </tr>
                             </thead> <tbody>
                                 <div id="messages">
@@ -42,27 +43,27 @@ $results=$db->get_results($query);
                             <td>
 
                               <?php $project_id=$result->project_id; ?>
-                                <p style="max-height: 30px; overflow: auto;"><?php echo $result->message; ?></p>
+                                <p style="max-height: 100px; overflow: auto; width:400px;"><?php echo $result->message; ?></p>
                             </td>
                             <td><?php echo $result->date_sent; ?></td>
                             <?php if ($result->status==1): ?>
                                 <td>
-                                <a href="in-progress-details?pid=<?php echo urlencode(convert_uuencode($result->project_id)) ?>#messageBox" class="btn btn-sm btn-block btn-light">view</a>
+                                <a href="in-progress-details?pid=<?php echo urlencode(convert_uuencode($result->project_id)) ?>#messageBox" class="btn-message btn-block">view</a>
                             </td>
                             <?php elseif($result->status==2): ?>
 
                             <td>
-                                <a href="delivered-details?pid=<?php echo urlencode(convert_uuencode($result->project_id)) ?>#messageBox" class="btn btn-sm btn-block btn-light">view</a>
+                                <a href="delivered-details?pid=<?php echo urlencode(convert_uuencode($result->project_id)) ?>#messageBox" class="btn-message btn-block">view</a>
                             </td>
                             <?php elseif($result->status==3): ?>
 
                             <td>
-                                <a href="revision-details?pid=<?php echo urlencode(convert_uuencode($result->project_id)) ?>#messageBox" class="btn btn-sm btn-block btn-light">view</a>
+                                <a href="revision-details?pid=<?php echo urlencode(convert_uuencode($result->project_id)) ?>#messageBox" class="btn-message btn-block">view</a>
                             </td>
                             <?php elseif($result->status>3): ?>
 
                             <td>
-                               <a href="my-projects-details?pid=<?php echo urlencode(convert_uuencode($result->project_id)) ?>#messageBox" class="btn btn-sm btn-block btn-light">view</a>
+                               <a href="my-projects-details?pid=<?php echo urlencode(convert_uuencode($result->project_id)) ?>#messageBox" class="btn-message btn-block">view</a>
                             </td>
                             <?php endif ?>
 
@@ -104,7 +105,7 @@ $results=$db->get_results($query);
         </div>
     </div>
 </div>
-
+</div>
 
 <?php
 require_once"../inc/footer_links.php";

@@ -5,7 +5,7 @@ require_once "../components/top_nav.php";
 require_once("../dbconfig/dbconnect.php");
 require_once("../inc/utilities.php");
 $user_id=$_SESSION['user_id'];
-$query="SELECT * FROM closed LEFT JOIN projects ON closed.project_id=projects.project_id  WHERE closed.student_id='$user_id'";
+$query="SELECT * FROM closed LEFT JOIN projects ON closed.project_id=projects.project_id  WHERE closed.student_id='$user_id' ORDER by closed.project_id desc";
 $results=$db->get_results($query);
 ?>
 <div class="page-container">
