@@ -154,7 +154,7 @@ background: #F5F7FB;
 <div class="open-button" onclick="openForm()">Contact support <span class="unread">0</span></div>
 
 <div class="chat-popup" id="myForm">
-<form action="" method="POST" class="form-container" >
+<form action="" method="POST" id="form" class="form-container" >
 	
 	<label for="msg"><b>Messages</b></label> <span class="cancel" onclick="closeForm()">X</span>
 	<div id="showmessage"></div>
@@ -185,7 +185,7 @@ document.getElementById("myForm").style.display = "none";
 
 $(document).ready(function(){
 
-$("form").submit(function(e){
+$("#form").submit(function(e){
 	e.preventDefault();
 
 	let message=$("#message").val();

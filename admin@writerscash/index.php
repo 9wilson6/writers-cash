@@ -8,19 +8,20 @@ require_once("./inc/leftnav.php");
 require_once("../dbconfig/dbconnect.php");
 $result=$db->get_var("SELECT payment_date FROM others");
  ?>
+ <div class="page-container">
 <div class="display">
   <div class="display__content">
     <?php require_once "inc/leftnav.php" ?>
-    <h1 class="headingTertiary text-light text-center text-uppercase">Dashboard </h1>
+    <h1 class="headingTertiary text-center text-uppercase">Dashboard </h1>
     <div class="row">
-      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-7">
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8">
 
         <div class="card">
           <div class="card-header text-uppercase">account activities summary</div>
           <!--card header-->
           <div class="card-body">
-            <marquee class="bg-dark text-light">Next funds disbursement date:
-              <?php echo date('Y-m-d H:i:s', $result); ?> (. ❛ ᴗ ❛.)</marquee>
+            <!-- <marquee class="bg-dark text-light">Next funds disbursement date:
+              <?php #echo date('Y-m-d H:i:s', $result); ?> (. ❛ ᴗ ❛.)</marquee> -->
             <div class="dashboard__content mb-5">
               <div class="row">
 
@@ -91,7 +92,7 @@ $result=$db->get_var("SELECT payment_date FROM others");
       </div>
       <!--col 1-->
 
-      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-5">
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4">
         <div class="card">
           <div class="card-header text-uppercase">Notifications</div>
           <!--card header-->
@@ -107,6 +108,7 @@ $result=$db->get_var("SELECT payment_date FROM others");
 
     </div>
   </div>
+</div>
 </div>
 <?php require_once("../inc/footer_links.php");
  ?>

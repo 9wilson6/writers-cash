@@ -40,3 +40,23 @@ a:hover {
 .img-fluid {
   height: 12px;
 }
+.my_pill,
+.pill {
+  color: $primary-color-white;
+  display: inline;
+  position: absolute;
+  top: 3px;
+  right: 13px;
+  height: 30px;
+  // width: 40px;
+  padding: 7px 10px;
+
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.my_pill {
+  background: $primary-color-blue;
+}
+.pill {
+  background: $primary-color-blue-1;
+}

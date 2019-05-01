@@ -595,6 +595,7 @@ foreach ($files as  $file) {
 
 ////////////////////Show Files Without download////////
 function deleteFiles($student_id, $project_id){
+
 $dir="../FILES/{$student_id}/{$project_id}/";
 $dir_="FILES/{$student_id}/{$project_id}/";
 
@@ -622,8 +623,10 @@ rmdir("../FILES/{$student_id}/{$project_id}");
 }
 
 }
-// Directory
 $directory = "../FILES/{$student_id}/";
+if(file_exists($directory)){
+// Directory
+
 
 // Returns array of files
 $files = scandir($directory);
@@ -633,6 +636,8 @@ $num_files = count($files)-2;
 if ($num_files==0) {
 rmdir("../FILES/{$student_id}");
 }
+}
+
 }
 
 ?>

@@ -73,6 +73,24 @@ a:hover {
 .img-fluid {
   height: 12px; }
 
+.my_pill,
+.pill {
+  color: #fff;
+  display: inline;
+  position: absolute;
+  top: 3px;
+  right: 13px;
+  height: 30px;
+  padding: 7px 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px; }
+
+.my_pill {
+  background: #222e4f; }
+
+.pill {
+  background: #126d91; }
+
 .navbar-container {
   width: 100%;
   position: fixed;

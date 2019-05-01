@@ -39,7 +39,7 @@ $db->query($querys);
 ?>
 <script>
     alert("Assignment Results Uploaded Successfully");
-// window.location.assign("delivered");
+window.location.assign("delivered");
 </script>
 <?php
 }

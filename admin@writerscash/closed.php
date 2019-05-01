@@ -10,12 +10,14 @@ $query="SELECT * FROM closed LEFT JOIN projects ON closed.project_id=projects.pr
 $results=$db->get_results($query);
 
  ?>
+ <div class="page-container">
+    <?php require_once "inc/leftnav.php" ?>
  <div class="display">
     <div class="display__content">
-        <?php require_once "inc/leftnav.php" ?>
+        
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-11">
-                <h1 class="headingTertiary text-light text-uppercase">Closed Orders</h1>
+                <h1 class="headingTertiary text-uppercase">Closed Orders</h1>
 
                 <div class="card">
                    	<div class="card-header text-uppercase">Closed Orders</div>
@@ -30,8 +32,6 @@ $results=$db->get_results($query);
                                     <th class="wide">Title</th>
                                     <th data-toggle="tooltip" title="Price $" data-placement="right">Price</th>
                                     <th data-toggle="tooltip" title="pages" data-placement="right">Pg</th>
-                                    <th data-toggle="tooltip" title="Slides" data-placement="right">Sl</th>
-                                    <th data-toggle="tooltip" title="Problems" data-placement="right">Pr</th>
                                     <th class="smalll">Subject</th>
                                     <th class="medium">Date Closed</th>
                                 </tr>
@@ -48,8 +48,6 @@ $results=$db->get_results($query);
                                     </td>
                                     <td><?php echo $result->budget; ?></td>
                                     <td><?php echo $result->pages; ?></td>
-                                    <td><?php echo $result->slides; ?></td>
-                                    <td><?php echo $result->problems; ?></td>
                                     <td class="smalll"><?php echo $result->subject; ?></td>
                                     <td><?php echo $result->date_closed; ?></td>
 
@@ -67,5 +65,6 @@ $results=$db->get_results($query);
             </div>
         </div>
     </div>
+</div>
 </div>
 <?php require_once("../inc/footer_links.php") ?>
