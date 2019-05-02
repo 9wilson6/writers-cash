@@ -130,6 +130,22 @@ if ($_POST['type']=="suspended") {
 }
 
 
+function messages(){
+	global $db;
+	$query="SELECT * FROM support WHERE status=0 AND sender!=3";
+	$results=$db->get_results($query);
+	return $db->num_rows;
+}
+if ($_POST['type']=="messages") {
+
+	if (messages()>0) {
+		echo "<div class='my_pill'>". messages()."</div>";
+	}else{
+		echo "<div class='pill'>". messages()."</div>";
+	}
+	
+}
+
 function applications(){
 	global $db;
 	$query="SELECT * FROM users WHERE type=2 and verified=0";

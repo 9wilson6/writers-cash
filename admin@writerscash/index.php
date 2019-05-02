@@ -64,6 +64,9 @@ $result=$db->get_var("SELECT payment_date FROM others");
                     <a href="suspended" class="dashboard__content--items">
                       <li class="list-group-item">Suspended <span id="suspended"></span></li>
                     </a>
+                     <a href="messages" class="dashboard__content--items">
+                      <li class="list-group-item">Messages <span id="messages"></span></li>
+                    </a>
                     <!-- <a href="closed"  class="dashboard__content--items"> <li class="list-group-item">Closed <span id="closed"></span></li> </a>
  -->
                   </ul>
@@ -158,6 +161,10 @@ $result=$db->get_var("SELECT payment_date FROM others");
 
       $("#balance").load('dashboard_counters', {
         type: 'balance',
+        submit: 'submit'
+      });
+        $("#messages").load('dashboard_counters', {
+        type: 'messages',
         submit: 'submit'
       });
       $("#cbody").load("notifications.php", { limit: 10 });

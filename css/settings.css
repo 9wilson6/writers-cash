@@ -1346,3 +1346,122 @@ button:hover {
         width: 100%; }
       .not_active__content .btn {
         width: 100%; } }
+
+.page-container {
+  position: relative; }
+
+.message_panel {
+  border: 2px solid green;
+  -webkit-box-shadow: 0px 0px 11px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 11px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 11px 5px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .message_panel_left {
+    border-bottom-left-radius: 7px;
+    border-top-left-radius: 7px;
+    background: #d8d8d8;
+    height: 70vh;
+    width: 300px;
+    padding-left: 5px;
+    padding-right: 5px; }
+    .message_panel_left .highlight {
+      height: 65vh;
+      overflow-y: auto; }
+    .message_panel_left .older {
+      text-align: center;
+      background: #d8d8d8;
+      border-bottom-left-radius: 10px; }
+      .message_panel_left .older .list-group-item {
+        height: 5vh;
+        background: #126d91;
+        text-decoration: none;
+        color: white;
+        width: 100%;
+        border-bottom-left-radius: 7px;
+        font-family: "Roboto", sans-serif;
+        font-weight: bolder;
+        padding-top: 10px; }
+        .message_panel_left .older .list-group-item:hover {
+          text-decoration: none;
+          color: white; }
+    .message_panel_left:first-child {
+      margin-top: 2px; }
+    .message_panel_left .chat_btn {
+      -webkit-box-shadow: 0px 1px 13px -3px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 1px 13px -3px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 1px 13px -3px rgba(0, 0, 0, 0.75);
+      color: #126d91;
+      font-size: 16px;
+      display: block;
+      width: 100% !important;
+      text-align: left;
+      background: #fff;
+      margin-bottom: 7px;
+      transition: all 0.3s ease-out; }
+      .message_panel_left .chat_btn:active {
+        outline: none; }
+      .message_panel_left .chat_btn:hover {
+        background: #e6e6e6; }
+  .message_panel_right {
+    position: relative;
+    background: url("../assets/noise_d.png");
+    width: 600px;
+    height: 70vh; }
+    .message_panel_right .showmessage {
+      height: 55vh;
+      overflow-y: auto;
+      padding: 15px; }
+    .message_panel_right .chat {
+      background: #fff;
+      width: 100%;
+      height: 15vh;
+      position: absolute;
+      left: 0;
+      bottom: 0; }
+      .message_panel_right .chat form {
+        position: relative; }
+        .message_panel_right .chat form textarea {
+          width: 100%;
+          height: 122px;
+          padding-bottom: 30px; }
+        .message_panel_right .chat form .send_btn {
+          position: absolute;
+          bottom: 3px;
+          right: 0px;
+          height: 35px;
+          padding: 2px 15px; }
+  .message_panel .sent,
+  .message_panel .received {
+    width: 90%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px; }
+  .message_panel .sent {
+    float: right;
+    clear: both;
+    background: #f6f6f6;
+    border: 1px solid #bfbfbf; }
+  .message_panel .received {
+    float: left;
+    clear: both;
+    background: #e6fdea;
+    border: 1px solid #a1e6a7; }
+  .message_panel .datetym {
+    display: block;
+    color: #18376e;
+    float: right;
+    font-size: 10px;
+    font-style: italic;
+    font-weight: lighter; }
+  @media only screen and (max-width: 916px) {
+    .message_panel_right {
+      width: 500px; }
+    .message_panel_left {
+      width: 250px; } }

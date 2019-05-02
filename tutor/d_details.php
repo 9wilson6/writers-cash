@@ -101,6 +101,7 @@ This project Is no longer Available
 </h1>
 </div>
 </div>
+</div>
 <?php  }else{ ?>
 <table class="table table-sm table-responsive{-sm|-md|-lg|-xl}">
 <thead class="table-light">

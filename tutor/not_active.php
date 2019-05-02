@@ -6,7 +6,7 @@ $user_id=$_SESSION['user_id'];
 $query="SELECT files FROM users WHERE user_id='$user_id'";
 $error=null;
 $success=null;
-$results=$db->get_var($query);
+$resultx=$db->get_var($query);
 if (isset($_POST['submit'])) {
   $name =basename($_FILES['id_card']['name']);
   $tmp_name=$_FILES['id_card']['tmp_name'];
@@ -56,7 +56,7 @@ if (isset($_POST['submit'])) {
         <?php endif ?>
 
 
-        <?php if ($results==1): ?>
+        <?php if ($resultx==1): ?>
 
         </div>
 
@@ -65,7 +65,7 @@ if (isset($_POST['submit'])) {
         </p>
 
 
-        <?php elseif($results==0): ?>
+        <?php elseif($resultx==0): ?>
          <p class="lead">
           kindly upload the following documents in order to continue with the
           registration process.

@@ -7,16 +7,17 @@ $count_q="SELECT COUNT(project_id) FROM projects WHERE deadline>{$date_global_}"
 $result_q=$db->get_var($count_q);
 if ($result_q>20) {
 
-    $query="SELECT * FROM projects WHERE deadline>{$date_global_} AND status=0 ORDER BY project_id desc LIMIT 20 ";
+    $queryd="SELECT * FROM projects WHERE deadline>{$date_global_} AND status=0 ORDER BY project_id desc LIMIT 20 ";
 }else{?>
     <!-- <meta http-equiv="refresh" content="30"> -->
 
     <?php
-    $query="SELECT * FROM projects WHERE deadline>{$date_global_} AND status=0 ORDER BY project_id desc";
+    $queryd="SELECT * FROM projects WHERE deadline>{$date_global_} AND status=0 ORDER BY project_id desc";
 
 }
 
-$results=$db->get_results($query);
+
+
 ?>
 <?php
 require_once "../inc/header_links.php";
@@ -24,6 +25,8 @@ require_once "../inc/header_links.php";
 $page="dashboard" ;
 require_once "../components/top_nav.php";
 ob_flush();
+
+
 ?>
 <div class="page-container">
  <?php require_once "../components/tutor_leftnav.php" ?>
@@ -37,9 +40,11 @@ ob_flush();
                 <div class="card wide-card">
                     <div class="card-header">Available Orders</div>
                     <div class="card-body">
-                        <?php if ($db->num_rows<1): ?>
+
+<?php $resultsx=$db->get_results($queryd); ?>
+                        <?php if ($db->num_rows==0){ ?>
                             <h1 class="classHeadingSecondary">There is Nothing To show Yet</h1>
-                            <?php elseif($db->num_rows>0): ?>
+                            <?php }elseif($db->num_rows>0){ ?>
                                 <table class="table table-bordered">
                                     <thead>
                                         <tr>
@@ -53,7 +58,7 @@ ob_flush();
                                     </thead>
 
                                     <tbody id="display">
-                                     <?php foreach ($results as $result): ?>
+                                     <?php foreach ($resultsx as $result): ?>
                                         <tr>
                                             <td class="smalll"><a
                                                 href="d_details?id=<?php echo urlencode(convert_uuencode($result->project_id)); ?>"><?php echo $result->project_id; ?><i
@@ -87,7 +92,7 @@ ob_flush();
                                                 </tbody>
 
                                             </table>
-                                        <?php endif ?>
+                                        <?php } ?>
                                     </div>
                                     <?php if ($result_q>10): ?>
                                         <div class="card-footer">
@@ -104,15 +109,15 @@ ob_flush();
                                            
                                             </div>
                                         <?php endif ?>
+
                                     </div>
                                 </div>
                                 <?php require_once("./section_rate.php"); ?>
 
                             </div>
                         </div>
-                    </div>
+                  </div>
 </div>
-
                     <?php
                     require_once"../inc/footer_links.php";
                     ?>

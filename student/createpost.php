@@ -271,3 +271,4 @@ create_post();
       });
     });
   </script>
+  <?php require_once("../support.php") ?>

@@ -3,9 +3,9 @@
 	require_once("../inc/utilities.php");
 	$limit=$_POST['limit'];
       $date_global_=strtotime($date_global);
-$query="SELECT * FROM projects WHERE deadline>{$date_global_} AND status=0 ORDER BY  project_id desc LIMIT {$limit}";
+$queryd="SELECT * FROM projects WHERE deadline>{$date_global_} AND status=0 ORDER BY  project_id desc LIMIT {$limit}";
 
-$results=$db->get_results($query);
+$results=$db->get_results($queryd);
 if ($db->num_rows>0) {
      foreach ($results as $result){ ?>
 <tr>
