@@ -102,9 +102,9 @@ require_once "../components/top_nav.php";
                             if ($db->num_rows<1) {?>
 
                         <div class="card-body">
-                            <h3 class="headingTertiary">
+                            <div class="headingTertiary">
                                 This project Is no longer Available
-                            </h3>
+                            </div>
                         </div>
                     </div>
                 </div>

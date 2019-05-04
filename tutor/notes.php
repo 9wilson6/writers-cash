@@ -20,6 +20,7 @@ require_once("../dbconfig/dbconnect.php");
           <?php echo $result->note; ?>
         </div>
         <?php endforeach; ?>
+        
         <?php  }else { ?>
         <div class="text-dark">No Activities</div>
         <?php  }

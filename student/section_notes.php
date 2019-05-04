@@ -9,8 +9,9 @@ function events($student_id){
           <?php echo $result->note; ?>
           </div>
         <?php endforeach; ?>
+        <div class="card-footer"><a href="notes" class="btn btn-submit btn-block">VIEW ALL</a></div>
     <?php  }else { ?>
-          <div class="text-dark">No Activities</div>
+          <div class="headingTertiary">No Activities</div>
         <?php  }
 
     }
@@ -23,6 +24,6 @@ function events($student_id){
             <div class="card-body" id="cbody">
                 <?php events($_SESSION['user_id']) ?>
             </div><!--card body-->
-            <div class="card-footer"><a href="notes" class="btn btn-submit btn-block">VIEW ALL</a></div>
+            
             </div><!--card-->
             </div>

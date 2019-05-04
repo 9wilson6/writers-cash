@@ -37,9 +37,9 @@
                         <div class="card-body">
                             <?php
 
-    if ($db->num_rows<1) {
-    echo "Order is no longer available";
-    } else{?>
+    if ($db->num_rows<1) { ?>
+   <div class="headingTertiary">Order is no longer available</div>
+   <?php } else{ ?>
                             <div class="table-responsive">
                                 <table class="table  table-striped table-hover table-bordered">
                                     <tbody>

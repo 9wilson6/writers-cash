@@ -31,7 +31,7 @@ $results=$db->get_row($query);
 <?php 
 
 if ($db->num_rows<1) {?>
-<div class="headingTertiary" style="font-size: 20px;">Order id No longer available</div>
+<div class="headingTertiary">Order id No longer available</div>
 <?php } else{?>
 <div class="table-responsive">
 <table class="table  table-striped table-hover table-bordered">

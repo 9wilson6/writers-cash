@@ -42,6 +42,7 @@ window.location.assign("applications");
 <th>Username</th>
 <th>Email</th>
 <th class="wide">Date Registered</th>
+<th class="wide">Files</th>
 <th class="wide">Action</th>
 </tr>
 </thead>
@@ -55,6 +56,7 @@ window.location.assign("applications");
 </td>
 <td><?php echo $result->email; ?></td>
 <td><?php echo $result->created_on; ?></td>
+<td><?php docs_download($result->user_id) ?></td>
 <td class="wide">
 <form action="" method="POST">
 <input type="hidden" name="user_id"

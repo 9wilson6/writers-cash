@@ -78,7 +78,7 @@ $results=$db->get_results($query);
                           </table>
                         </div>
                         <?php else: ?>
-                            <h2 class="headingSecondary">No Messages Yet</h2>
+                            <div class="headingTertiary">No Messages Yet</div>
                         <?php endif ?>
 
                     </div>

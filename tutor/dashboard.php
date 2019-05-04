@@ -43,7 +43,8 @@ ob_flush();
 
 <?php $resultsx=$db->get_results($queryd); ?>
                         <?php if ($db->num_rows==0){ ?>
-                            <h1 class="classHeadingSecondary">There is Nothing To show Yet</h1>
+                            <div class="headingTertiary">There is Nothing To show Yet</div>
+
                             <?php }elseif($db->num_rows>0){ ?>
                                 <table class="table table-bordered">
                                     <thead>

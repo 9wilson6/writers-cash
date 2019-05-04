@@ -14,13 +14,15 @@ if (isset($_REQUEST['key'])) {
    }
 
 ?>
+<div class="page-container">
+     <?php require_once "../components/tutor_leftnav.php" ?>
 <div class="display">
     <div class="display__content">
-        <?php require_once "../components/tutor_leftnav.php" ?>
+       
         <!-- <h1 class="headingTertiary text-left">Available</h1> -->
         <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-9">
-                <h1 class="headingTertiary text-light">My Profile</h1>
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8">
+                <h1 class="headingTertiary">My Profile</h1>
                 <div class="card wide-card">
                     <div class="card-header">Profile</div>
                     <div class="card-body">
@@ -43,6 +45,7 @@ if (isset($_REQUEST['key'])) {
                                  <td><?php echo $results->email; ?></td>
                                  <td><?php echo $results->created_on; ?></td>
                              </tr>
+                             <tr><th colspan="2">About me</th> <td colspan="2"><?php echo $results->about_me; ?></td></tr>
                          </tbody>
                         </table>
                 </div>
@@ -54,7 +57,7 @@ if (isset($_REQUEST['key'])) {
         </div>
     </div>
 </div>
-
+</div>
 
 <?php
 require_once"../inc/footer_links.php";

@@ -41,16 +41,18 @@ require_once("../dbconfig/dbconnect.php");?>
                 <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8">
                     <h1 class="headingTertiary">Project # <?php echo $project_id. " Details"; ?></h1>
                     <div class="card">
+                        <div class="card-header">Project details</div>
                         <?php  $query=("SELECT * FROM delivered left join projects on delivered.project_id=projects.project_id WHERE delivered.project_id='$project_id'");
-$results=$db->get_row($query);
-if ($db->num_rows<1) {?>
+                            $results=$db->get_row($query);
+
+                            if ($db->num_rows<1) {?>
 
                         <div class="card-body">
-                            <h1 class="headingSeconadry text-uppercase">
+                            <div class="headingTertiary">
                                 This project Is no longer Available
-                            </h1>
+                            </div>
                         </div>
-
+</div>
                         <?php  }else{ ?>
                         <table class="table table-sm table-responsive{-sm|-md|-lg|-xl}">
                             <thead class="table-light">

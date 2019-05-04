@@ -96,9 +96,9 @@ $results=$db->get_row($query);
 if ($db->num_rows<1) {?>
 
 <div class="card-body">
-<h1 class="headingSeconadry text-uppercase">
+<div class="headingTertiary">
 This project Is no longer Available
-</h1>
+</div>
 </div>
 </div>
 </div>

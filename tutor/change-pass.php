@@ -36,13 +36,15 @@ if (isset($_REQUEST['key'])) {
 
  }
 ?>
+<div class="page-container">
+   <?php require_once "../components/tutor_leftnav.php" ?>
 <div class="display">
     <div class="display__content">
-        <?php require_once "../components/tutor_leftnav.php" ?>
+       
         <!-- <h1 class="headingTertiary text-left">Available</h1> -->
         <div class="row">
-           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-9">
-                <h1 class="headingTertiary text-light">CHANGE ACCOUNT PASSSWORD</h1>
+           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8">
+                <h1 class="headingTertiary">CHANGE ACCOUNT PASSSWORD</h1>
  <div class="card wide-card">
                     <div class="card-header">PASSWORD DETAILS</div>
                     <div class="card-body">
@@ -76,7 +78,7 @@ if (isset($_REQUEST['key'])) {
                                  </tr>
                                  <tr>
                                      <td>&nbsp;</td>
-                                     <td><input type="submit" class="btn btn-block btn-primary" name="submit" value="Submit"></td>
+                                     <td><input type="submit" class="submit" name="submit" value="Submit"></td>
                                  </tr>
                              </form>
                          </tbody>
@@ -87,6 +89,7 @@ if (isset($_REQUEST['key'])) {
             </div>
         </div>
 <?php require_once("./section_rate.php"); ?>
+        </div>
         </div>
     </div>
 </div>

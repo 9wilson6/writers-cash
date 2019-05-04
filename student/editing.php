@@ -20,9 +20,9 @@ $results=$db->get_results($query);
                 <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8">
                     <h1 class="headingTertiary">Under Editing</h1>
                     <div class="card">
-                        <div class="card-header">Relax our expert Tutors are working on your Homework</div>
+                        <div class="card-header">Details</div>
                         <?php if ($db->num_rows<1) { ?>
-                        <h1 class="text-center">There is nothing to show Yet</h1>
+                        <div class="headingTertiary">There is nothing to show Yet</div>
                         <?php }else{?>
 
 

@@ -91,13 +91,14 @@ require_once("../dbconfig/dbconnect.php");
                 <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8">
                     <h1 class="headingTertiary">Project # <?php echo $project_id. " Details"; ?></h1>
                     <div class="card">
+                        <div class="card-header">Project Details</div>
                         <?php  $query=("SELECT * FROM on_progress left join projects on on_progress.project_id=projects.project_id WHERE on_progress.project_id='$project_id'");
 $results=$db->get_row($query);
 if ($db->num_rows<1) {?>
                         <div class="card-body">
-                            <h1 class="headingSeconadry text-uppercase">
+                            <div class="headingTertiary">
                                 This project Is no longer Available
-                            </h1>
+                            </div>
                         </div>
                     </div>
                     <?php  }else{ ?>

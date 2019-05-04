@@ -719,3 +719,42 @@ unlink( $target );
 }
 }
 ?>
+<?php
+//////////////////////Admin docs download//////////////////////////////
+
+function docs_download($tutor_id){
+$dir="../DOCS/{$tutor_id}/";
+$dir_="DOCS/{$tutor_id}/";
+if (!file_exists($dir)) {
+echo "No Files Attached"; 
+}else{
+
+$allFiles=scandir($dir);
+$files=array_diff($allFiles, array('.', '..'));
+
+if(empty($files)) {
+echo "No Files Attached";
+}else{
+echo '<ul class="list-group">';
+ ?>
+<?php
+// $files=array_diff($allFiles, array('.', '..', "Order_". $project_id."_.zip"));
+foreach ($files as  $file) {
+?>
+<li class="list-group-item">
+<?php echo "<a href='../download?file=".urlencode($file)."&dir=".$dir_."'>".$file."</a><i class='fa fa-download ml-3 icon-r'></i><br/>";	 ?>
+</li>
+
+
+<?php }
+
+}
+
+?>
+
+</ul>
+<?php
+}
+
+}
+?>

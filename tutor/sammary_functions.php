@@ -17,7 +17,12 @@ return $result;
       $query="SELECT SUM(rating) as rate FROM closed where tutor_id='$tutor_id'";
       $result=$db->get_var($query);
       $count=$db->get_results("SELECT * FROM closed where tutor_id='$tutor_id'");
-      return round($result/$db->num_rows, 1);
+      if ($db->num_rows>0) {
+        return round($result/$db->num_rows, 1);
+      }else{
+        return 0;
+      }
+     
     }
     function events($tutor_id){
       global $db;
@@ -29,6 +34,7 @@ return $result;
           <?php echo $result->note; ?>
           </div>
         <?php endforeach; ?>
+         <div class="card-footer"><a href="notes" class="btn btn-info btn-block">VIEW ALL</a></div>
     <?php  }else { ?>
           <div class="text-dark">No Activities</div>
         <?php  }

@@ -33,10 +33,9 @@ $results=$db->get_row($query);
                         <div class="card-header">details</div>
                         <div class="card-body">
                             <?php
-
-if ($db->num_rows<1) {
-echo "Order is no longer available";
-} else{?>
+                            if ($db->num_rows<1) { ?>
+                           <div class="headingTertiary">Order is no longer available</div>
+                          <?php  } else{ ?>
                             <div class="table-responsive">
                                 <table class="table  table-striped table-hover table-bordered">
                                     <tbody>
@@ -76,7 +75,7 @@ echo "Order is no longer available";
                                             <th scope="row">Deadline</th>
                                             <td>
                                                 <?php $time=getDateTimeDiff($date_global, $results->deadline );
-$period= explode(" ", $time); ?>
+                                                $period= explode(" ", $time); ?>
                                                 <?php if ($period[1]=="days"): ?>
                                                 <span class="text-dark">
                                                     <?php echo "{$time}"; ?></span>
@@ -116,9 +115,7 @@ $period= explode(" ", $time); ?>
                                 </table>
                             </div>
 
-                            <?php }
 
-?>
                             <div class="card">
                                 <div class="card-header">
                                     Manage files
@@ -199,7 +196,7 @@ $period= explode(" ", $time); ?>
                                             $results=$db->get_results($query);
 
                                             if ($db->num_rows<1) {?>
-                                        <h1 class="headingTertiary">Nothing To Show Yet</h1>
+                                        <div class="headingTertiary">Nothing To Show Yet</div>
                                         <?php }else{ ?>
 
                                         <table class="table">
@@ -267,9 +264,10 @@ $period= explode(" ", $time); ?>
                                             </tbody>
                                         </table>
 
-                                        <?php }
+                                        <?php }  }
 
 ?>
+
                                     </div>
                                     <p class="text-center"></p>
                                 </div>

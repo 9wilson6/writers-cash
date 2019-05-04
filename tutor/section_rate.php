@@ -22,11 +22,11 @@
                       <?php } ?></td>
 
                     </tr>
-                    <tr>
+                   <!--  <tr>
                         <td>Account Rating (30)</td>
-                        <td><?php echo thirty_rating($_SESSION['user_id']); ?></td>
+                        <td><?php #echo thirty_rating($_SESSION['user_id']); ?></td>
 
-                    </tr>
+                    </tr> -->
                     <tr>
                         <td>Account Rating</td>
                         <td><?php echo account_rating($_SESSION['user_id']); ?></td>
@@ -41,6 +41,6 @@
             <div class="card-body" id="cbody">
                 <?php events($_SESSION['user_id']) ?>
             </div><!--card body-->
-            <div class="card-footer"><a href="notes" class="btn btn-info btn-block">VIEW ALL</a></div>
+           
             </div><!--card-->
 </div>

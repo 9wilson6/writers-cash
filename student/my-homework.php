@@ -29,7 +29,8 @@ require_once "../components/top_nav.php";
                         </div>
                         <div class="card-body">
                             <?php if ($db->num_rows<=0): ?>
-                            <h2 class="headingTertiary">Nothing to Show Yet</h2>
+                            <div class="headingTertiary">Nothing to Show Yet</div>
+                        </div>
                             <?php elseif($db->num_rows>0): ?>
                             <table class="table table-bordered">
                                 <thead>

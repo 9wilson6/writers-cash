@@ -4,8 +4,7 @@ $page="revision" ;
 require_once "../components/top_nav.php";
 require_once("../dbconfig/dbconnect.php");
 require_once("../inc/utilities.php");
-$query="SELECT * FROM revisions LEFT JOIN projects ON revisions.project_id=projects.project_id WHERE revisions.tutor_id=".$_SESSION['user_id'];
-$results=$db->get_results($query)
+
 
 ?>
 <div class="page-container">
@@ -18,8 +17,11 @@ $results=$db->get_results($query)
                     <div class="card">
                         <div class="card-header">On Revision</div>
                         <div class="card-body">
-                            <?php if ($db->num_rows<1) {?>
-                            <div class="headingSecondary">Nothing to show Yet</div>
+                            <?php
+                            $query="SELECT * FROM revisions LEFT JOIN projects ON revisions.project_id=projects.project_id WHERE revisions.tutor_id=".$_SESSION['user_id'];
+                                $results=$db->get_results($query);
+                                 if ($db->num_rows<1) {?>
+                            <div class="headingTertiary">Nothing to show Yet</div>
                             <?php }else{ ?>
                             <table class="table table-bordered">
                                 <thead>
@@ -41,7 +43,7 @@ $results=$db->get_results($query)
                                         <td><?php echo $result->charges; ?></td>
                                         <td class="bg-light">
                                             <?php $time=getDateTimeDiff($date_global, $result->revision_deadline );
-$period= explode(" ", $time); ?>
+                                            $period= explode(" ", $time); ?>
                                             <?php if ($period[1]=="days"): ?>
                                             <span class="text-dark">
                                                 <?php echo "{$time}"; ?></span>

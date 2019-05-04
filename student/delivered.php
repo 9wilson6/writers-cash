@@ -22,7 +22,8 @@ $results=$db->get_results($query);
                        <div class="card-body">
                 <?php if ($db->num_rows<1) { ?>
                 
-                    <h1 class="text-center">There is nothing to show yet</h1>
+                    <div class="headingTertiary">There is nothing to show yet</div>
+                </div>
                
                <?php }else{?>
                           

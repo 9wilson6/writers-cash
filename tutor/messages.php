@@ -4,9 +4,7 @@ $page="messages" ;
 require_once "../components/top_nav.php";
 require_once("../dbconfig/dbconnect.php");
 ?>
-<?php $query="SELECT chats.user_type, chats.message, chats.date_sent, chats.project_id, chats.student_id, chats.tutor_id,projects.status FROM chats LEFT JOIN projects on chats.project_id=projects.project_id where chats.user_type=1 ORDER BY date_sent DESC LIMIT 10";
-$results=$db->get_results($query);
- ?>
+
  <div class="page-container">
       <?php require_once "../components/tutor_leftnav.php" ?>
 <div class="display">
@@ -19,7 +17,9 @@ $results=$db->get_results($query);
                     <div class="card-header">Your recent messages</div>
 
                     <div class="card-body">
-
+                        <?php $query="SELECT chats.user_type, chats.message, chats.date_sent, chats.project_id, chats.student_id, chats.tutor_id,projects.status FROM chats LEFT JOIN projects on chats.project_id=projects.project_id where chats.user_type=1 ORDER BY date_sent DESC LIMIT 10";
+                        $results=$db->get_results($query);
+                         ?>
                         <?php if ($db->num_rows >0): ?>
                             <div class="table-responsive" id="meso">
                           <table class="table">
@@ -79,7 +79,7 @@ $results=$db->get_results($query);
                           </table>
                         </div>
                         <?php else: ?>
-                            <h2 class="headingSecondary">No Messages Yet</h2>
+                            <div class="headingTertiary">No Messages Yet</div>
                         <?php endif ?>
 
                     </div>
