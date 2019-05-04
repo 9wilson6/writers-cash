@@ -14,7 +14,11 @@ $results=$db->get_results($query);
     <div class="display">
         <div class="display__content" >
             <div class="row" >
-              
+               <?php if (!isset($_REQUEST['user_id'])) {
+              $user_id=0;
+              }else{
+                $user_id= $_REQUEST['user_id'];
+              } ?>
              <?php if (isset($_REQUEST['user_id'])) { ?>
                             <script>
                              let user_id = <?php echo $_REQUEST['user_id']; ?>
@@ -39,12 +43,22 @@ $results=$db->get_results($query);
                     
                       <?php foreach ($results as $result) {
                         $query="SELECT count(message) FROM support where user_id=$result->user_id  AND sender !=3" ;
+                        $queryx="SELECT * FROM users WHERE user_id=$result->user_id";
+                        $resultx=$db->get_row($queryx);
                         $result2=$db->get_var($query);
+
                        ?>
                       <form action="" method="GET" id="prevew_message">
-                        <!-- <li class="list-group-item">User Id <?php #secho $result->user_id."   ". "(".$result2.")"; ?></li> -->
+
+                       <?php  $type=""; if ($resultx->type==1){ $type="Student ID";}elseif($resultx->type==2){ $type="Tutor ID";} ?>
+                       <!-- <li class="list-group-item">User Id <?php #echo $result->sender."   ". "(".$result2.")"; ?></li>  -->
                         <input type="hidden" name="user_id" id="user_id" value="<?php echo $result->user_id ?>">
-                        <button type="submit" class="chat_btn">User Id <?php echo $result->user_id."   ". "(".$result2.")"; ?></button>
+                        <?php if ($result->user_id==$user_id): ?>
+                          <button type="submit" class="chat_btn active"><?php echo $resultx->username." ".$type." ". $result->user_id."   ". "(".$result2.")"; ?></button>
+                        <?php else: ?>
+                         <button type="submit" class="chat_btn"><?php echo $resultx->username." ".$type." ". $result->user_id."   ". "(".$result2.")"; ?></button>
+                        <?php endif ?>
+
                       </form>
                       <?php }
                      ?>

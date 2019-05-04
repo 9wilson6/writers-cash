@@ -1409,6 +1409,10 @@ button:hover {
         outline: none; }
       .message_panel_left .chat_btn:hover {
         background: #e6e6e6; }
+    .message_panel_left .active {
+      background: #ededed; }
+      .message_panel_left .active:hover {
+        background: #e6e6e6; }
   .message_panel_right {
     position: relative;
     background: url("../assets/noise_d.png");

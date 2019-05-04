@@ -10,12 +10,14 @@ $query="SELECT * FROM users WHERE type =2 ORDER BY verified DESC";
 $results=$db->get_results($query);
 
  ?>
+ <div class="page-container">
+   <?php require_once "inc/leftnav.php" ?>
  <div class="display">
     <div class="display__content">
-        <?php require_once "inc/leftnav.php" ?>
+       
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-11">
-                <h1 class="headingTertiary text-light text-uppercase">Registered Tutors</h1>
+                <h1 class="headingTertiary text-uppercase">Registered Tutors</h1>
 
                 <div class="card">
                    	<div class="card-header text-uppercase">Registered Tutors</div>
@@ -69,5 +71,6 @@ $results=$db->get_results($query);
             </div>
         </div>
     </div>
+</div>
 </div>
 <?php require_once("../inc/footer_links.php") ?>

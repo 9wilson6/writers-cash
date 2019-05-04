@@ -25,6 +25,7 @@
     width: 300px;
     padding-left: 5px;
     padding-right: 5px;
+
     .highlight {
       height: 65vh;
       overflow-y: auto;
@@ -69,6 +70,12 @@
       margin-bottom: 7px;
 
       transition: all 0.3s ease-out;
+      &:hover {
+        background: darken($color: #fff, $amount: 10);
+      }
+    }
+    .active {
+      background: darken($color: $primary-color-white, $amount: 7);
       &:hover {
         background: darken($color: #fff, $amount: 10);
       }

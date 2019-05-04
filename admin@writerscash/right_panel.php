@@ -1,6 +1,4 @@
-
 	<?php
-
 	if (isset($_POST['user_id']) || isset($_GET['user_id']) ) {
 	require_once("../dbconfig/dbconnect.php");
 	$user_id=$_REQUEST['user_id'];
