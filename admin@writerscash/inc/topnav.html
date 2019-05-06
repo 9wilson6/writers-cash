@@ -1,0 +1,76 @@
+  			<!DOCTYPE html>
+<html lang="en">
+			
+			<head>
+			<title>Drop down navigationbar and menus</title>
+			<meta charset="utf-8"/>
+			<style>
+				.nav{
+				margin: 0 auto;
+				width:100%;
+				background: #000033;
+				height:80px;
+				}
+				ul{
+				list-style:none;
+				padding:0;
+				margin:0;
+				position:absolute;}
+				ul li{
+					float:left;
+					margin-top:20px;
+					
+				}
+				ul li a{
+				width:150px;
+				color:white;
+				display:block;
+				text-decoration:none;
+				font-size: 20px;
+				text-align:center;
+				padding:10px;
+				border-radius:10px;
+				font-family: Century Gothic;
+				font-weight:bold;
+				}
+				a:hover{
+				background-color:#669900}
+				ul li ul{
+				background:#000033}
+				 ul li ul li{
+				 float:none;
+				 }
+				 ul li ul{
+				 display:none;}
+				  ul li:hover ul{
+				  
+				  display:block;}
+			</style>
+			</head>
+			
+		<body>
+			<div class="nav">
+				<ul>
+				
+				<li><a href="#">Home</a></li>
+				<li><a href="#">News</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Feedback</a></li>
+				<li><a href="#">More</a>
+					<ul>
+					<li><a href="#">More 1</a></li>
+					<li><a href="#">More 2</a></li>
+					<li><a href="#">More 3</a></li>
+					<li><a href="#">More 4</a></li>
+					<li><a href="#">More 5</a></li>
+					</ul>
+				</li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+		</body>
+			
+			
+			</html>
+			

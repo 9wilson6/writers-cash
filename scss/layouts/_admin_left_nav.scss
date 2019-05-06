@@ -1,0 +1,47 @@
+.admin_left_nav {
+  .nav_ {
+    margin: 0 auto;
+    width: 100%;
+    background: #000033;
+    height: 80px;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+    }
+    ul li {
+      float: left;
+      margin-top: 20px;
+    }
+    ul li a {
+      width: 150px;
+      color: white;
+      display: block;
+      text-decoration: none;
+      font-size: 20px;
+      text-align: center;
+      padding: 10px;
+      border-radius: 10px;
+      font-family: Century Gothic;
+      font-weight: bold;
+      transition: all 0.3s ease-in;
+    }
+    a:hover {
+      background-color: #669900;
+    }
+    ul li ul {
+      background: #000033;
+      z-index: 300;
+    }
+    ul li ul li {
+      float: none;
+    }
+    ul li ul {
+      display: none;
+    }
+    ul li:hover ul {
+      display: block;
+    }
+  }
+}
