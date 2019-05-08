@@ -100,9 +100,10 @@
       right: 0px;
       color: dodgerblue;
     }
-    @media (max-width: 700px) {
+
+    @media (max-width: 860px) {
       .box {
-        width: 90%;
+        width: 500px;
       }
     }
   }

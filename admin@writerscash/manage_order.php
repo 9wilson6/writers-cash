@@ -33,7 +33,7 @@ if ( $db->query($query)) { ?>
         <div class="col-sm-12 col-md-12 col-lg-11">
           <div class="card">
             <div class="card-header">The following orders have run out of time and have not been assigned to any tutor
-              soo far</div>
+              so far</div>
             <div class="card-body">
               <?php if ($db->num_rows<1): ?>
               <div class="headingTertiary">There is Nothing To show Yet</div>

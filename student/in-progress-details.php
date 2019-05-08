@@ -180,13 +180,13 @@ value="<?php echo $results->tutor_id ?>">
 <div class="my_container">
 <div class="row">
 <div class="col-3 col-sm-3 col-md-3"><label for="files"
-class="forms2__label">Add More Files
+class="forms2__label"><small>Add More Files</small>
 &rarr;</label></div>
 <div class="col-6 col-sm-6 col-md-6">
 <label for="cert_" class="input-label">
 <i class="fa fa-upload"></i>
 <span id="cert">0 Selected</span>
-</label><input type="file" name="file[]" class="id_card" id="cert_"
+</label><input type="file" name="file[]" class="id_card" required id="cert_"
 multiple />
 <input type="hidden" name="project_id" value="<?php echo $project_id ?>">
 <input type="hidden" name="user_id"

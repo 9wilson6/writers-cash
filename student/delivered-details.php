@@ -274,7 +274,7 @@
                                                 <div class="modal-dialog" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <h6 class="modal-title ml-lg-5">LET'S KNOW HOW YOU FEEL
+                                                            <h6 class="modal-title">LET'S KNOW HOW YOU FEEL
                                                                 ABOUT THIS TUTOR</h6>
                                                             <button type="button" class="close" data-dismiss="modal"
                                                                 aria-label="Close">
@@ -290,7 +290,7 @@
                                                                          <div class="col-12 col-md-2"></div>
                                                                         <div class="col-12 col-md-10">
                                                                             <label for="">Rate out of 10</label> <br>
-                                                                            <input type="number" name="rating"
+                                                                            <input type="number"  name="rating"
                                                                                 class="form-control"
                                                                                 max="10" min="0" value="10"
                                                                                  required>

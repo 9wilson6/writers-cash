@@ -5,10 +5,12 @@ $page="";
 $mainpage="";
 require_once("./inc/leftnav.php");
  ?>
+ <div class="page-container">
+   <?php require_once "inc/leftnav.php" ?>
  <div class="display">
     <div class="display__content">
-        <?php require_once "inc/leftnav.php" ?>
-        <h1 class="headingTertiary text-light text-center text-uppercase">notifications </h1>
+       
+        <h1 class="headingTertiary  text-center text-uppercase">notifications </h1>
         <div class="row">
 
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-10">
@@ -37,9 +39,9 @@ require_once("./inc/leftnav.php");
                         </div>
                       <?php }
                     }
-                  }else{
-                    echo "there is nothing to show yet";
-                  }
+                  }else{ ?>
+                   <div class="headingTertiary">there is nothing to show yet</div>
+                 <?php }
  ?>
 
                       
@@ -51,3 +53,6 @@ require_once("./inc/leftnav.php");
         </div>
     </div>
 </div>
+
+</div>
+<?php require_once("../inc/footer_links.php") ?>

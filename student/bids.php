@@ -8,7 +8,7 @@ if (isset($_POST['project_id'])) {
                   $query="SELECT * FROM bids WHERE project_id=$project_id";
                   $results=$db->get_results($query);
                  if ($db->num_rows<1) {?>
-                            <h1 class="headingTertiary">Nothing To Show Yet</h1>
+                            <div class="headingTertiary">Nothing To Show Yet</div>
                             <?php }else{ ?>
                             
                                 <table class="table">
@@ -28,7 +28,13 @@ if (isset($_POST['project_id'])) {
                                             </td>
                                             <?php $query="SELECT SUM(rating) as rating, COUNT(comment) as complited FROM closed WHERE tutor_id='$result->tutor_id'";
                                         $results=$db->get_row($query);
-                                        $rate=round($results->rating/$results->complited,0);
+                                        
+                                        if ($results->rating>0) {
+                                         $rate=round($results->rating/$results->complited,0);  
+                                        }else{
+                                            $rate=0;
+                                        }
+                                        
                                          ?>
                                             <td>
                                                 <?php echo $rate."/10"  ?> &nbsp;

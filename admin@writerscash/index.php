@@ -103,7 +103,7 @@ $result=$db->get_var("SELECT payment_date FROM others");
           <div class="card-body" id="cbody">
           </div>
           <!--card body-->
-          <div class="card-footer"><a href="notes" class="btn btn-info btn-block">VIEW ALL</a></div>
+         
         </div>
         <!--card-->
       </div>

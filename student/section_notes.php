@@ -9,7 +9,7 @@ function events($student_id){
           <?php echo $result->note; ?>
           </div>
         <?php endforeach; ?>
-        <div class="card-footer"><a href="notes" class="btn btn-submit btn-block">VIEW ALL</a></div>
+        <div class="card-footer"><a href="notes" class="btn btn-submit btn-block move-up">VIEW ALL</a></div>
     <?php  }else { ?>
           <div class="headingTertiary">No Activities</div>
         <?php  }

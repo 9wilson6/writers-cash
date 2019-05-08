@@ -512,8 +512,8 @@ a:hover {
   background: #f1f3f9; }
 
 .display {
-  padding: 10px 200px; }
-  @media only screen and (max-width: 767px) {
+  padding: 10px 150px; }
+  @media only screen and (max-width: 867px) {
     .display {
       padding: 10px 80px; } }
   .display__content {
@@ -539,11 +539,11 @@ a:hover {
     .display__content .submit {
       width: 60% !important;
       display: block;
-      margin: 10px auto;
+      margin: 1px auto;
       background: #222e4f;
       color: white;
       transition: background 0.3s ease-out;
-      height: 40px;
+      height: 35px;
       border-radius: 10px;
       font-weight: bolder;
       cursor: pointer; }
@@ -874,9 +874,9 @@ a:hover {
     top: 0px;
     right: 0px;
     color: dodgerblue; }
-  @media (max-width: 700px) {
+  @media (max-width: 860px) {
     .login__content .box {
-      width: 90%; } }
+      width: 500px; } }
 
 .formsubmit {
   display: inline-block;

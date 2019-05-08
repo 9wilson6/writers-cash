@@ -50,7 +50,7 @@ if ($db->num_rows<1): ?>
 </th>
 <th data-toggle="tooltip" title="pages" data-placement="right">Pg</th>
 <th class="smalll">Subject</th>
-<th class="medium">Deadline</th>
+<th class="medium">Date closed</th>
 </tr>
 </thead>
 
@@ -66,19 +66,7 @@ class="fas fa-external-link-alt icon-r ml-4"></i></a></td>
 <td><?php echo $result->charges; ?></td>
 <td><?php echo $result->pages; ?></td>
 <td class="smalll"><?php echo $result->subject; ?></td>
-<td><?php $time=getDateTimeDiff($date_global, $result->deadline );
-$period= explode(" ", $time); ?>
-<?php if ($period[1]=="days"): ?>
-<span class="text-dark"><?php echo "{$time}"; ?></span>
-<?php elseif($period[1]=="day"): ?>
-<span class="text-success"><?php echo "{$time}"; ?></span>
-<?php elseif($period[1]=="hours" || $period[1]=="hour"): ?>
-<span class="text-warning"><?php echo "{$time}"; ?></span>
-<?php elseif($period[1]=="mins" || $period[1]=="min"): ?>
-<span class="text-danger"><?php echo "{$time}"; ?></span>
-<?php elseif($period[1]=="secs" || $period[1]=="sec"): ?>
-<span class="text-danger"><?php echo "{$time}"; ?></span>
-<?php endif ?>
+<td> <?php echo $result->date_closed; ?>
 </td>
 
 

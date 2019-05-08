@@ -20,8 +20,9 @@ if (isset($_POST['limit'])) {
 				  <?php echo $result->note; ?>
 				</div>
 			<?php }
-		}
-	}else{
+		} ?>
+ <div class="card-footer"><a href="notes" class="btn btn-info btn-block move-up">VIEW ALL</a></div>
+	<?php }else{
 		echo "there is nothing to show yet";
 	}
  ?>
