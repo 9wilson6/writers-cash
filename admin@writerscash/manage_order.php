@@ -4,8 +4,8 @@ require_once("./inc/topnav.php");
 require_once("../inc/utilities.php");
 require_once("../inc/global_functions.php");
 require_once("../dbconfig/dbconnect.php");
-$mainpage="orders";
-$page="manage_order";
+$mainpage="projects";
+$sub_page="clean_up";
 $date_global_=strtotime($date_global);
 $query="SELECT * FROM projects WHERE deadline < {$date_global_} AND status=0";
 $results=$db->get_results($query);
@@ -36,7 +36,7 @@ if ( $db->query($query)) { ?>
               soo far</div>
             <div class="card-body">
               <?php if ($db->num_rows<1): ?>
-              <h1 class="classHeadingSecondary">There is Nothing To show Yet</h1>
+              <div class="headingTertiary">There is Nothing To show Yet</div>
               <?php elseif($db->num_rows>0): ?>
               <table class="table table-bordered">
                 <thead>

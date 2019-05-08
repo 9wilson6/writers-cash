@@ -3,7 +3,7 @@ require_once("../inc/header_links.php");
 require_once("./inc/topnav.php");
 require_once("../inc/utilities.php");
 $mainpage="tutor";
-$page="tut_suspend";
+$sub_page="tutor_suspend";
 require_once("../inc/global_functions.php");
 require_once("../dbconfig/dbconnect.php");
 $query="SELECT * FROM users WHERE type =2 and status=1";

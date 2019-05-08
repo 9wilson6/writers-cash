@@ -679,42 +679,22 @@ a:hover {
     .order_now .headingSecondary {
       font-size: 20px; } }
 
-.admin_left_nav .nav_ {
-  margin: 0 auto;
-  width: 100%;
-  background: #000033;
-  height: 80px; }
-  .admin_left_nav .nav_ ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    position: absolute; }
-  .admin_left_nav .nav_ ul li {
-    float: left;
-    margin-top: 20px; }
-  .admin_left_nav .nav_ ul li a {
-    width: 150px;
-    color: white;
-    display: block;
-    text-decoration: none;
-    font-size: 20px;
-    text-align: center;
-    padding: 10px;
-    border-radius: 10px;
-    font-family: Century Gothic;
-    font-weight: bold;
-    transition: all 0.3s ease-in; }
-  .admin_left_nav .nav_ a:hover {
-    background-color: #669900; }
-  .admin_left_nav .nav_ ul li ul {
-    background: #000033;
-    z-index: 300; }
-  .admin_left_nav .nav_ ul li ul li {
-    float: none; }
-  .admin_left_nav .nav_ ul li ul {
-    display: none; }
-  .admin_left_nav .nav_ ul li:hover ul {
-    display: block; }
+.admin_left_nav nav {
+  background: #222e4f; }
+  .admin_left_nav nav li {
+    font-size: 17px; }
+    .admin_left_nav nav li a {
+      color: #fff; }
+    .admin_left_nav nav li .dropdown-menu {
+      background: #126d91; }
+      .admin_left_nav nav li .dropdown-menu a {
+        font-size: 16px; }
+        .admin_left_nav nav li .dropdown-menu a:hover {
+          background: #106383;
+          color: #fff; }
+  .admin_left_nav nav .active {
+    color: #dfb834;
+    background: transparent !important; }
 
 .advantage {
   width: 100vw;

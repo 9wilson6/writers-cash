@@ -4,7 +4,8 @@
   require_once("../inc/utilities.php");
   require_once("../inc/global_functions.php");
   require_once("../dbconfig/dbconnect.php");
-  $mainpage="tutor";
+$mainpage="tutor";
+$sub_page="tutor_message";
   $feedback=null;
   $feedback_=null;
   $users=$db->get_results("SELECT * FROM users WHERE type=2");

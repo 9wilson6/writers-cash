@@ -4,10 +4,10 @@ require_once("./inc/topnav.php");
 require_once("../inc/utilities.php");
 require_once("../inc/global_functions.php");
 require_once("../dbconfig/dbconnect.php");
-$mainpage="tutor";
+$mainpage="student";
+$sub_page="student_message";
 $feedback=null;
 $feedback_=null;
-$page="tut_message";
 $users=$db->get_results("SELECT * FROM users WHERE type=1");
 if (isset($_POST['send'])) {
 $subject=$_POST['subject'];

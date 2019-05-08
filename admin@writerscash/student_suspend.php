@@ -2,8 +2,8 @@
     require_once("../inc/header_links.php");
     require_once("./inc/topnav.php");
     require_once("../inc/utilities.php");
-    $mainpage="student";
-    $page="student_suspend";
+   $mainpage="student";
+    $sub_page="student_suspend";
     require_once("../inc/global_functions.php");
     require_once("../dbconfig/dbconnect.php");
     $query="SELECT * FROM users WHERE type =1 and status=1";
@@ -21,9 +21,10 @@
     }
     ?>
 <div class="page-container">
-    <?php require_once "inc/leftnav.php" ?>
+   <?php require_once "inc/leftnav.php" ?>
     <div class="display">
         <div class="display__content">
+             
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12 col-xl-11">
                     <h1 class="headingTertiary text-uppercase">Student suspension panel</h1>
