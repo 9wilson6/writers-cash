@@ -8,8 +8,7 @@ $tutor_id=$_SESSION['user_id'];
 if (isset($_REQUEST['pid'])) {
 $project_id=convert_uudecode($_REQUEST['pid']);
 }
-$page="" ;
-$mainpage="orders";
+$page="dashboard";
 require_once "./inc/topnav.php";
 ?>
 <div class="page-container">

@@ -104,6 +104,7 @@ class="fas fa-external-link-alt icon-r ml-4"></i></a></td>
 <?php
 require_once"../inc/footer_links.php";
 ?>
+   <?php require_once("../support.php") ?>
 <script>
 $(document).ready(function () {
 $("#select").change(function () {

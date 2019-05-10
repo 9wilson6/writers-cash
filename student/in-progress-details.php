@@ -147,7 +147,7 @@ $period= explode(" ", $time); ?>
 <div class="messages__view " id="messageBox">
 <script>
 let project_id = "<?php echo $results->project_id; ?>";
-let user_type = "<?php echo $_SESSION['user_type'] ?>";
+// let user_type_ = "<?php echo $_SESSION['user_type'] ?>";
 </script>
 </div>
 
@@ -222,6 +222,7 @@ Files</button>
 <?php
 require_once"../inc/footer_links.php";
 ?>
+<?php require_once("../support.php") ?>
 <script src="../js/chat.js"></script>
 <script src="../js/files.js"></script>
 <script>

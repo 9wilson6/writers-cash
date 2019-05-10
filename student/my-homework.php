@@ -105,3 +105,4 @@ require_once "../components/top_nav.php";
     <?php
 require_once"../inc/footer_links.php";
  ?>
+ <?php require_once("../support.php") ?>

@@ -194,7 +194,7 @@ create_post();
                         <?php endif?> />
                     </div>
                     <div class="col-md-6 mb-3">
-                      <label for="sources">Number of Sources</label>
+                      <label for="sources">Number of Sources</label><br>
                       <input type="number" name="sources" id="sources" max="1000" min="1" class="form-control"
                         <?php if (isset($_SESSION['sources'])): ?> value="<?php echo $_SESSION['sources'] ?>"
                         <?php endif?> />

@@ -59,6 +59,3 @@ $period= explode(" ", $time); ?>
 
 
 } ?>
-
-<!-- $string=strlen($result->title > 10) ? substr($result->title, 0, 10).'...' : $result->title; -->
-<!-- echo $string; -->

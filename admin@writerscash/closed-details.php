@@ -2,8 +2,7 @@
     require_once("../inc/header_links.php");
     require_once("./inc/topnav.php");
     require_once("../inc/utilities.php");
-    $page="";
-    $mainpage="";
+   $page="dashboard";
     require_once("../inc/global_functions.php");
     require_once("../dbconfig/dbconnect.php");
     $project_id=convert_uudecode($_REQUEST['pid']);

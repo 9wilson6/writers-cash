@@ -9,8 +9,7 @@ $query=("SELECT * FROM on_progress left join projects on on_progress.project_id=
 $results=$db->get_row($query);
 ?>
 <div class="page-container">
-<?php $page="";
-$mainpage="orders"; ?>
+<?php $page="dashboard"; ?>
 <?php require_once "inc/leftnav.php" ?>
 <div class="display">
 <div class="display__content">

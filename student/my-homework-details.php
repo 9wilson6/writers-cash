@@ -315,3 +315,4 @@ return c; //you can just return c because it will be true or false
 });
 </script>
 
+<?php require_once("../support.php") ?>
