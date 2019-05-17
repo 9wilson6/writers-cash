@@ -11,6 +11,7 @@ if (isset($_POST['submit'])) {
   $name =basename($_FILES['id_card']['name']);
   $tmp_name=$_FILES['id_card']['tmp_name'];
   $name2 =basename($_FILES['academic_document']['name']);
+
   $tmp_name2=$_FILES['academic_document']['tmp_name'];
   $tutor_id=$user_id;
   if (!file_exists('../DOCS/'.$tutor_id)) {
@@ -40,10 +41,15 @@ if (isset($_POST['submit'])) {
 
 <div class="not_active">
   <div class="not_active__content">
-    <h2 class="headingSeconadry">
+   <?php if (isset($_SESSION['username'])): ?>
+      <h2 class="headingSeconadry">
       Welcome
       <?php echo $_SESSION['username'] ?> :)
+      <a class="float-right" href="../logout"><small>logout <span class="lnr lnr-power-switch"></span></small> </a>
     </h2>
+   <?php else: ?>
+   <script>window.location.assign("../index")</script>
+   <?php endif ?>
     <div style="text-align: center">
       <?php if (!$success==null): ?>
         <?php echo $success; 
@@ -63,8 +69,11 @@ if (isset($_POST['submit'])) {
         <p class="lead">
          We are processing your request.... :)
         </p>
-
-
+        <?php elseif($resultx==3): ?>
+          <p class="lead">
+         We are sorry to inform that you didn't qualify to work with us. kindly try again after 3years. 
+         <?php header("Refresh:10; url =../logout"); ?>
+        </p>
         <?php elseif($resultx==0): ?>
          <p class="lead">
           kindly upload the following documents in order to continue with the

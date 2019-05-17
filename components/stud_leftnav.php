@@ -8,6 +8,9 @@ session_student();
   <a href="../student/createpost"  <?php if ($page=="create") { ?>
   	class="active"
   <?php } ?>><li class="list-group-item">Post Homework</li></a>
+  <a href="../student/classes"  <?php if ($page=="classes") { ?>
+    class="active"
+  <?php } ?>><li class="list-group-item">Classes</li></a>
   <a href="../student/my-homework" <?php if ($page=="my-homework") { ?>
    class="active"
  <?php } ?>><li class="list-group-item">Homework<span class="  " id="available">0</span></li></a>

@@ -109,7 +109,7 @@ This project Is no longer Available
 <th class="text-center">Level</th>
 <th class="text-center">Deadline</th>
 <th class="text-center">Budget</th>
-<th class="text-center">Yuor Bid</th>
+<th class="text-center">your Bid</th>
 
 </tr>
 </thead>

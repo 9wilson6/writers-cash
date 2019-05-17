@@ -285,9 +285,8 @@ class="btn btn-submit btn-block move-up mr-0">Award</button>
 <?php require_once("section_notes.php") ?>
 
 
-</div>
-</div>
-</div>
+
+
 </div>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 

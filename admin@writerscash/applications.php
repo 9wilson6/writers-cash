@@ -8,12 +8,23 @@ require_once("../dbconfig/dbconnect.php");
 $query="SELECT * FROM users WHERE type=2 and verified=0";
 $results=$db->get_results($query);
 
-if (isset($_POST['submit'])) {
+if (isset($_POST['verify'])) {
 $user_id=$_POST['user_id'];
 $query="UPDATE users SET verified=1 WHERE type =2 AND user_id=$user_id";
 if ($db->query($query)) { ?>
 <script>
 alert("Tutor ID: <?php echo $user_id  ?> account has been marked as verified");
+window.location.assign("applications");
+</script>
+
+<?php } 
+}
+if (isset($_POST['decline'])) {
+$user_id=$_POST['user_id'];
+$query="UPDATE users SET files=3, verified=3 WHERE type =2 AND user_id=$user_id";
+if ($db->query($query)) { ?>
+<script>
+alert("Tutor ID: <?php echo $user_id  ?> application has been declined");
 window.location.assign("applications");
 </script>
 
@@ -60,8 +71,14 @@ window.location.assign("applications");
 <form action="" method="POST">
 <input type="hidden" name="user_id"
 value="<?php echo $result->user_id?>">
-<input type="submit" style="color:aliceblue" name="submit"
+<input type="submit" style="color:aliceblue ; background: #006266; margin-bottom: 3px; border-radius: 10px" name="verify"
 class="btn-submit btn-block" value="ACTIVATE">
+</form>
+<form action="" method="POST">
+<input type="hidden" name="user_id"
+value="<?php echo $result->user_id?>">
+<input type="submit" style="color:aliceblue; background: #b71540; border-radius: 10px;" name="decline"
+class="btn-submit btn-block" value="DECLINE">
 </form>
 </td>
 </tr>

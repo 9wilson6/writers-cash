@@ -32,6 +32,9 @@ session_admin();
           <a class="dropdown-item <?php if ($sub_page=="student_message") { ?>
           active
           <?php } ?>" href="stud_message">Message</a>
+          <a class="dropdown-item <?php if ($sub_page=="student_acc") { ?>
+          active
+          <?php } ?>" href="create_std">Create Acc</a>
         </div>
       </li>
 

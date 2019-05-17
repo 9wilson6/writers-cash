@@ -12,6 +12,11 @@ $user_type=$db->escape($_POST['user_type']);
 $email=$db->escape($_POST['email']);
 $password=$db->escape($_POST['password']);
 $C_password=$db->escape($_POST['C_password']);
+if (isset($_POST['about_me'])) {
+	$about_me=$db->escape($_POST['about_me']);
+}else{
+	$about_me="";
+}
 if (isset($_POST['reg'])) {
 	$_SESSION['username']=$username;
 	$_SESSION['email']=$email;
@@ -61,7 +66,7 @@ if($db->num_rows == 0){
 	$date=date("Y-m-d H:i:sa");
 	$verif_key=str_shuffle(substr(password_hash($date, PASSWORD_DEFAULT), 30,90));
 
-	$query="INSERT INTO users(username, email, password, type, created_on,verif_key, status) VALUES('$username','$email','$password_', '$user_type','$date','$verif_key', 1)";
+	$query="INSERT INTO users(username, email, password, type, created_on,verif_key, status, about_me) VALUES('$username','$email','$password_', '$user_type','$date','$verif_key', 1, '$about_me')";
 	$results=$db->query($query);
 
 
@@ -582,7 +587,7 @@ $files=array_diff($allFiles, array('.', '..', "Order_". $project_id."_.zip"));
 foreach ($files as  $file) {
 ?>
 <li class="list-group-item">
-<?php echo "<a href='../delete_file?id={$project_id}&&file=".urlencode($file)."&dir=".$dir_."'>".$file." <i class='far fa-trash-alt text-danger ml-3'></i></a><br/>";	 ?>
+<?php echo $file. "<a href='../delete_file?id={$project_id}&&file=".urlencode($file)."&dir=".$dir_."'> <span class='text-danger'> &nbsp; delete file.</span>  </a><br/>";	 ?>
 </li>
 
 <?php

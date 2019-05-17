@@ -30,22 +30,24 @@ $result=$db->get_var("SELECT payment_date FROM others");
 <div class="card-header">Order Summary</div>
 <ul class="list-group">
 <a href="available" class="dashboard__content--items">
-<li class="list-group-item"> Available <span id="available"></span> </li>
+<li class="list-group-item"> Available <span id="available"><center><img style="display: inline; position: relative; top: -30px;" height="40px" src="../assets/Flickr-1s-200px.gif" alt="loading....."></center></span> </li>
 </a>
 <a href="progress" class="dashboard__content--items">
-<li class="list-group-item">Progress<span id="progress"></span></li>
+<li class="list-group-item">Progress<span id="progress"><center><img style="display: inline; position: relative; top: -30px;" height="40px" src="../assets/Flickr-1s-200px.gif" alt="loading....."></center></span></li>
 </a>
 <a href="delivered" class="dashboard__content--items">
-<li class="list-group-item">Delivered <span id="delivered"></span></li>
+<li class="list-group-item">Delivered <span id="delivered"><center><img style="display: inline; position: relative; top: -30px;" height="40px" src="../assets/Flickr-1s-200px.gif" alt="loading....."></center></span></li>
 </a>
 <a href="revision" class="dashboard__content--items">
-<li class="list-group-item">Revisions <span id="revision"></span></li>
+<li class="list-group-item">Revisions <span id="revision"><center><img style="display: inline; position: relative; top: -30px;" height="40px" src="../assets/Flickr-1s-200px.gif" alt="loading....."></center></span></li>
 </a>
-<a href="closed" class="dashboard__content--items">
-<li class="list-group-item">Closed <span id="closed"></span></li>
+<a href="classes" class="dashboard__content--items">
+<li class="list-group-item">Class <span id="classes"><center><img style="display: inline; position: relative; top: -30px;" height="40px" src="../assets/Flickr-1s-200px.gif" alt="loading....."></center></span></li>
 </a>
-<!-- <a href="disputed"  class="dashboard__content--items"> <li class="list-group-item">Disputed <span id="disputed"></span></li></a> -->
 
+<a href="closed" class="dashboard__content--items">
+<li class="list-group-item">Closed <span id="closed"><center><img style="display: inline; position: relative; top: -30px;" height="40px" src="../assets/Flickr-1s-200px.gif" alt="loading....."></center></span></li>
+</a>
 </ul>
 </div>
 <!--col-1-->
@@ -53,20 +55,20 @@ $result=$db->get_var("SELECT payment_date FROM others");
 <div class="card-header">Accounts Summary</div>
 <ul class="list-group">
 <a href="tutors" class="dashboard__content--items">
-<li class="list-group-item">Tutors <span id="tutors"></span></li>
+<li class="list-group-item">Tutors <span id="tutors"><center><img style="display: inline; position: relative; top: -30px;" height="40px" src="../assets/Facebook-1s-200px.gif" alt="loading....."></center></span></li>
 </a>
 <a href="students" class="dashboard__content--items">
-<li class="list-group-item">Students <span id="students"></span></li>
+<li class="list-group-item">Students <span id="students"><center><img style="display: inline; position: relative; top: -30px;" height="40px" src="../assets/Facebook-1s-200px.gif" alt="loading....."></center></span></li>
 </a>
 
 <a href="applications" class="dashboard__content--items">
-<li class="list-group-item">Applications <span id="applications"></span></li>
+<li class="list-group-item">Applications <span id="applications"><center><img style="display: inline; position: relative; top: -30px;" height="40px" src="../assets/Facebook-1s-200px.gif" alt="loading....."></center></span></li>
 </a>
 <a href="suspended" class="dashboard__content--items">
-<li class="list-group-item">Suspended <span id="suspended"></span></li>
+<li class="list-group-item">Suspended <span id="suspended"><center><img style="display: inline; position: relative; top: -30px;" height="40px" src="../assets/Facebook-1s-200px.gif" alt="loading....."></center></span></li>
 </a>
 <a href="messages" class="dashboard__content--items">
-<li class="list-group-item">Messages <span id="messages"></span></li>
+<li class="list-group-item">Messages <span id="messages"><center><img style="display: inline; position: relative; top: -30px;" height="40px" src="../assets/Facebook-1s-200px.gif" alt="loading....."></center></span></li>
 </a>
 <!-- <a href="closed"  class="dashboard__content--items"> <li class="list-group-item">Closed <span id="closed"></span></li> </a>
 -->
@@ -78,10 +80,10 @@ $result=$db->get_var("SELECT payment_date FROM others");
 <ul class="list-group">
 
 <a href="dues" class="dashboard__content--items">
-<li class="list-group-item">Dues<span id="dues"></span></li>
+<li class="list-group-item">Dues<span id="dues"><center><img style="display: inline; position: relative; top: -30px;" height="40px" src="../assets/Flickr-1s-200px.gif" alt="loading....."></center></span></li>
 </a>
 <a href="acc_balance" class="dashboard__content--items">
-<li class="list-group-item"> Balance <span id="balance"></span> </li>
+<li class="list-group-item"> Balance <span id="balance"><center><img style="display: inline; position: relative; top: -30px;" height="40px" src="../assets/Flickr-1s-200px.gif" alt="loading....."></center></span> </li>
 </a>
 </ul>
 </div>
@@ -101,6 +103,7 @@ $result=$db->get_var("SELECT payment_date FROM others");
 <div class="card-header text-uppercase">Notifications</div>
 <!--card header-->
 <div class="card-body" id="cbody">
+	<center><img src="../assets/Ripple-1s-200px.gif" alt="loading....."></center>
 </div>
 <!--card body-->
 
@@ -123,28 +126,9 @@ $("#available").load('dashboard_counters', {
 type: 'available',
 submit: 'submit'
 });
-$("#progress").load('dashboard_counters', {
-type: 'progress',
-submit: 'submit'
-});
+
 $("#delivered").load('dashboard_counters', {
 type: 'delivered',
-submit: 'submit'
-});
-$("#revision").load('dashboard_counters', {
-type: 'revision',
-submit: 'submit'
-});
-$("#closed").load('dashboard_counters', {
-type: 'closed',
-submit: 'submit'
-});
-$("#students").load('dashboard_counters', {
-type: 'students',
-submit: 'submit'
-});
-$("#tutors").load('dashboard_counters', {
-type: 'tutors',
 submit: 'submit'
 });
 $("#suspended").load('dashboard_counters', {
@@ -155,20 +139,53 @@ $("#applications").load('dashboard_counters', {
 type: 'applications',
 submit: 'submit'
 });
+$("#classes").load('dashboard_counters', {
+type: 'classes',
+submit: 'submit'
+});
+$("#balance").load('dashboard_counters', {
+type: 'balance',
+submit: 'submit'
+});
+}, 5000);
+
+setInterval(function () {
+$("#students").load('dashboard_counters', {
+type: 'students',
+submit: 'submit'
+});
+$("#tutors").load('dashboard_counters', {
+type: 'tutors',
+submit: 'submit'
+});
+
+$("#messages").load('dashboard_counters', {
+type: 'messages',
+submit: 'submit'
+});
+$("#revision").load('dashboard_counters', {
+type: 'revision',
+submit: 'submit'
+});
+$("#closed").load('dashboard_counters', {
+type: 'closed',
+submit: 'submit'
+});
+}, 3000);
+
+setInterval(function () {
+$("#progress").load('dashboard_counters', {
+type: 'progress',
+submit: 'submit'
+});
 $("#dues").load('dashboard_counters', {
 type: 'dues',
 submit: 'submit'
 });
 
-$("#balance").load('dashboard_counters', {
-type: 'balance',
-submit: 'submit'
-});
-$("#messages").load('dashboard_counters', {
-type: 'messages',
-submit: 'submit'
-});
+
+
 $("#cbody").load("notifications.php", { limit: 10 });
-}, 300);
+}, 7000);
 });
 </script>

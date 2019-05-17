@@ -81,6 +81,27 @@ if ($_POST['type']=="closed") {
 	}
 	
 }
+
+function class_(){
+	global $db;
+	$query="SELECT * FROM classes";
+	$results=$db->get_results($query);
+	return $db->num_rows;
+}
+if ($_POST['type']=="classes") {
+	if ( class_()>0) {
+		if (class_()>1000000000) {
+			echo "<div class='my_pill'> 1000,000,000+</div>";
+		}else{
+			echo "<div class='my_pill'>". class_()."</div>";
+		}
+	}else{
+		echo "<div class='pill'>". class_()."</div>";
+	}
+	
+}
+
+
 function tutors(){
 	global $db;
 	$query="SELECT * FROM users WHERE type=2";

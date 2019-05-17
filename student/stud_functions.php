@@ -64,7 +64,42 @@ $error="Was not Successfully Posted try again";
   }
 }
 }
+ function create_class(){
 
+  if (isset($_POST['submit_class'])) {
+    global $success, $error, $date_global, $db;
+    $subject=$db->escape($_POST['subject']);
+    $budget=$db->escape($_POST['budget']);
+    $instructions=$db->escape($_POST['instructions']);
+    $student_id=$_SESSION['user_id'];
+    $class_query="INSERT into classes(student_id, budget, instructions, subject, date_created)VALUES('$student_id','$budget','$instructions','$subject', '$date_global') ";
+    if ($db->query($class_query)) {
+   $success="Class created successfully";  
+    //,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,notification,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+  //
+  //
+  //
+  //,,,,,,,,,,,,,,,,,,,,,,,,,, //
+  $date_global=strtotime($date_global);
+  $note="Student ID: ". $student_id." posted a new class at ".date("Y-m-d H:i:sa",$date_global);
+  $note2="You posted a new class at ".date("Y-m-d H:i:sa",$date_global);
+  
+  $user_type=$_SESSION['user_type'];
+ $querys="INSERT INTO notifications(user_type, note) VALUES('$user_type','$note')";
+  $db->query($querys);
+  $querys="INSERT INTO notifications(user_type, note, user_id) VALUES(3,'$note2', '$student_id')";
+  $db->query($querys);
+  // ........,,,,,,,,,,,,,,,,,,,,,,,,,,notification,,,,,,,,,,,,,,,,,
+  // 
+  // 
+  // ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,//
+    }else{
+
+$error="Class not created";
+    }
+
+  }
+ }
 function edit_post(){
 if (isset($_POST['edit'])) {
 require_once("../dbconfig/dbconnect.php");
@@ -115,6 +150,35 @@ global $success, $error, $date_global;
 $error="Was not Successfully Posted try again";
 header("location:homework_edit?id=".urlencode(convert_uuencode($project_id))."&error=".$error);
   }
+}
+}
+
+function class_edit(){
+
+global $success, $error, $date_global, $db;
+if (isset($_POST['edit_class'])) {
+  $homework_id=$_POST['project_id'];
+  $subject=$db->escape($_POST['subject']);
+  $budget=$db->escape($_POST['budget']);
+  $instructions=$db->escape($_POST['instructions']);
+  $class_edit_query="UPDATE classes SET subject='$subject', budget='$budget', instructions='$instructions' WHERE project_id='$homework_id' ";
+if ($db->query($class_edit_query)) {
+   $student_id=$_SESSION['user_id'];
+    /////////////////////////////////notification/////////////////////////////////////////////
+    $note="Student Id: ".  $student_id." edited class id: ".$project_id." at ".date("Y-m-d H:i:sa",$date_global);
+    $note2="You Edited class id: ".$project_id." at ".date("Y-m-d H:i:sa",$date_global);
+    $user_type=$_SESSION['user_type'];
+    $querys="INSERT INTO notifications(user_type, note) VALUES('$user_type','$note')";
+    $db->query($querys);
+    $querys="INSERT INTO notifications(user_type, note, user_id) VALUES(3,'$note2', '$student_id')";
+    $db->query($querys);
+  $success="Class updated successfully";
+ header("location:my-class-details?id=".urlencode(convert_uuencode($homework_id)));
+  }else{
+$error="Was not Successfully Posted try again";
+header("location:class_edit?id=".urlencode(convert_uuencode($homework_id))."&error=".$error);
+  }
+
 }
 }
 

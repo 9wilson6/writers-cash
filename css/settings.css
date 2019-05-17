@@ -518,7 +518,7 @@ a:hover {
       padding: 10px 80px; } }
   .display__content {
     width: 100%;
-    font-size: 65% !important;
+    font-size: 75% !important;
     min-height: 140vh;
     font-family: "Roboto", sans-serif;
     margin-bottom: 5rem;
