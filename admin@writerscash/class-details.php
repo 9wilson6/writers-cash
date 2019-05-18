@@ -17,16 +17,14 @@ $project_id=$_POST['project_id'];
 $tutor_id=$_POST['tutor_id'];
 $bid_amount=$_POST['bid_amount'];
 $query="INSERT INTO bids(tutor_id, project_id, bid_amount, bid_fee, bid_total_amount, student_id) VALUES('$tutor_id', '$project_id', '$bid_amount','$bid_amount','$bid_amount', '$student_id')";
-
-
 $results=$db->query($query);
 }
 if (isset($_POST['delete'])) {
 $project_id=$_POST['project_id'];
 $tutor_id=$_POST['tutor_id'];
-$bids=$_POST['bids']-1;
+// $bids=$_POST['bids']-1;
 $db->query("DELETE FROM bids WHERE tutor_id='$tutor_id' AND project_id='$project_id'");
-$db->query("UPDATE projects SET bids='$bids' WHERE project_id='$project_id'");
+// $db->query("UPDATE projects SET bids='$bids' WHERE project_id='$project_id'");
 
 ?>
 <script>
@@ -145,7 +143,7 @@ value="<?php echo $project_id ?>">
 <input type="hidden" name="bids" value="<?php echo $results->bids ?>">
 </div>
 <div class="col-4">
-<button class="btn-submit btn-block" style="background: red;" name="delete"
+<button class="btn-submit btn-block" style="background: #e74c3c;" name="delete"
 type="submit">DELETE</button>
 </div>
 
