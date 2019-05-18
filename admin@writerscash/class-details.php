@@ -48,7 +48,7 @@ $db->query("UPDATE projects SET bids='$bids' WHERE project_id='$project_id'");
 <h1 class="headingTertiary">Class # <?php echo $project_id. " Details"; ?></h1>
 <div class="card">
 <div class="card-header">Order info</div>
-<?php  $query=("SELECT * FROM classes WHERE project_id='$project_id' and status=0");
+<?php  $query=("SELECT * FROM classes WHERE project_id='$project_id'");
 $results=$db->get_row($query);
 if ($db->num_rows<1) {?>
 <div class="card-body">

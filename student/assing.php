@@ -12,6 +12,9 @@ if (isset($_POST['assing'])) {
 	$_SESSION['tutor_id']=$_POST['tutor_id'];
 	$_SESSION['cost']=$_POST['cost'];
 	$_SESSION['charges']=$_POST['charged'];
+	if (isset($_POST['is_class'])) {
+		$_SESSION['is_class']="yes";
+	}
 	require '../paypal_integration/bootstrap.php';
 	if (empty($_POST['cost'])) {
 	    throw new Exception('This script should not be called directly, expected post data');

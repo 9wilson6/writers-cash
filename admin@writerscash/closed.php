@@ -5,7 +5,7 @@ require_once("../inc/utilities.php");
 $page="dashboard";
 require_once("../inc/global_functions.php");
 require_once("../dbconfig/dbconnect.php");
-$query="SELECT * FROM closed LEFT JOIN projects ON closed.project_id=projects.project_id";
+$query="SELECT * FROM closed LEFT JOIN projects ON closed.project_id=projects.project_id WHERE closed.type=0";
 $results=$db->get_results($query);
 
 ?>

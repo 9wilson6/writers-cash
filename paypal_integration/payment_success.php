@@ -72,14 +72,23 @@ function addPayment($data)
              $charges=  $_SESSION['charges'];
     $query="INSERT INTO on_progress(project_id, student_id, tutor_id) VALUES ('$project_id', '$user_id', '$tutor_id')";
 if ($db->query($query)) {
-    $query="UPDATE projects SET status=1, cost=$cost, charges=$charges WHERE project_id='$project_id'";
+   if (isset($_SESSION['is_class'])) {
+      $query="UPDATE classes SET status=1, cost=$cost WHERE project_id='$project_id'";
+   }else{
+     $query="UPDATE projects SET status=1, cost=$cost, charges=$charges WHERE project_id='$project_id'";
+   }
     if ($db->query($query)) {
 
         $query="DELETE FROM bids WHERE project_id='$project_id'";
         if ($db->query($query)) {
              /////////////////////////////////notification/////////////////////////////////////////////
-    $note="Student Id: ".$user_id." assigned project id: ".$project_id." to Tutor id:".$tutor_id." at ".$date_global;
+   if (isset($_SESSION['is_class'])) {
+      $note="Student Id: ".$user_id." assigned class id: ".$project_id." to Tutor id:".$tutor_id." at ".$date_global;
+    $note2="You Assigned class id: ".$project_id." to Tutor id:".$tutor_id." at ". $date_global; 
+   }else{
+     $note="Student Id: ".$user_id." assigned project id: ".$project_id." to Tutor id:".$tutor_id." at ".$date_global;
     $note2="You Assigned project id: ".$project_id." to Tutor id:".$tutor_id." at ". $date_global;
+   }
     $user_type=$_SESSION['user_type'];
     $querys="INSERT INTO notifications(user_type, note) VALUES('$user_type','$note')";
     $db->query($querys);
@@ -92,11 +101,20 @@ if ($db->query($query)) {
             unset($_SESSION['charges']);
             unset($_SESSION['user_type_pass']);
             ?>
-        <script>
+            <?php if (isset($_SESSION['is_class'])): ?>
+            <script>
+            let x="<?php echo $tutor_id ?>"
+            alert(" Payment Completed Successfully....\n Project successfully assigned to tutor id: " +x );
+              window.location.assign("../student/active_classes");
+        </script>
+                <?php else: ?>
+                 <script>
             let x="<?php echo $tutor_id ?>"
             alert(" Payment Completed Successfully....\n Project successfully assigned to tutor id: " +x );
               window.location.assign("../student/in-progress");
         </script>
+            <?php endif ?>
+       
     <?php
         }
      }

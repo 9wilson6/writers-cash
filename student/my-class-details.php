@@ -161,6 +161,7 @@ alt="">
 <form action="assing" method="POST" id="assing">
 <input type="hidden" name="project_id"
 value="<?php echo $project_id; ?>">
+<input type="hidden" name="is_class">
 <input type="hidden" name="user_id"
 value="<?php echo $_SESSION['user_id']; ?>">
 <input type="hidden" name="user_type"

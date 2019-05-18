@@ -84,7 +84,7 @@ if ($_POST['type']=="closed") {
 
 function class_(){
 	global $db;
-	$query="SELECT * FROM classes";
+	$query="SELECT * FROM classes WHERE status <3";
 	$results=$db->get_results($query);
 	return $db->num_rows;
 }
@@ -187,8 +187,9 @@ if ($_POST['type']=="applications") {
 
 function dues(){
 	global $db;
-	$query="SELECT SUM(charges) AS charges FROM projects WHERE status=4";
+	$query="SELECT SUM(dues) AS charges FROM users";
 	$results=$db->get_row($query);
+
 	return $results->charges;
 }
 if ($_POST['type']=="dues") {
@@ -205,7 +206,9 @@ function balance(){
 	global $db;
 	$query="SELECT SUM(cost) AS cost FROM projects WHERE status=4";
 	$results=$db->get_row($query);
-	return $results->cost;
+	$qeury_class="SELECT SUM(cost) FROM classes WHERE status=4";
+	$qeury_class_results=$db->get_var($qeury_class);
+	return ($results->cost + $qeury_class_results);
 }
 if ($_POST['type']=="balance") {
 

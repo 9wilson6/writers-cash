@@ -40,7 +40,8 @@
 
   $query="UPDATE projects SET status=5, DATE_PAID='$date_global' WHERE status=4";
   $db->query($query);
-
+ $query="UPDATE classes SET status=5, DATE_PAID='$date_global' WHERE status=4";
+  $db->query($query);
   $date=strtotime("+15days");
 
   $query="UPDATE others SET payment_date='$date'";

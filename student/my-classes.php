@@ -6,7 +6,7 @@ require_once("../inc/utilities.php");
 require_once "../inc/header_links.php";
 $student_id=$_SESSION['user_id'];
 
-$query="SELECT * FROM classes WHERE student_id='$student_id' order by project_id desc";
+$query="SELECT * FROM classes WHERE student_id='$student_id' and status=0 order by project_id desc";
 $results=$db->get_results($query);
 $page="classes";
 require_once "../components/top_nav.php";
@@ -69,6 +69,8 @@ href="my-class-details?id=<?php echo urlencode(convert_uuencode($result->project
 </tbody>
 </table>
 </div>
+<div class="card-footer">
+	<a href="active_classes" class="submit" name="submit_class" style="color: #fff; text-align: center; font-weight: bolder; padding-top: 5px; font-size: 16px" />Active/Closed Classes</a></div>
 <?php endif ?>
 </div>
 </div>

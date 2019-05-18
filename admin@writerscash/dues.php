@@ -21,7 +21,7 @@ $results=$db->get_results($query);
 <div class="card-header text-uppercase">Recently complited orders</div>
 <div class="card-body">
 <?php if ($db->num_rows<1): ?>
-<h1 class="classHeadingSecondary">There is Nothing To show Yet</h1>
+<h1 class="classHeadingSecondary">There are no closed assignments</h1>
 <?php elseif($db->num_rows>0): ?>
 <table class="table table-bordered">
 <thead>
@@ -40,7 +40,7 @@ $results=$db->get_results($query);
 <tr>
 <td class="smalll"><?php echo $result->project_id; ?></td>
 <td class="wide">
-<?php echo (strlen($result->title) >35 )? substr($result->title, 0, 35).'...':$result->title; ?>
+<?php echo (strlen($result->title) >35 )? substr($result->title, 0, 55).'...':$result->title; ?>
 </td>
 <td><?php echo $result->charges; ?></td>
 <td><?php echo $result->pages; ?></td>
@@ -67,6 +67,38 @@ $period= explode(" ", $time); ?>
 </tbody>
 </table>
 <?php endif ?>
+<?php $classes_query="SELECT * FROM classes WHERE status=4";
+$classes_query_results=$db->get_results($classes_query);
+if ($db->num_rows>0) { ?>
+	<h2 class="headingTertiary">Closed Classes</h2>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Class Id</th>
+<th class="wide">Subject</th>
+<th data-toggle="tooltip" title="Price $" data-placement="right">Price</th>
+<th data-toggle="tooltip" title="pages" data-placement="right">DATE_CREATED</th>
+<th class="smalll">Student ID</th>
+<!-- <th class="medium">Description</th> -->
+</tr>
+</thead>
+
+<tbody id="display">
+	<?php foreach ($classes_query_results as $classes_query_result): ?>
+		<tr>
+			<td><?php echo $classes_query_result->project_id; ?></td>
+			<td><?php echo $classes_query_result->subject; ?></td>
+			<td><?php echo $classes_query_result->cost; ?></td>
+			<td><?php echo $classes_query_result->date_created; ?></td>
+			<td><?php echo $classes_query_result->student_id; ?></td>
+
+		</tr>
+	<?php endforeach ?>
+</tbody>
+</table>
+<?php }
+ ?>
+
 </div>
 <div class="card-footer"></div>
 </div>

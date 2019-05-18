@@ -26,7 +26,7 @@ window.location.assign("classes");
 $query("SELECT ");
 
  } 
-$query="SELECT * FROM classes where date_closed=0 order by project_id desc";
+$query="SELECT * FROM classes where status=0 order by project_id desc";
 $results=$db->get_results($query);
 
 ?>
@@ -69,7 +69,9 @@ class="fas fa-external-link-alt icon-r ml-4"></i></a></td>
 </table>
 <?php endif ?>
 </div>
-<div class="card-footer"></div>
+<div class="card-footer">
+	<a href="active_classes" class="submit" name="submit_class" style="color: #fff; text-align: center; font-weight: bolder; padding-top: 5px; font-size: 16px" />Active/Closed Classes</a>
+</div>
 </div>
 </div>
 
