@@ -27,8 +27,8 @@ $db->query("UPDATE projects SET bids='$bids' WHERE project_id='$project_id'");
 //
 //
 //,,,,,,,,,,,,,,,,,,,,,,,,,, //
-$note="Tutor ID: ". $tutor_id." has placed a bid for project ID: ".$project_id." at ".$date_global."bid amnt: ".$bid_total_amount;
-$note2="You have placed a bid for project ID: ".$project_id." at ".$date_global."bid amnt: ".$bid_total_amount;
+$note="Tutor ID: ". $tutor_id." has placed a bid for project ID: ".$project_id." at ".$date_global."bid amnt: ".$bid_amount;
+$note2="You have placed a bid for project ID: ".$project_id." at ".$date_global."bid amnt: ".$bid_amount;
 $querys="INSERT INTO notifications(user_type, note) VALUES(2,'$note')";
 $db->query($querys);
 $querys="INSERT INTO notifications(user_type, note, user_id) VALUES(3,'$note2','$tutor_id')";
@@ -103,7 +103,8 @@ This project Is no longer Available
 </div>
 </div>
 <?php  }else{ ?>
-<table class="table table-sm table-responsive{-sm|-md|-lg|-xl}">
+<div class="table-responsive-md">
+<table class="table table-sm">
 <thead class="table-light">
 <tr>
 <th class="text-center">Level</th>
@@ -207,13 +208,15 @@ type="submit">DELETE</button>
 </tbody>
 </table>
 </div>
+</div>
 
 <div class="card bg-light mb-5">
 <div class="card-header">Order Info</div>
 <div class="card-body d_table_1__c ">
 
 <div class="instrcution text-left">
-<table class="table table-sm table-responsive{-sm|-md|-lg|-xl} text-centerxt">
+	<div class="table-responsive-md">
+<table class="table table-sm text-centerxt">
 <tr>  
 <th> Paper Format </th>
 <td> <?php  echo $results->style; ?> </td>
@@ -255,10 +258,10 @@ echo "{$sources}";
 <td colspan="3"> <?php  echo $results->instructions; ?> </td>
 </tr>
 </table>
-
+</div>
 <div class="row">
 
-<div class="col-sm-12 col-md-5 col lg-5">
+<div class="col-sm-12 col-md-5 col-lg-5">
 <div class="card">
 <div class="card-header"><strong>Files:</strong></div>
 <div class="card-body files">
@@ -267,7 +270,7 @@ echo "{$sources}";
 </div>
 
 </div>
-<div class="col-sm-12 col-md-7 col lg-7">
+<div class="col-sm-12 col-md-7 col-lg-7">
 <div class="card">
 <div class="card-header"><strong>Messages:</strong></div>
 <div class="card-body messages">

@@ -5,7 +5,7 @@
 .display {
   padding: 10px 150px;
   @media only screen and (max-width: 867px) {
-    padding: 10px 80px;
+    padding: 10px 10px;
   }
 
   &__content {
@@ -165,7 +165,7 @@
       }
     }
     .move-up {
-      margin: 0 0 0 0 !important;
+      margin: 0 0 0 -20px !important;
       // height: 10px !important;
       transform: translateX(20px);
       width: 100%;

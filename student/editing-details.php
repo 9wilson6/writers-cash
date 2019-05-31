@@ -127,7 +127,7 @@ $period= explode(" ", $time); ?>
 
 
 <div class="row">
-<div class="col-sm-12 col-md-6 col lg-6">
+<div class="col-sm-12 col-md-6 col-lg-6">
 <div class="card">
 <div class="card-header"><strong>Files:</strong></div>
 <div class="card-body files" id="files">
@@ -146,7 +146,7 @@ $period= explode(" ", $time); ?>
 </div>
 
 </div>
-<div class="col-sm-12 col-md-6 col lg-6">
+<div class="col-sm-12 col-md-6 col-lg-6">
 <div class="card">
 <div class="card-header"><strong>Messages:</strong></div>
 <div class="card-body messages">
@@ -185,10 +185,10 @@ value="<?php echo $results->tutor_id ?>">
 <form action="" enctype="multipart/form-data" method="POST" class="files_edit mt-5">
 <div class="my_container">
 <div class="row">
-<div class="col-3 col-sm-3 col-md-3"><label for="files"
-class="forms2__label">Add More Files
+<div class="col-5 col-sm-5 col-md-3"><label for="files"
+class="forms2__label"><small>Add More Files</small>
 &rarr;</label></div>
-<div class="col-6 col-sm-6 col-md-6">
+<div class="col-7 col-sm-7 col-md-6">
 <label for="cert_" class="input-label">
 <i class="fa fa-upload"></i>
 <span id="cert">0 Selected</span>
@@ -198,7 +198,7 @@ multiple />
 <input type="hidden" name="user_id"
 value="<?php echo $results->student_id ?>">
 </div>
-<div class="col-3 col-sm-3 col-md-3"><button type="submit" name="submit"
+<div class="col-12 col-sm-12 col-md-3"><button type="submit" name="submit"
 class=" btn-submit btn-block">Upload
 Files</button>
 

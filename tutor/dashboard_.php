@@ -9,8 +9,8 @@ $results=$db->get_results($queryd);
 if ($db->num_rows>0) {
      foreach ($results as $result){ ?>
 <tr>
-    <td class="smalll"><a href="d_details?id=<?php echo urlencode(convert_uuencode($result->project_id)); ?>"><?php echo $result->project_id; ?><i
-                class="fas fa-external-link-alt icon-r ml-4"></i></a></td>
+    <td width="100px"><a href="d_details?id=<?php echo urlencode(convert_uuencode($result->project_id)); ?>"><?php echo $result->project_id; ?><i
+                class="fas fa-external-link-alt icon-r ml-2"></i></a></td>
     <td class="wide"><?php echo (strlen($result->title) >35 )? substr($result->title, 0, 35).'...':$result->title; ?>
     </td>
     <td><?php echo $result->budget; ?></td>

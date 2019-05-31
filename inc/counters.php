@@ -16,7 +16,9 @@ if ($user_type==1) {
 	$query="SELECT * FROM on_progress WHERE tutor_id='$user_id' ";
 }
 $results=$db->get_results($query);
+
 return $db->num_rows;
+
 }
 ////////////////////////////////////////////////////////////////////
 if ($_POST['target']=="in_progress") {
@@ -50,7 +52,9 @@ if ($user_type==1) {
 	$query="SELECT * FROM closed WHERE tutor_id='$user_id' ";
 }
 $results=$db->get_results($query);
+
 return $db->num_rows;
+
 }
 ////////////////////////////////////////////////////////////////////
 if ($_POST['target']=="closed") {
@@ -75,7 +79,9 @@ if ($user_type==1) {
 	$query="SELECT * FROM revisions WHERE tutor_id='$user_id'";
 }
 $results=$db->get_results($query);
+
 return $db->num_rows;
+
 }
 ////////////////////////////////////////////////////////////////////
 if ($_POST['target']=="on_revision") {
@@ -134,6 +140,7 @@ if ($user_type==1) {
 	$query="SELECT * FROM projects WHERE status=0 AND deadline>$date_global_";
 }
 $results=$db->get_results($query);
+
 return $db->num_rows;
 }
 ///////////////////////////////////////////////////////////////////////////////////
@@ -167,6 +174,7 @@ if ($user_type==1) {
 }
 
 $results=$db->get_results($query);
+
 return $db->num_rows;
 }
 ///////////////////////////////////////////////////////////////////////////////////
@@ -186,6 +194,4 @@ echo "<span class='my_pill_'>".messages($_POST["user_id"], $_POST["user_type"]).
 function announcements(){
 
 }
-
-
 ?>

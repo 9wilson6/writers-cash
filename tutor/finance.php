@@ -20,7 +20,7 @@ $results=$db->get_results($query);
 ?>
 <?php if ($results>0): ?>
 
-
+<div class="table-responsive">
 <table class="table table-bordered">
 <thead>
 <tr>
@@ -50,6 +50,7 @@ class="fas fa-external-link-alt icon-r ml-4"></i></a></td>
 <?php endforeach ?>
 </tbody>
 </table>
+</div>
 <?php else: ?>
 <div class="headingTertiary">
 Nothing To show yet

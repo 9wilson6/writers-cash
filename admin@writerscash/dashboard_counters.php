@@ -1,4 +1,3 @@
-
 <?php 
 require_once("../dbconfig/dbconnect.php");
 require_once("../inc/utilities.php");
@@ -219,5 +218,7 @@ if ($_POST['type']=="balance") {
 	}
 	
 }
+$db->disconnect();
 }
+$db->disconnect();
  ?>

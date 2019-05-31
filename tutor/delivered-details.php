@@ -54,7 +54,8 @@
     </div>
     </div>
     <?php  }else{ ?>
-    <table class="table table-sm table-responsive{-sm|-md|-lg|-xl}">
+        <div class="table-responsive-md">
+    <table class="table table-sm ">
     <thead class="table-light">
     <tr>
     <th class="text-center">Order Id</th>
@@ -101,6 +102,7 @@
     </tbody>
     </table>
     </div>
+    </div>
 
     <div class="card bg-light mb-5">
     <div class="card-header ">Order Info</div>
@@ -108,8 +110,8 @@
     <ul class="d_table_1 d_table_1__b mb-5 mt-3">
 
 
-
-    <table class="table table-sm table-responsive{-sm|-md|-lg|-xl}">
+<div class="table-responsive-md">
+    <table class="table table-sm ">
 
     <tr>
     <th class="">Status</th>
@@ -127,8 +129,6 @@
     <th>Subject</th>
     <td><?php echo $results->subject; ?></td>
     </tr>
-
-
     <tr>
     <th class="">Type of paper</th>
     <td class=""><?php echo $results->type_of_paper; ?></td>
@@ -151,14 +151,12 @@
     <th>Instructions</th>
     <td colspan="3"><?php echo $results->instructions ?></td>
     </tr>
-
-
-
     </table>
+    </div>
     </ul>
     <div class="instrcution text-left">
     <div class="row">
-    <div class="col-sm-12 col-md-6 col lg-6">
+    <div class="col-sm-12 col-md-6 col-lg-6">
     <div class="card">
     <div class="card-header"><strong>Files:</strong></div>
     <div class="card-body files" id="files">
@@ -177,7 +175,7 @@
     </div>
 
     </div>
-    <div class="col-sm-12 col-md-6 col lg-6">
+    <div class="col-sm-12 col-md-6 col-lg-6">
     <div class="card">
     <div class="card-header"><strong>Messages:</strong></div>
     <div class="card-body messages">

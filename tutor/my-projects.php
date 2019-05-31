@@ -57,7 +57,7 @@ if ($db->num_rows<1): ?>
 <tbody>
 <?php foreach ($results as $result): ?>
 <tr>
-<td class="smalll"><a
+<td width="100px"><a
 href="my-projects-details?pid=<?php echo urlencode(convert_uuencode($result->project_id)); ?>"><?php echo $result->project_id; ?><i
 class="fas fa-external-link-alt icon-r ml-4"></i></a></td>
 <td class="wide">

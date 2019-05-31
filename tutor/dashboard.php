@@ -46,10 +46,11 @@ ob_flush();
 <div class="headingTertiary">There is Nothing To show Yet</div>
 
 <?php }elseif($db->num_rows>0){ ?>
-<table class="table table-bordered">
+<div class="table-responsive-md">
+	<table class="table table-bordered no-wrap">
 <thead>
 <tr>
-<th>id</th>
+<th class="th-lg">id</th>
 <th class="wide">Title</th>
 <th data-toggle="tooltip" title="Price $" data-placement="right">Price</th>
 <th data-toggle="tooltip" title="pages" data-placement="right">Pg</th>
@@ -61,9 +62,9 @@ ob_flush();
 <tbody id="display">
 <?php foreach ($resultsx as $result): ?>
 <tr>
-<td class="smalll"><a
+<td width="100px"><a
 href="d_details?id=<?php echo urlencode(convert_uuencode($result->project_id)); ?>"><?php echo $result->project_id; ?><i
-class="fas fa-external-link-alt icon-r ml-4"></i></a></td>
+class="fas fa-external-link-alt icon-r ml-2"></i></a></td>
 <td class="wide">
 <?php echo (strlen($result->title) >35 )? substr($result->title, 0, 35).'...':$result->title; ?>
 </td>
@@ -93,6 +94,7 @@ $period= explode(" ", $time); ?>
 </tbody>
 
 </table>
+</div>
 <?php } ?>
 </div>
 <?php if ($result_q>10): ?>

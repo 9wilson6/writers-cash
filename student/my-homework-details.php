@@ -36,7 +36,7 @@ $results=$db->get_row($query);
 if ($db->num_rows<1) { ?>
 <div class="headingTertiary">Order is no longer available</div>
 <?php  } else{ ?>
-<div class="table-responsive">
+<div class="table-responsive-md">
 <table class="table  table-striped table-hover table-bordered">
 <tbody>
 <tr>
@@ -129,12 +129,12 @@ Manage files
 <form action="" enctype="multipart/form-data" method="POST" class="files_edit">
 <div class="my_container">
 <div class="row">
-<div class="col-3 col-sm-3 col-md-3">
+<div class="col-5 col-sm-5 col-md-3">
 <label for="files"
 class="forms2__label"><small>Add More Files</small>
 &rarr;</label>
 </div>
-<div class="col-6 col-sm-6 col-md-6">
+<div class="col-7 col-sm-7 col-md-6">
 <label for="cert_" class="input-label">
 <i class="fa fa-upload"></i>
 <span id="cert">0 Selected</span>
@@ -143,7 +143,7 @@ multiple />
 <input type="hidden" name="project_id"
 value="<?php echo $project_id ?>">
 </div>
-<div class="col-3 col-sm-3 col-md-3"><button type="submit" name="submit"
+<div class="col-12 col-sm-12 col-md-3"><button type="submit" name="submit"
 class=" btn-submit btn-block">Upload
 Files</button>
 
@@ -200,7 +200,8 @@ $results=$db->get_results($query);
 if ($db->num_rows<1) {?>
 <div class="headingTertiary">Nothing To Show Yet</div>
 <?php }else{ ?>
-
+<div class="table-responsive-md">
+	
 <table class="table">
 <thead>
 <th>Tutor Id</th>
@@ -218,7 +219,7 @@ if ($db->num_rows<1) {?>
 </td>
 <?php $query="SELECT SUM(rating) as rating, COUNT(comment) as complited FROM closed WHERE tutor_id='$result->tutor_id'";
 $results=$db->get_row($query);
-if ($results->rating>0) {
+if ($results->complited>0) {
 $rate=round($results->rating/$results->complited,0);  
 }else{
 $rate=0;
@@ -270,6 +271,7 @@ class="btn btn-submit btn-block move-up mr-0">Award</button>
 <?php } ?>
 </tbody>
 </table>
+</div>
 
 <?php }  }
 

@@ -28,20 +28,21 @@ $results=$db->get_results($query);
 if ($db->num_rows<1) {?>
 <div class="headingTertiary">Nothing to show Yet</div>
 <?php }else{ ?>
+	<div class="table-responsive">
 <table class="table table-bordered">
 <thead>
 <tr>
 <th>Order id</th>
-<th class="wide">Topic</th>
-<th class="smalll">Price($)</th>
-<th class="medium">Deadline</th>
+<th >Topic</th>
+<th>Price($)</th>
+<th >Deadline</th>
 </tr>
 </thead>
 <tbody>
 <?php foreach ($results as $result): ?>
 <tr>
 
-<td class="smalll"><a
+<td width="100px"><a
 href="in-progress-details?pid=<?php echo urlencode(convert_uuencode($result->project_id)); ?>"><?php echo $result->project_id; ?><i
 class="fas fa-external-link-alt icon-r ml-4"></i></a></td>
 <td><?php echo $result->title; ?></td>
@@ -65,6 +66,7 @@ $period= explode(" ", $time); ?>
 
 </tbody>
 </table>
+</div>
 <?php } ?>
 </div>
 </div>

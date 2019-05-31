@@ -7,8 +7,8 @@ body {
   font-weight: 400; // color: #777; // padding: 1.5rem;
   box-sizing: border-box;
   width: 100vw;
-  min-width: 767px;
+  // min-width: 767px;
   // min-width: 600px;
   background: $primary-color-blue;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }

@@ -40,7 +40,8 @@ This project Is no longer Available
 </div>
 </div>
 <?php  }else{ ?>
-<table class="table table-sm table-responsive{-sm|-md|-lg|-xl}">
+	<div class="table-responsive-md">
+<table class="table table-sm ">
 <thead class="table-light">
 <tr>
 <th class="text-center">Level</th>
@@ -68,6 +69,7 @@ This project Is no longer Available
 </tbody>
 </table>
 </div>
+</div>
 
 <div class="card bg-light mb-5">
 <div class="card-header">Order Info</div>
@@ -75,8 +77,8 @@ This project Is no longer Available
 <ul class="d_table_1 d_table_1__b mb-5 mt-3">
 
 
-
-<table class="table table-sm table-responsive{-sm|-md|-lg|-xl}">
+<div class="table-responsive-md">
+<table class="table table-sm">
 
 <tr>
 <th class="">Status</th>
@@ -122,11 +124,12 @@ echo "{$sources}";
 
 
 </table>
+</div>
 </ul>
 <div class="instrcution text-left">
 
 <div class="row">
-<div class="col-sm-12 col-md-6 col lg-6">
+<div class="col-sm-12 col-md-6 col-lg-6">
 <div class="card">
 <div class="card-header">Files</div>
 <div class="card-body files">
@@ -136,7 +139,7 @@ echo "{$sources}";
 </div>
 
 </div>
-<div class="col-sm-12 col-md-6 col lg-6">
+<div class="col-sm-12 col-md-6 col-lg-6">
 <div class="card">
 <div class="card-header">Messages</div>
 <div class="card-body messages">

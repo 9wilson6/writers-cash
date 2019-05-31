@@ -28,13 +28,15 @@
 
 
     <div class="card-body">
+
+        <div class="table-responsive-md">
     <table class="table table-bordered">
     <thead>
     <tr>
     <th>Order id</th>
-    <th class="wide">Topic</th>
-    <th class="smalll">Tutor Id</th>
-    <th class="medium">Deadline</th>
+    <th>Topic</th>
+    <th >Tutor Id</th>
+    <th>Deadline</th>
     </tr>
     </thead>
     <tbody>
@@ -42,7 +44,7 @@
     <?php foreach ($results  as $result): ?>
 
 
-    <td class="smalll"><a
+    <td width="100px"><a
     href="in-progress-details?pid=<?php echo urlencode(convert_uuencode($result->project_id)) ?>"><?php echo $result->project_id."<i class='fas fa-external-link-alt icon-r ml-4'></i>"; ?></a>
     </td>
     <td><?php echo $result->title; ?></td>
@@ -74,6 +76,7 @@
     <?php endforeach ?>
     </tbody>
     </table>
+    </div>
     </div>
     <?php } ?>
     </div>

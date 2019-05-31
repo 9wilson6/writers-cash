@@ -10,7 +10,7 @@ $results=$db->get_results($query);
 if ($db->num_rows<1) {?>
 <div class="headingTertiary">Nothing To Show Yet</div>
 <?php }else{ ?>
-
+<div class="table-responsive-md">
 <table class="table">
 <thead>
 <th>Tutor Id</th>
@@ -72,7 +72,7 @@ $rate=0;
 <?php } ?>
 </tbody>
 </table>
-
+</div>
 <?php }
 
 ?>

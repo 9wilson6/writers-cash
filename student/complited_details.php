@@ -1,4 +1,3 @@
-<!-- <meta http-equiv="refresh" content="300"> -->
 <?php
 $project_id=convert_uudecode($_REQUEST['id']);
 require_once("../dbconfig/dbconnect.php");
@@ -33,7 +32,7 @@ if ($db->num_rows<1) { ?>
 <div class="headingTertiary">Order is no longer available</div>
 
 <?php } else { ?>
-<div class="table-responsive ">
+<div class="table-responsive">
 <table class="table  table-striped table-hover table-bordered">
 <tbody>
 <tr>
@@ -142,7 +141,7 @@ $period= explode(" ", $time); ?>
 
 </div>
 
-<div class="col-sm-12 col-md-6 col lg-6">
+<div class="col-sm-12 col-md-6 col-lg-6">
 <div class="card">
 <div class="card-header"><strong>Messages:</strong></div>
 <div class="card-body messages">

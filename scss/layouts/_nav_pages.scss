@@ -1,0 +1,21 @@
+.bg-top {
+  height: 7rem;
+  background: transparent;
+}
+.faq-container {
+  width: 100vw;
+  min-height: 100vh;
+  background: $primary-color-blue-1;
+  .container {
+    padding: 3rem 4rem;
+    background: $primary-color-base;
+
+    h2,
+    li {
+      color: #000;
+      p {
+        color: gray;
+      }
+    }
+  }
+}

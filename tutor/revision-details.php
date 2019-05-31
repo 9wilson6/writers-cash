@@ -109,7 +109,8 @@
     </div>
     </div>
     <?php  }else{ ?>
-    <table class="table table-sm table-responsive{-sm|-md|-lg|-xl}">
+        <div class="table-responsive">
+    <table class="table table-sm">
     <thead class="table-light">
     <tr>
     <th class="text-center">Style</th>
@@ -157,6 +158,7 @@
     </tbody>
     </table>
     </div>
+    </div>
 
     <div class="card mb-5">
     <div class="card-header">Order Info</div>
@@ -165,7 +167,8 @@
 
     <div class="row">
     <div class="col-sm-12 col-md-12 col-lg-12">
-    <table class="table table-sm table-responsive{-sm|-md|-lg|-xl}">
+        <div class="table-responsive">
+    <table class="table table-sm">
 
     <tbody>
     <tr>
@@ -224,10 +227,11 @@
     </tbody>
 
     </table>
+    </div>
     </ul>
     <div class="instrcution text-left">
     <div class="row">
-    <div class="col-sm-12 col-md-6 col lg-6">
+    <div class="col-sm-12 col-md-6 col-lg-6">
     <div class="card">
     <div class="card-header">Files</div>
     <div class="card-body files" id="files">
@@ -247,7 +251,7 @@
     </div>
 
     </div>
-    <div class="col-sm-12 col-md-6 col lg-6">
+    <div class="col-sm-12 col-md-6 col-lg-6">
     <div class="card">
     <div class="card-header">Messages</div>
     <div class="card-body messages">
@@ -292,7 +296,7 @@
     class="files_edit customSelect py-2">
     <div class="my_container">
     <div class="row">
-    <div class="col-3 col-sm-3 col-md-3 pb-5">
+    <div class="col-5 col-sm-5 col-md-3 pb-5">
 
     <div class="select">
     <select name="result_type" class="custom-select" id="select"
@@ -303,7 +307,7 @@
     </select>
     </div>
     </div>
-    <div class="col-6 col-sm-6 col-md-6 pb-5">
+    <div class="col-7 col-sm-7 col-md-6 pb-5">
     <label for="cert_" class="input-label">
     <i class="fa fa-upload"></i>
     <span id="cert">0 Selected</span>
@@ -314,7 +318,7 @@
     <input type="hidden" name="student_id"
     value="<?php echo $results->student_id ?>">
     </div>
-    <div class="col-3 col-sm-3 col-md-3 pb-5"><button type="submit"
+    <div class="col-12 col-sm-12 col-md-3 pb-5"><button type="submit"
     name="submit" class="btn btn-submit btn-block move-up">Upload
     Results</button>
 

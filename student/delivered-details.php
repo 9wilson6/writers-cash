@@ -129,7 +129,7 @@
     </div>
 
     <div class="row">
-    <div class="col-sm-12 col-md-6 col lg-6">
+    <div class="col-sm-12 col-md-6 col-lg-6">
     <div class="card">
     <div class="card-header"><strong>Files:</strong></div>
     <div class="card-body files" id="files">
@@ -148,7 +148,7 @@
     </div>
 
     </div>
-    <div class="col-sm-12 col-md-6 col lg-6">
+    <div class="col-sm-12 col-md-6 col-lg-6">
     <div class="card">
     <div class="card-header"><strong>Messages:</strong></div>
     <div class="card-body messages">

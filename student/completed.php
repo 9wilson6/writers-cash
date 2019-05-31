@@ -28,6 +28,7 @@
     <?php if ($db->num_rows<=0): ?>
     <div class="headingTertiary">Nothing to Show Yet</div>
     <?php elseif($db->num_rows>0): ?>
+        <div class="table-responsive">
     <table class="table table-bordered">
     <thead>
     <tr>
@@ -44,7 +45,7 @@
 
     <tr>
 
-    <td class="smalll"><a
+    <td width="100px"><a
     href="complited_details?id=<?php echo urlencode(convert_uuencode($result->project_id)); ?>">
     <?php echo $result->project_id. "<i class='fas fa-external-link-alt icon-r ml-4'></i>"; ?></a>
     </td>
@@ -66,6 +67,7 @@
     <?php } ?>
     </tbody>
     </table>
+    </div>
     <?php endif ?>
     </div>
     <!--  <?php #if (!$result_q<20 ||$result_q>$result_q): ?>

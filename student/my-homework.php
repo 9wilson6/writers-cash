@@ -32,14 +32,15 @@ You have 0 posted assignments
 <div class="headingTertiary">Nothing to Show Yet</div>
 </div>
 <?php elseif($db->num_rows>0): ?>
-<table class="table table-bordered">
+	<div class="table-responsive-sm">
+<table class="table table-bordered ">
 <thead>
 <tr>
 <th>id</th>
-<th class="wide">Topic</th>
+<th>Topic</th>
 <th>Budget</th>
-<th class="medium">Deadline</th>
-<th class="medium">bids</th>
+<th>Deadline</th>
+<th>bids</th>
 </tr>
 </thead>
 <tbody>
@@ -48,7 +49,7 @@ You have 0 posted assignments
 
 <tr>
 
-<td class="smalll"><a
+<td width="100px"><a
 href="my-homework-details?id=<?php echo urlencode(convert_uuencode($result->project_id)); ?>">
 <?php echo $result->project_id. "<i class='fas fa-external-link-alt icon-r ml-4'></i>"; ?></a>
 </td>
@@ -90,6 +91,7 @@ $period= explode(" ", $time); ?>
 <?php } ?>
 </tbody>
 </table>
+</div>
 </div>
 <?php endif ?>
 </div>
