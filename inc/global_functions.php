@@ -5,7 +5,7 @@ if (isset($_POST['reg'])) {
 global	$db, $error_1, $success_1;
 }
 if (isset($_POST['submit'])) {
-require_once("dbconfig/dbconnect.php");
+require_once("../dbconfig/dbconnect.php");
 /////////////////////////////////RECEIVE FORM DATA/////////////////////////////////////////
 $username=$db->escape($_POST['username']);
 $user_type=$db->escape($_POST['user_type']);
@@ -125,9 +125,9 @@ $error_1="Was not Successfully Posted try again";
 		$_SESSION['email']=$email;
 		$_SESSION['password']=$password;
 		if ($user_type==1) {
-			header("Refresh:0; url=student_login");
+			header("Refresh:0; url=login");
 		}elseif ($user_type==2) {
-			header("Refresh:0; url=tutor_login");
+			header("Refresh:0; url=login");
 		}
 ////////////////////////////////
 	}else{
@@ -203,7 +203,7 @@ if ($results->status==1) {
 $_SESSION["info"]=$results;
 $_SESSION['user_type']=1; ?>
 <script>
-	window.location.assign("student/createpost");
+	window.location.assign("createpost");
 </script>
 
 <?php }else{
@@ -215,9 +215,9 @@ if ($results->status==1) {
 if ($results->verified==1) {
 	$_SESSION['user_type']=2;
 	$_SESSION["info"]=$results;
-	header("location:tutor/dashboard");
+	header("location:dashboard");
 }else{
-	header("location:tutor/not_active");
+	header("location:not_active");
 }
 }else{
 $error="Sorry your account is under suspension. <br> contact admin for further details";
@@ -240,7 +240,7 @@ $error="Invalid credentials";
 }
 
 function reset_pass(){
-require_once("dbconfig/dbconnect.php");
+require_once("../dbconfig/dbconnect.php");
 global $error, $success;
 if (isset($_POST['reset'])) {
 $email=$_POST['email'];

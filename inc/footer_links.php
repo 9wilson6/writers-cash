@@ -34,7 +34,14 @@
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+ 
+  
+<?php } else {?>
+
+  <script type="text/javascript" src="../js/custom.js"></script>
+  <script type="text/javascript" src="../js/session_timer.js"></script>
+ <script  src="../plugins/jquery.nice-number.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
   <script>
     $(document).ready(function () {
 
@@ -53,12 +60,6 @@
 
 
   </script>
-   <script type="text/javascript" src="./plugins/jquery.nice-number.min.js"></script>
-<?php } else {?>
-  <script type="text/javascript" src="../js/custom.js"></script>
-  <script type="text/javascript" src="../js/session_timer.js"></script>
- <script  src="../plugins/jquery.nice-number.min.js"></script>
-
 <?php }?>
 <!-- custom timer Js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
@@ -66,19 +67,13 @@
 <!-- Ck Editor -->
 <!-- <script src="https://cdn.ckeditor.com/4.11.1/standard/ckeditor.js"></script> -->
 <!-- Animation On Scrol Trigger  -->
+ <script type="text/javascript" src="../plugins/jquery.nice-number.min.js"></script>
 <script>
   $(function () {
 
     $('input[type="number"]').niceNumber();
 
   });</script>
-<script>
-  AOS.init(
-
-    { offset:200,
-      duration:1000,}
-      );
-    </script>
 
   </body>
   </html>

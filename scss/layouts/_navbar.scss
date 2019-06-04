@@ -24,7 +24,7 @@
       float: left;
       // font-size: 2.5rem;
       margin: 0;
-      font-size: 35px;
+      font-size: 25px;
       color: $primary-color-green;
       // text-transform: uppercase;
       font-weight: 700;
@@ -52,6 +52,7 @@
         list-style: none;
       }
       li {
+        font-size: 12px;
         border-bottom: 1px solid #575766;
         &:last-child {
           border-bottom: none;
@@ -139,11 +140,7 @@
             border: 2px solid $primary-color-green;
             border-radius: 10px;
             &:hover {
-              background-image: -webkit-linear-gradient(
-                225deg,
-                #00cf8a,
-                #0084d6
-              );
+              background-image: -webkit-linear-gradient(225deg, #00cf8a, #0084d6);
               background-image: linear-gradient(225deg, #00cf8a, #0084d6);
             }
           }

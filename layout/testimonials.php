@@ -8,7 +8,7 @@
                         <!-- /////////////////////Check point////////////////////////// -->
                         <div class="testmonial">
                             <div class="pic">
-                                <img src="./assets/images/user.png" alt="" class="img-responsive">
+                                <img src="../assets/images/user.png" alt="" class="img-responsive">
                             </div>
                             <div class="testmonial-review">
                                 <p>My tutor delivered on time. I got help within 6 hours and managed to submit
@@ -22,7 +22,7 @@
                         <!-- /////////////////////Check point////////////////////////// -->
                         <div class="testmonial">
                             <div class="pic">
-                                <img src="./assets/images/user.png" alt="" class="img-responsive">
+                                <img src="../assets/images/user.png" alt="" class="img-responsive">
                             </div>
                             <div class="testmonial-review">
                                 <p>Lou helped me a lot with referencing my master’s thesis.
@@ -36,7 +36,7 @@
                         <!-- /////////////////////Check point////////////////////////// -->
                         <div class="testmonial">
                             <div class="pic">
-                                <img src="./assets/images/user.png" alt="" class="img-responsive">
+                                <img src="../assets/images/user.png" alt="" class="img-responsive">
                             </div>
                             <div class="testmonial-review">
                                 <p>WriterDom tutors are the best! I saw a huge, positive improvement in my
@@ -50,7 +50,7 @@
                         <!-- /////////////////////Check point////////////////////////// -->
                         <div class="testmonial">
                             <div class="pic">
-                                <img src="./assets/images/user.png" alt="" class="img-responsive">
+                                <img src="../assets/images/user.png" alt="" class="img-responsive">
                             </div>
                             <div class="testmonial-review">
                                 <p>I found it easy to work with your tutors who were knowledgeable on my
@@ -64,7 +64,7 @@
                         <!-- /////////////////////Check point////////////////////////// -->
                         <div class="testmonial">
                             <div class="pic">
-                                <img src="./assets/images/user.png" alt="" class="img-responsive">
+                                <img src="../assets/images/user.png" alt="" class="img-responsive">
                             </div>
                             <div class="testmonial-review">
                                 <p>I was wowed by your competitive prices for the value provided! Your tutors
@@ -78,7 +78,7 @@
                         <!-- /////////////////////Check point////////////////////////// -->
                         <div class="testmonial">
                             <div class="pic">
-                                <img src="./assets/images/user.png" alt="" class="img-responsive">
+                                <img src="../assets/images/user.png" alt="" class="img-responsive">
                             </div>
                             <div class="testmonial-review">
                                 <p>I was almost giving up on my statistics course until I found WriterDom.
@@ -92,7 +92,7 @@
                         <!-- /////////////////////Check point////////////////////////// -->
                         <div class="testmonial">
                             <div class="pic">
-                                <img src="./assets/images/user.png" alt="" class="img-responsive">
+                                <img src="../assets/images/user.png" alt="" class="img-responsive">
                             </div>
                             <div class="testmonial-review">
                                 <p>WriterDom kept their word on safe payment and privacy and
@@ -107,7 +107,7 @@
                         <!-- /////////////////////Check point////////////////////////// -->
                         <div class="testmonial">
                             <div class="pic">
-                                <img src="./assets/images/user.png" alt="" class="img-responsive">
+                                <img src="../assets/images/user.png" alt="" class="img-responsive">
                             </div>
                             <div class="testmonial-review">
                                 <p>No hidden charges. Your customer service is very efficient. I solved a

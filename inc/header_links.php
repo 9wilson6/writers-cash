@@ -16,15 +16,15 @@ session_start(); ?>
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<!-- Custom Css -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
 
 	<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+	<link rel="stylesheet" href="../plugins/jquery.nice-number.min.css">
 	<?php if(isset($link)) {?>
 		<link rel="stylesheet" href="css/settings.css">
-		<link rel="stylesheet" href="./plugins/jquery.nice-number.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
-	<?php }else{?>
 		<link rel="stylesheet" href="../plugins/jquery.nice-number.min.css">
+	<?php }else{?>
+		
 		<link rel="stylesheet" href="../css/settings.css">
 		<!-- <link rel="stylesheet" href="../secondary_settings.css"> -->
 	<?php }?>

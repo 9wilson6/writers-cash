@@ -11,7 +11,7 @@
                 for you! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam.</span
               >
             </h1>
-            <a class="btn btn1" href="student_register">
+            <a class="btn btn1" href="register">
               Get Help Now
             </a>
           </div>

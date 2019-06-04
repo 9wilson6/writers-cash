@@ -105,13 +105,13 @@ if ($db->query($query)) {
             <script>
             let x="<?php echo $tutor_id ?>"
             alert(" Payment Completed Successfully....\n Project successfully assigned to tutor id: " +x );
-              window.location.assign("../student/active_classes");
+              window.location.assign("./researchhobby/active_classes");
         </script>
                 <?php else: ?>
                  <script>
             let x="<?php echo $tutor_id ?>"
             alert(" Payment Completed Successfully....\n Project successfully assigned to tutor id: " +x );
-              window.location.assign("../student/in-progress");
+              window.location.assign("./researchhobby/in-progress");
         </script>
             <?php endif ?>
        

@@ -1,6 +1,6 @@
 $(function(){
 setInterval(function() {
-        $("#messageBox").load("../chat", {
+        $("#messageBox").load("../chat.php", {
            project_id: project_id,
            user_type: user_type
         });
@@ -14,7 +14,7 @@ setInterval(function() {
 
  $('textarea').keyup(function(){
     // alert(user_type);
-    $.post("../chat", {
+    $.post("../chat.php", {
            project_id: project_id,
            user_type: user_type,
            event: "keylistener"

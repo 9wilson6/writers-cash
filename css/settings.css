@@ -112,7 +112,7 @@ a:hover {
     .navbar-container .navbar .logo {
       float: left;
       margin: 0;
-      font-size: 35px;
+      font-size: 25px;
       color: #00dd6e;
       font-weight: 700;
       font-family: "Black Ops One", cursive; }
@@ -134,6 +134,7 @@ a:hover {
         padding: 0;
         list-style: none; }
       .navbar-container .navbar .site-nav li {
+        font-size: 12px;
         border-bottom: 1px solid #575766; }
         .navbar-container .navbar .site-nav li:last-child {
           border-bottom: none;
